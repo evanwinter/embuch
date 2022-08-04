@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const Background = styled.div`
-  background-color: lightskyblue;
+  /* background-color: lightskyblue; */
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("/clouds.png");
+  /* background-image: url("/clouds.png"); */
 
   svg {
     width: min(100vw, 595px);

@@ -5,6 +5,20 @@ import { Background, Text } from "./Splash.styled";
 const Splash = () => {
   return (
     <Background>
+      <video
+        autoPlay
+        muted
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100vh",
+          objectFit: "cover",
+          zIndex: -1,
+        }}
+      >
+        <source src="/clouds.mp4" />
+      </video>
       <Link to="/">
         <svg
           width="595"
