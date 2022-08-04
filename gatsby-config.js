@@ -23,6 +23,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-sharp",
+    "gatsby-plugin-netlify",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
