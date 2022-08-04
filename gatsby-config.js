@@ -1,30 +1,48 @@
 module.exports = {
   siteMetadata: {
-    title: `emily-gatsby`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Emily Buchberger`,
+    siteUrl: `https://emilybuchberger.design`,
   },
-  plugins: [{
-    resolve: 'gatsby-source-contentful',
-    options: {
-      "accessToken": "UkJsyURAuZ2kNOeTrDBERokXDVsRQzNulcBFKOWvjLw",
-      "spaceId": "xomu64mpvs1b"
-    }
-  }, "gatsby-plugin-styled-components", {
-    resolve: 'gatsby-plugin-google-analytics',
-    options: {
-      "trackingId": ""
-    }
-  }, "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/images/icon.png"
-    }
-  }, "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": "./src/images/"
+  plugins: [
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        accessToken: "UkJsyURAuZ2kNOeTrDBERokXDVsRQzNulcBFKOWvjLw",
+        spaceId: "xomu64mpvs1b",
+      },
     },
-    __key: "images"
-  }]
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-image",
+    "gatsby-plugin-layout",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "./static/flower.svg",
+      },
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./src/images/",
+      },
+      __key: "images",
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@components": "/src/components",
+          "@images": "/src/images",
+          "@utils": "/src/utils",
+          "@styles": "/src/styles",
+        },
+        extensions: ["js", "svg"],
+      },
+    },
+  ],
 };
