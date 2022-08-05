@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { colors } from "@utils";
 
 export const Navigation = styled.nav`
+  margin-top: ${({ height }) => `-${height}px`};
   display: flex;
   width: 100%;
-
   a {
     text-decoration: none;
     color: currentColor;
@@ -28,7 +28,6 @@ export const NavigationLink = styled(motion.div)`
       0px -2px ${colors.lime};
     z-index: 14;
     background-color: ${colors.white};
-    margin-bottom: -2px;
   }
 `;
 

@@ -2,7 +2,24 @@ import React from "react";
 import { Preview } from "@components";
 import { Grid } from "@styles";
 
-const data = [
+export default function FunPage() {
+  return (
+    <div>
+      <Grid gridGap="2rem 3rem" padding="2rem 3rem">
+        {projects.map((project, index) => (
+          <Preview
+            key={project.slug}
+            project={project}
+            kind="fun"
+            index={index}
+          />
+        ))}
+      </Grid>
+    </div>
+  );
+}
+
+const projects = [
   {
     title: "T-Shirts",
     slug: "t-shirts",
@@ -24,15 +41,3 @@ const data = [
     coverImage: "/fun/customtype.jpg",
   },
 ];
-
-export default function FunPage() {
-  return (
-    <div>
-      <Grid gridGap="2rem 3rem" padding="2rem 3rem">
-        {data.map((project) => (
-          <Preview key={project.slug} project={project} kind="fun" />
-        ))}
-      </Grid>
-    </div>
-  );
-}

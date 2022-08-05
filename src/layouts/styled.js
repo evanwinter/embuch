@@ -31,10 +31,4 @@ export const Sheet = styled(motion.div)`
   width: 100%;
   min-height: 100vh;
   background-color: ${colors.white};
-  /* border-top: 2px solid ${colors.lime}; */
-
-  header {
-    z-index: 10;
-    margin-top: -107px;
-  }
 `;

@@ -1,23 +1,36 @@
 import React from "react";
 import styled from "styled-components";
-import { graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import ReactMarkdown from "react-markdown";
+import { motion } from "framer-motion";
+import { animateInY, stagger } from "@utils";
 
-const AboutPage = ({ data }) => {
-  const image = data.allContentfulAboutPage.edges[0].node.image;
+const AboutPage = () => {
   return (
-    <div>
-      <AboutImageWrapper>
-        <GatsbyImage image={getImage(image)} />
-      </AboutImageWrapper>
-      <AboutTextWrapper>
-        <h2>{data.allContentfulAboutPage.edges[0].node.title}</h2>
-        <ReactMarkdown>
-          {data.allContentfulAboutPage.edges[0].node.text.text}
-        </ReactMarkdown>
+    <AboutLayout>
+      <AboutTextWrapper key="text" {...animateInY}>
+        <div>
+          <p className="p1">
+            Aliquip exercitation reprehenderit duis exercitation excepteur
+            consequat officia aliquip et non reprehenderit.
+          </p>
+          <p className="p1">
+            Enim labore non excepteur eiusmod aute excepteur elit labore.
+            Laborum laborum cillum est reprehenderit esse laborum id aliqua elit
+            labore id dolor. Sit excepteur cillum consectetur cupidatat eu
+            officia est fugiat dolor voluptate proident tempor non. Ea mollit
+            reprehenderit laborum veniam magna officia tempor minim.
+          </p>
+          <a className="link" href="mailto:emilybuchberger@gmail.com">
+            email
+          </a>
+        </div>
       </AboutTextWrapper>
-    </div>
+      <AboutImageWrapper
+        key="image"
+        {...stagger({ animation: animateInY, staggerAmount: 0.2 })}
+      >
+        <img src="/polaroids.gif" alt="Polaroids of Emily" />
+      </AboutImageWrapper>
+    </AboutLayout>
   );
 };
 
@@ -25,33 +38,29 @@ const AboutLayout = styled.div`
   display: flex;
   justify-content: center;
   gap: min(5vw, 3rem);
-  margin-inline: min(5vw, 3rem);
+  margin-inline: min(5vw, 3rem) 0;
 `;
 
-const AboutTextWrapper = styled.div`
-  flex: 1;
+const AboutTextWrapper = styled(motion.div)`
+  flex: 1 0 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - var(--menu-height));
+
+  > div {
+    max-width: 80ch;
+    margin-inline: auto;
+  }
 `;
 
-const AboutImageWrapper = styled.div`
-  width: 400px;
-`;
-
-export const query = graphql`
-  query AboutPageQuery {
-    allContentfulAboutPage {
-      edges {
-        node {
-          title
-          text {
-            text
-          }
-          image {
-            title
-            gatsbyImageData
-          }
-        }
-      }
-    }
+const AboutImageWrapper = styled(motion.div)`
+  flex: 1 0 3;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: calc(100vh - var(--menu-height));
   }
 `;
 
