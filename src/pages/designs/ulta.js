@@ -1,9 +1,10 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function UltaPage() {
   return (
     <div>
-      <img src="/ulta.jpg" alt="Ulta" />
+      <StaticImage src="../../images/ulta.jpg" alt="Ulta" />
     </div>
   );
 }

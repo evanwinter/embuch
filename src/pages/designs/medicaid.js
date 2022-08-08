@@ -1,9 +1,10 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function MedicaidPage() {
   return (
     <div>
-      <img src="/medicaid.jpg" alt="Medicaid" />
+      <StaticImage src="../../images/medicaid.jpg" alt="Medicaid" />
     </div>
   );
 }

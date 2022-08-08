@@ -7,9 +7,10 @@ import { motion } from "framer-motion";
 export default function Preview({ project, kind = "designs", index = 0 }) {
   const animation = stagger({
     animation: animateInY,
-    staggerIndex: index,
-    staggerAmount: 0.1,
+    index: index,
+    amount: 0.1,
   });
+
   return (
     <PreviewItem key={project.slug} {...animation}>
       <h3 className="h2">{project.title}</h3>
@@ -26,14 +27,7 @@ export default function Preview({ project, kind = "designs", index = 0 }) {
         }}
       >
         <PreviewLink to={`/${kind}/${project.slug}`}>
-          {typeof project.coverImage === "string" ? (
-            <img src={project.coverImage} alt={project.title} />
-          ) : (
-            <GatsbyImage
-              image={getImage(project.coverImage)}
-              alt={project.title}
-            />
-          )}
+          <img src={project.coverImage} alt={project.title} />
         </PreviewLink>
       </motion.div>
     </PreviewItem>

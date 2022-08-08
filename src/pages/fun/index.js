@@ -1,6 +1,10 @@
 import React from "react";
 import { Preview } from "@components";
 import { Grid } from "@styles";
+import sundayScaries from "../../images/fun/sunday-scaries.jpg";
+import prettyGood from "../../images/fun/prettygood.jpg";
+import kittySleep from "../../images/fun/kittysleep.jpg";
+import customType from "../../images/fun/customtype.jpg";
 
 export default function FunPage() {
   return (
@@ -23,21 +27,21 @@ const projects = [
   {
     title: "T-Shirts",
     slug: "t-shirts",
-    coverImage: "/fun/sunday-scaries.jpg",
+    coverImage: sundayScaries,
   },
   {
     title: "Logos",
     slug: "logos",
-    coverImage: "/fun/prettygood.jpg",
+    coverImage: prettyGood,
   },
   {
     title: "Portraits",
     slug: "portaits",
-    coverImage: "/fun/kittysleep.jpg",
+    coverImage: kittySleep,
   },
   {
     title: "Custom Type",
     slug: "custom-type",
-    coverImage: "/fun/customtype.jpg",
+    coverImage: customType,
   },
 ];

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { animateInY, stagger } from "@utils";
+import polaroidGif from "../images/polaroids.gif";
 
 const AboutPage = () => {
   return (
@@ -26,9 +27,9 @@ const AboutPage = () => {
       </AboutTextWrapper>
       <AboutImageWrapper
         key="image"
-        {...stagger({ animation: animateInY, staggerAmount: 0.2 })}
+        {...stagger({ animation: animateInY, amount: 0.2 })}
       >
-        <img src="/polaroids.gif" alt="Polaroids of Emily" />
+        <img src={polaroidGif} alt="Polaroids of Emily" />
       </AboutImageWrapper>
     </AboutLayout>
   );

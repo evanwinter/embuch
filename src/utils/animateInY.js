@@ -1,12 +1,9 @@
-export function stagger({ animation, staggerIndex, staggerAmount }) {
+export function stagger({ animation, index, amount }) {
   return {
     ...animation,
     transition: {
       ...animation.transition,
-      delay:
-        staggerIndex !== undefined
-          ? staggerIndex * staggerAmount
-          : staggerAmount,
+      delay: index !== undefined ? amount * index : amount,
     },
   };
 }
