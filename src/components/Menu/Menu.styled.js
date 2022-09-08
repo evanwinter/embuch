@@ -19,8 +19,8 @@ export const NavigationLink = styled(motion.div)`
   border-radius: calc(1.5 * var(--size)) calc(1.5 * var(--size)) 0 0;
   padding-block: 2rem 1rem;
   padding-inline: 2rem;
-  font-size: 3rem;
-  font-weight: 400;
+  font-size: 50px;
+  font-weight: 300;
   background-color: ${(props) => props.color};
 
   &[data-active="true"] {

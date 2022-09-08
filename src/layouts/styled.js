@@ -3,6 +3,14 @@ import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 
 export const AppLayout = styled.div`
+  --color-white: ${colors.white};
+  --color-black: ${colors.black};
+  --color-dark-gray: ${colors.darkGray};
+  --color-red: ${colors.red};
+  --color-pink: ${colors.pink};
+  --color-lime: ${colors.lime};
+  --color-orange: ${colors.orange};
+
   width: 100%;
   height: auto;
   ${(props) =>

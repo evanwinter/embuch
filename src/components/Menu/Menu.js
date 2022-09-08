@@ -51,7 +51,7 @@ const Menu = forwardRef(({ pathname }, ref) => {
             key="flower"
             whileTap={{ scale: 0.9, transition: { duration: 0.3 } }}
           >
-            <FlowerImage src="/flower.svg" alt="Flower" />
+            <FlowerImage src="/daisy.svg" alt="Flower" />
           </motion.div>
         </Link>
       </Sticker>

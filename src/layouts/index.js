@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { Menu, Splash } from "@components";
-import { AnimatePresence } from "framer-motion";
-import { FadeInOut } from "@components/FadeInOut";
 import { AppLayout, Sheet } from "./styled";
 import { useDimensions } from "@utils";
+import { PageTransition } from "../components/PageTransition";
 import "../styles/index.css";
+import "../styles/typography.css";
 
 const IDLE = "idle";
 const PINNED = "pinned";
@@ -33,9 +33,7 @@ const Layout = ({ children, location }) => {
         }}
       >
         <Menu pathname={pathname} ref={ref} />
-        <AnimatePresence exitBeforeEnter>
-          <FadeInOut key={pathname}>{children}</FadeInOut>
-        </AnimatePresence>
+        <PageTransition pathname={pathname}>{children}</PageTransition>
       </Sheet>
     </AppLayout>
   );

@@ -1,10 +1,17 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { WorkHeader } from "../../components/Work/WorkHeader";
+import { colors } from "@utils";
 
 export default function AudiblePage() {
   return (
     <div>
-      <StaticImage src="../../images/Audible.jpg" alt="Audible" />
+      <WorkHeader
+        title={"Audible"}
+        tags={[{ text: "product design", backgroundColor: colors.pink }]}
+        description={
+          "Rethinking Audible’s plans page and product description pages."
+        }
+      />
     </div>
   );
 }

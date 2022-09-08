@@ -4,13 +4,6 @@ module.exports = {
     siteUrl: `https://emilybuchberger.design`,
   },
   plugins: [
-    {
-      resolve: "gatsby-source-contentful",
-      options: {
-        accessToken: "UkJsyURAuZ2kNOeTrDBERokXDVsRQzNulcBFKOWvjLw",
-        spaceId: "xomu64mpvs1b",
-      },
-    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-layout",
@@ -19,7 +12,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "./static/flower.svg",
+        icon: "./static/daisy.svg",
       },
     },
     "gatsby-plugin-sharp",
@@ -43,6 +36,14 @@ module.exports = {
           "@styles": "/src/styles",
         },
         extensions: ["js", "svg"],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
       },
     },
   ],

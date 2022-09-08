@@ -4,8 +4,6 @@ import { Background, Text } from "./Splash.styled";
 import emilySvg from "../../images/emily.svg";
 import clouds from "../../images/clouds.mp4";
 
-console.log(clouds);
-
 const Splash = () => {
   return (
     <Background>

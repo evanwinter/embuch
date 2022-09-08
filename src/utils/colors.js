@@ -1,7 +1,8 @@
 const colors = {
   white: "#fefefe",
   transparent: "transparent",
-  black: "#121212",
+  black: "#201D1D",
+  darkGray: "#201D1D",
   red: "#FF2100",
   pink: "#F3ACCC",
   lime: "#C1FF31",
