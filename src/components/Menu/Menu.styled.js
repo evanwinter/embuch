@@ -6,7 +6,7 @@ import { MENU_HEIGHT } from "../../layouts/index.js";
 export const Navigation = styled.nav`
   display: flex;
   width: 100%;
-  margin-top: -${MENU_HEIGHT}px;
+  margin-top: -108px;
   a {
     text-decoration: none;
     color: currentColor;

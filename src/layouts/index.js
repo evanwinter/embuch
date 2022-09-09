@@ -8,9 +8,6 @@ import "../styles/typography.css";
 const IDLE = "idle";
 const PINNED = "pinned";
 
-export const MENU_HEIGHT = 108;
-export const MENU_TOP_GAP = 16;
-
 const Layout = ({ children, location }) => {
   const isPinned = location.pathname !== "/";
   return (
@@ -20,7 +17,7 @@ const Layout = ({ children, location }) => {
         variants={{
           [IDLE]: { translateY: 0 },
           [PINNED]: {
-            translateY: `calc(-100vh + ${MENU_HEIGHT}px + ${MENU_TOP_GAP}px)`,
+            translateY: `calc(-100vh + 108px + 16px)`,
           },
         }}
         initial={isPinned ? PINNED : IDLE}
