@@ -1,11 +1,14 @@
 import styled from "styled-components";
+import { Link } from "gatsby";
+import { colors } from "@styles";
 
 export const Separator = styled.div`
-  width: 100%;
+  width: 100vw;
   display: block;
   height: 3px;
   background-color: black;
   margin-block: 4rem;
+  margin-inline: -4rem;
 `;
 
 export const Title = styled.h1``;
@@ -21,9 +24,34 @@ export const Description = styled.p`
 `;
 
 export const Header = styled.header`
-  margin-block: 8rem;
+  margin-block: 4rem 8rem;
+  padding-inline: 4rem;
+`;
 
-  > * {
-    padding-inline: 4rem;
+export const LinkText = styled.span`
+  font-size: 1.25rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 0.6725rem;
+  transition: transform 0.2s ease-in-out;
+`;
+
+export const BackLink = styled(Link)`
+  display: block;
+  color: currentColor;
+  text-decoration: none;
+  margin-bottom: 4rem;
+  transition: color 0.2s ease;
+  svg {
+    fill: currentColor;
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    color: ${colors.lime};
+    span {
+      transform: translate(-2px, -2px);
+    }
   }
 `;

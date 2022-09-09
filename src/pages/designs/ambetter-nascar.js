@@ -6,12 +6,12 @@ export default function AmbetterPage({ location }) {
   return (
     <WorkLayout pathname={location.pathname}>
       <WorkHeader
-        title="Ambetter x Nascar"
+        title="Ambetter x NASCAR"
         tags={[
           { text: "design", backgroundColor: colors.pink },
           { text: "production", backgroundColor: colors.orange },
         ]}
-        description="Rethinking Audible's plans page and product description pages."
+        description=""
       />
     </WorkLayout>
   );

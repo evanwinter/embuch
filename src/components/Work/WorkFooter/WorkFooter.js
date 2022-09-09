@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
 import { WORK_PROJECTS } from "@data";
+import ArrowSmall from "@images/arrow-right.inline.svg"; // TODO small arrow
 import {
   Footer,
   BackLink,
@@ -8,7 +8,6 @@ import {
   LinkImage,
   LinkText,
 } from "./WorkFooter.styled";
-import ArrowSmall from "@images/arrow-right.inline.svg";
 
 export default function WorkFooter({ pathname }) {
   const current = WORK_PROJECTS.findIndex(({ slug }) =>
