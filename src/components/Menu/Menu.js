@@ -1,7 +1,6 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import { motion } from "framer-motion";
-import { useDimensions } from "@utils";
 import { colors } from "@styles";
 import {
   FlowerImage,
@@ -10,10 +9,9 @@ import {
   Sticker,
 } from "./Menu.styled";
 
-const Menu = forwardRef(({ pathname }, ref) => {
-  const { height } = useDimensions(ref, "menu");
+const Menu = ({ pathname }) => {
   return (
-    <Navigation ref={ref} height={height}>
+    <Navigation>
       <Link to="/designs" color="currentColor">
         <NavigationLink
           data-active={pathname.includes("/designs")}
@@ -58,6 +56,6 @@ const Menu = forwardRef(({ pathname }, ref) => {
       </Sticker>
     </Navigation>
   );
-});
+};
 
 export default Menu;

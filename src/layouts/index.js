@@ -1,7 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Menu, Splash } from "@components";
 import { AppLayout, Sheet } from "./styled";
-import { useDimensions } from "@utils";
 import { PageTransition } from "../components/PageTransition";
 import "../styles/index.css";
 import "../styles/typography.css";
@@ -9,19 +8,20 @@ import "../styles/typography.css";
 const IDLE = "idle";
 const PINNED = "pinned";
 
-const Layout = ({ children, location }) => {
-  const { pathname } = location;
-  const isPinned = pathname !== "/";
-  const ref = useRef(null);
-  const { height = 105 } = useDimensions(ref);
+export const MENU_HEIGHT = 108;
+export const MENU_TOP_GAP = 16;
 
+const Layout = ({ children, location }) => {
+  const isPinned = location.pathname !== "/";
   return (
     <AppLayout pinned={isPinned}>
       <Splash />
       <Sheet
         variants={{
           [IDLE]: { translateY: 0 },
-          [PINNED]: { translateY: `calc(-100vh + ${height + 16}px)` },
+          [PINNED]: {
+            translateY: `calc(-100vh + ${MENU_HEIGHT}px + ${MENU_TOP_GAP}px)`,
+          },
         }}
         initial={isPinned ? PINNED : IDLE}
         animate={isPinned ? PINNED : IDLE}
@@ -32,8 +32,8 @@ const Layout = ({ children, location }) => {
           duration: 0.3,
         }}
       >
-        <Menu pathname={pathname} ref={ref} />
-        <PageTransition pathname={pathname}>{children}</PageTransition>
+        <Menu pathname={location.pathname} />
+        <PageTransition pathname={location.pathname}>{children}</PageTransition>
       </Sheet>
     </AppLayout>
   );

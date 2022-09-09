@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { colors } from "@styles";
+import { MENU_HEIGHT } from "../../layouts/index.js";
 
 export const Navigation = styled.nav`
-  margin-top: ${({ height }) => `-${height}px`};
   display: flex;
   width: 100%;
+  margin-top: -${MENU_HEIGHT}px;
   a {
     text-decoration: none;
     color: currentColor;
@@ -24,8 +25,8 @@ export const NavigationLink = styled(motion.div)`
   background-color: ${(props) => props.color};
 
   &[data-active="true"] {
-    box-shadow: -2px 0px ${colors.lime}, 2px 0px ${colors.lime},
-      0px -2px ${colors.lime};
+    /* box-shadow: -2px 0px ${colors.lime}, 2px 0px ${colors.lime},
+      0px -2px ${colors.lime}; */
     z-index: 14;
     background-color: ${colors.white};
   }
