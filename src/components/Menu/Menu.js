@@ -1,7 +1,8 @@
 import React, { forwardRef } from "react";
 import { Link } from "gatsby";
 import { motion } from "framer-motion";
-import { colors, useDimensions } from "@utils";
+import { useDimensions } from "@utils";
+import { colors } from "@styles";
 import {
   FlowerImage,
   Navigation,

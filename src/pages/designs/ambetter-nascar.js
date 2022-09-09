@@ -1,24 +1,18 @@
 import React from "react";
-import { colors } from "@utils";
-import { WorkHeader } from "../../components/Work/WorkHeader";
+import { WorkHeader, WorkLayout } from "@components";
+import { colors } from "@styles";
 
-export default function AmbetterPage() {
+export default function AmbetterPage({ location }) {
   return (
-    <div>
+    <WorkLayout pathname={location.pathname}>
       <WorkHeader
-        title={"American Cancer Society Gala"}
+        title="Ambetter x Nascar"
         tags={[
           { text: "design", backgroundColor: colors.pink },
           { text: "production", backgroundColor: colors.orange },
-          { text: "illustration", backgroundColor: colors.red },
         ]}
-        subtitle={
-          "The American Cancer Society 6th Annual Champions of Hope Gala"
-        }
-        description={
-          "Designed the visual look and feel for the American Cancer Society's Gala."
-        }
+        description="Rethinking Audible's plans page and product description pages."
       />
-    </div>
+    </WorkLayout>
   );
 }

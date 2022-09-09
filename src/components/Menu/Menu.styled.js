@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { colors } from "@utils";
+import { colors } from "@styles";
 
 export const Navigation = styled.nav`
   margin-top: ${({ height }) => `-${height}px`};

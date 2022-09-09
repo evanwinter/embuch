@@ -34,6 +34,7 @@ module.exports = {
           "@images": "/src/images",
           "@utils": "/src/utils",
           "@styles": "/src/styles",
+          "@data": "/src/data",
         },
         extensions: ["js", "svg"],
       },

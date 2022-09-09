@@ -1,10 +1,10 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { WorkHeader, WorkLayout } from "@components";
 
-export default function UltaPage() {
+export default function UltaPage({ location }) {
   return (
-    <div>
-      <StaticImage src="../../images/ulta.jpg" alt="Ulta" />
-    </div>
+    <WorkLayout pathname={location.pathname}>
+      <WorkHeader title="Ulta" tags={[]} description="" />
+    </WorkLayout>
   );
 }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "@utils";
+import { colors } from "@styles";
 
 export const Tag = styled.div`
   display: inline-block;

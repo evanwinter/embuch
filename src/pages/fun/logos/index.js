@@ -82,7 +82,7 @@ const LogoCollection = ({ children }) => {
   );
 };
 
-export default function LogosPage() {
+export default function LogosPage({ location }) {
   return (
     <div>
       <h1>Logos</h1>

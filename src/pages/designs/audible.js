@@ -1,10 +1,10 @@
 import React from "react";
-import { WorkHeader } from "../../components/Work/WorkHeader";
-import { colors } from "@utils";
+import { WorkHeader, WorkLayout } from "@components";
+import { colors } from "@styles";
 
-export default function AudiblePage() {
+export default function AudiblePage({ location }) {
   return (
-    <div>
+    <WorkLayout pathname={location.pathname}>
       <WorkHeader
         title={"Audible"}
         tags={[{ text: "product design", backgroundColor: colors.pink }]}
@@ -12,6 +12,6 @@ export default function AudiblePage() {
           "Rethinking Audible’s plans page and product description pages."
         }
       />
-    </div>
+    </WorkLayout>
   );
 }

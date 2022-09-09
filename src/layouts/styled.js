@@ -1,4 +1,4 @@
-import { colors } from "@utils";
+import { colors } from "@styles";
 import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 

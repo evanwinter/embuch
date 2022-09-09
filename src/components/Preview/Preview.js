@@ -1,6 +1,7 @@
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { animateInY, colors, stagger } from "@utils";
+import { animateInY, stagger } from "@utils";
+import { colors } from "@styles";
 import { PreviewItem, PreviewLink } from "./Preview.styled";
 import { motion } from "framer-motion";
 

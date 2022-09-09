@@ -1,10 +1,14 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { WorkHeader, WorkLayout } from "@components";
 
-export default function MedicaidPage() {
+export default function MedicaidPage({ location }) {
   return (
-    <div>
-      <StaticImage src="../../images/medicaid.jpg" alt="Medicaid" />
-    </div>
+    <WorkLayout pathname={location.pathname}>
+      <WorkHeader
+        title="Medicaid"
+        tags={[]}
+        description="Rethinking Audible's plans page and product description pages."
+      />
+    </WorkLayout>
   );
 }

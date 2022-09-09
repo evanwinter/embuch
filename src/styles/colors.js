@@ -3,6 +3,7 @@ const colors = {
   transparent: "transparent",
   black: "#201D1D",
   darkGray: "#201D1D",
+  lightGray: "#F3F3F3",
   red: "#FF2100",
   pink: "#F3ACCC",
   lime: "#C1FF31",

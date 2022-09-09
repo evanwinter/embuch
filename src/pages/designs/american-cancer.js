@@ -1,12 +1,11 @@
 import React from "react";
-import { colors } from "@utils";
 import { StaticImage } from "gatsby-plugin-image";
-import { WorkHeader } from "../../components/Work/WorkHeader";
-import { WorkCarousel } from "../../components/Work/WorkCarousel";
+import { WorkLayout, WorkCarousel, WorkHeader } from "@components";
+import { colors } from "@styles";
 
-export default function AmericanCancerPage() {
+export default function AmericanCancerPage({ location }) {
   return (
-    <div>
+    <WorkLayout pathname={location.pathname}>
       <WorkHeader
         title="American Cancer Society Gala"
         subtitle="The American Cancer Society 6th Annual Champions of Hope Gala"
@@ -98,9 +97,10 @@ export default function AmericanCancerPage() {
         />
       </WorkCarousel>
 
-      <div>
-        <StaticImage src="../../images/ACS-Handout-Mockup.jpg" alt="TODO" />
-      </div>
+      <StaticImage
+        src="../../images/work/american-cancer/ACS-Handout-Mockup.jpg"
+        alt="TODO"
+      />
 
       <WorkCarousel tab="Impact" backgroundColor={colors.black}>
         <StaticImage
@@ -171,6 +171,6 @@ export default function AmericanCancerPage() {
           quality={100}
         />
       </WorkCarousel>
-    </div>
+    </WorkLayout>
   );
 }

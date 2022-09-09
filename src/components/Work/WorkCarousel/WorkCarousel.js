@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { colors } from "@utils";
+import { colors } from "@styles";
 import Arrow from "@images/arrow-right.inline.svg";
 import {
   Container,
@@ -14,12 +14,13 @@ const WorkCarousel = ({
   backgroundColor = colors.darkGray,
   color = colors.white,
   children,
-  style
+  style,
 }) => {
   const scrollContainer = useRef(null);
   const handleScroll = (direction) => {
+    if (!["next", "prev"].includes(direction)) return;
     scrollContainer.current.scrollBy({
-      left: direction === "next" ? 300 : direction === "prev" ? -300 : 0,
+      left: direction === "next" ? 300 : -300,
       behavior: "smooth",
     });
   };
