@@ -1,2 +1,2 @@
 export * from "./system";
-export { default as colors } from "./colors";
+export { colors, colorVariables } from "./colors";

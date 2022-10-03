@@ -1,68 +1,102 @@
-// Work
-import americanCancer from "@images/work/american-cancer/ACS-Cover-Image.jpg";
-import hlk from "@images/HLK.jpg";
-import audible from "@images/Audible.jpg";
-import ambetter from "@images/AMB.png";
-import medicaid from "@images/medicaid.jpg";
-import ulta from "@images/ulta.jpg";
-// Fun
-import sundayScaries from "@images/fun/sunday-scaries.jpg";
-import prettyGood from "@images/fun/prettygood.jpg";
-import kittySleep from "@images/fun/kittysleep.jpg";
-import customType from "@images/fun/customtype.jpg";
+import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 
 export const WORK_PROJECTS = [
   {
     title: "American Cancer",
-    coverImage: americanCancer,
     slug: "american-cancer",
+    coverImage: () => (
+      <StaticImage
+        src="../images/work/american-cancer/ACS-Cover-Image.jpg"
+        quality={100}
+        alt=""
+      />
+    ),
   },
   {
     title: "HLK",
-    coverImage: hlk,
     slug: "hlk",
+    coverImage: () => (
+      <StaticImage src="../images/HLK.jpg" quality={100} alt="HLK" />
+    ),
   },
   {
     title: "Audible",
-    coverImage: audible,
     slug: "audible",
+    coverImage: () => (
+      <StaticImage src="../images/Audible.jpg" quality={100} alt="Audible" />
+    ),
   },
   {
     title: "Ambetter X NASCAR",
-    coverImage: ambetter,
     slug: "ambetter-nascar",
+    coverImage: () => (
+      <StaticImage
+        src="../images/AMB.png"
+        quality={100}
+        alt="Ambetter X NASCAR"
+      />
+    ),
   },
   {
     title: "Medicaid",
-    coverImage: medicaid,
     slug: "medicaid",
+    coverImage: () => (
+      <StaticImage src="../images/medicaid.jpg" quality={100} alt="Medicaid" />
+    ),
   },
   {
     title: "Ulta",
-    coverImage: ulta,
     slug: "ulta",
+    coverImage: () => (
+      <StaticImage src="../images/ulta.jpg" quality={100} alt="Ulta" />
+    ),
   },
 ];
 
 export const FUN_PROJECTS = [
   {
     title: "T-Shirts",
-    coverImage: sundayScaries,
     slug: "t-shirts",
+    coverImage: () => (
+      <StaticImage
+        src="../images/fun/Page-Hero-Images.jpg"
+        quality={100}
+        alt="T-Shirts"
+      />
+    ),
   },
   {
     title: "Logos",
-    coverImage: prettyGood,
     slug: "logos",
+    coverImage: () => (
+      <StaticImage
+        src="../images/fun/prettygood.jpg"
+        quality={100}
+        alt="Logos"
+      />
+    ),
   },
   {
     title: "Portraits",
-    coverImage: kittySleep,
     slug: "portaits",
+    coverImage: () => (
+      <StaticImage
+        src="../images/fun/kittysleep.jpg"
+        quality={100}
+        alt="Portraits"
+      />
+    ),
   },
   {
     title: "Custom Type",
-    coverImage: customType,
     slug: "custom-type",
+    coverImage: () => (
+      <StaticImage
+        src="../images/fun/customtype.jpg"
+        quality={100}
+        alt="Custom Type"
+      />
+    ),
   },
 ];

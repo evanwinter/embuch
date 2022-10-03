@@ -1,6 +1,6 @@
 import React from "react";
 import { TagList } from "../../TagList";
-import Arrow from "@images/arrow-right.inline.svg"; // TODO small arrow
+import Arrow from "@images/arrow.inline.svg";
 import {
   Header,
   Description,
@@ -11,12 +11,12 @@ import {
   Title,
 } from "./WorkHeader.styled";
 
-const WorkHeader = ({ title, tags, subtitle, description }) => {
+const WorkHeader = ({ title, tags, subtitle, description, HeaderImage }) => {
   return (
     <Header>
       <BackLink to="/designs">
         <LinkText>
-          <Arrow />
+          <Arrow style={{ transform: "rotateX(180deg)" }} />
           back
         </LinkText>
       </BackLink>
@@ -25,6 +25,7 @@ const WorkHeader = ({ title, tags, subtitle, description }) => {
       <Separator />
       <Subtitle>{subtitle}</Subtitle>
       <Description>{description}</Description>
+      {HeaderImage && <HeaderImage />}
     </Header>
   );
 };

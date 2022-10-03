@@ -7,7 +7,7 @@ export const Separator = styled.div`
   display: block;
   height: 3px;
   background-color: black;
-  margin-block: 4rem;
+  margin-block: 1.5rem 4rem;
   margin-inline: -4rem;
 `;
 
@@ -15,7 +15,7 @@ export const Title = styled.h1``;
 export const Subtitle = styled.h3`
   font-size: 40px;
   font-weight: 800;
-  margin-block: 1rem;
+  margin-block: 1rem 0.25rem;
 `;
 export const Description = styled.p`
   font-size: 40px;
@@ -24,7 +24,7 @@ export const Description = styled.p`
 `;
 
 export const Header = styled.header`
-  margin-block: 4rem 8rem;
+  margin-block: 4rem;
   padding-inline: 4rem;
 `;
 

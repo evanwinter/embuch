@@ -7,6 +7,7 @@ export const Background = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   /* background-image: url("/clouds.png"); */
 
   svg {

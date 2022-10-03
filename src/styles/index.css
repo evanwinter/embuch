@@ -85,3 +85,29 @@ a.link::after {
   background-color: black;
   margin-block: 4rem;
 }
+
+.w-lg {
+  max-width: 968px;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.my-md {
+  margin-block: 2rem;
+}
+
+.my-lg {
+  margin-block: 3.125rem;
+}
+
+.h-lg {
+  max-height: 700px;
+  width: auto;
+}
+
+::selection {
+  background-color: #c1ff31;
+  color: #000;
+}

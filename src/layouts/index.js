@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Menu, Splash } from "@components";
 import { AppLayout, Sheet } from "./styled";
 import { PageTransition } from "../components/PageTransition";

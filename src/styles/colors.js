@@ -1,4 +1,6 @@
-const colors = {
+import { css } from "styled-components";
+
+export const colors = {
   white: "#fefefe",
   transparent: "transparent",
   black: "#201D1D",
@@ -10,4 +12,13 @@ const colors = {
   orange: "#FAB313",
 };
 
-export default colors;
+export const colorVariables = css`
+  --color-white: ${colors.white};
+  --color-black: ${colors.black};
+  --color-dark-gray: ${colors.darkGray};
+  --color-light-gray: ${colors.lightGray};
+  --color-red: ${colors.red};
+  --color-pink: ${colors.pink};
+  --color-lime: ${colors.lime};
+  --color-orange: ${colors.orange};
+`;

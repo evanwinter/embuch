@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { colors } from "@styles";
-import { MENU_HEIGHT } from "../../layouts/index.js";
 
 export const Navigation = styled.nav`
   display: flex;

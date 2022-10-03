@@ -1,5 +1,4 @@
 import React from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { animateInY, stagger } from "@utils";
 import { colors } from "@styles";
 import { PreviewItem, PreviewLink } from "./Preview.styled";
@@ -11,6 +10,8 @@ export default function Preview({ project, kind = "designs", index = 0 }) {
     index: index,
     amount: 0.1,
   });
+
+  const Image = project["coverImage"];
 
   return (
     <PreviewItem key={project.slug} {...animation}>
@@ -28,7 +29,7 @@ export default function Preview({ project, kind = "designs", index = 0 }) {
         }}
       >
         <PreviewLink to={`/${kind}/${project.slug}`}>
-          <img src={project.coverImage} alt={project.title} />
+          <Image />
         </PreviewLink>
       </motion.div>
     </PreviewItem>

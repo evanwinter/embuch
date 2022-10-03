@@ -1,9 +1,30 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import { WorkLayout, WorkCarousel, WorkHeader } from "@components";
 import { colors } from "@styles";
+import Row from "../../components/Row";
+import { useStaticQuery, graphql } from "gatsby";
 
 export default function AmericanCancerPage({ location }) {
+  // Get images from graphql layer
+  const images = useStaticQuery(graphql`
+    query {
+      allFile(filter: { relativeDirectory: { eq: "work/american-cancer" } }) {
+        nodes {
+          name
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  `).allFile.nodes.reduce((imageMap, image) => {
+    imageMap[image.name] = image.childImageSharp.gatsbyImageData;
+    return imageMap;
+  }, {});
+
+  console.log(images);
+
   return (
     <WorkLayout pathname={location.pathname}>
       <WorkHeader
@@ -16,93 +37,212 @@ export default function AmericanCancerPage({ location }) {
           { text: "illustration", backgroundColor: colors.red },
         ]}
       />
-      <WorkCarousel tab="Research" backgroundColor={colors.darkGray}>
+
+      <StaticImage
+        src="../../images/work/american-cancer/ACS-Header1.png"
+        alt="American Cancer Society Gala"
+        placeholder="blurred"
+        layout="fullWidth"
+        style={{ borderBlock: `3px solid ${colors.black}` }}
+      />
+
+      <WorkCarousel
+        backgroundColor={colors.darkGray}
+        headline="Handout outlining research efforts given out to attendees of the Gala."
+      >
         <StaticImage
           src="../../images/work/american-cancer/ACS_Gala_Handout-1.jpg"
           alt="ACS_Gala_Handout-1"
-          height={600}
+          height={571}
           quality={100}
         />
         <StaticImage
           src="../../images/work/american-cancer/ACS_Gala_Handout-2.jpg"
           alt="ACS_Gala_Handout-2"
-          height={600}
+          height={571}
           quality={100}
         />
         <StaticImage
           src="../../images/work/american-cancer/ACS_Gala_Handout-3.jpg"
           alt="ACS_Gala_Handout-3"
-          height={600}
+          height={571}
           quality={100}
         />
         <StaticImage
           src="../../images/work/american-cancer/ACS_Gala_Handout-4.jpg"
           alt="ACS_Gala_Handout-4"
-          height={600}
+          height={571}
           quality={100}
         />
         <StaticImage
           src="../../images/work/american-cancer/ACS_Gala_Handout-5.jpg"
           alt="ACS_Gala_Handout-5"
-          height={600}
+          height={571}
           quality={100}
         />
         <StaticImage
           src="../../images/work/american-cancer/ACS_Gala_Handout-6.jpg"
           alt="ACS_Gala_Handout-6"
-          height={600}
+          height={571}
           quality={100}
         />
         <StaticImage
           src="../../images/work/american-cancer/ACS_Gala_Handout-7.jpg"
           alt="ACS_Gala_Handout-7"
-          height={600}
+          height={571}
           quality={100}
         />
         <StaticImage
           src="../../images/work/american-cancer/ACS_Gala_Handout-8.jpg"
           alt="ACS_Gala_Handout-8"
-          height={600}
+          height={571}
           quality={100}
         />
         <StaticImage
           src="../../images/work/american-cancer/ACS_Gala_Handout-9.jpg"
           alt="ACS_Gala_Handout-9"
-          height={600}
+          height={571}
           quality={100}
         />
         <StaticImage
           src="../../images/work/american-cancer/ACS_Gala_Handout-10.jpg"
           alt="ACS_Gala_Handout-10"
-          height={600}
+          height={571}
           quality={100}
         />
         <StaticImage
           src="../../images/work/american-cancer/ACS_Gala_Handout-11.jpg"
           alt="ACS_Gala_Handout-11"
-          height={600}
+          height={571}
           quality={100}
         />
         <StaticImage
           src="../../images/work/american-cancer/ACS_Gala_Handout-12.jpg"
           alt="ACS_Gala_Handout-12"
-          height={600}
+          height={571}
           quality={100}
         />
         <StaticImage
           src="../../images/work/american-cancer/ACS_Gala_Handout-13.jpg"
           alt="ACS_Gala_Handout-13"
-          height={600}
+          height={571}
           quality={100}
         />
       </WorkCarousel>
 
-      <StaticImage
-        src="../../images/work/american-cancer/ACS-Handout-Mockup.jpg"
-        alt="TODO"
-      />
+      <WorkCarousel
+        backgroundColor={colors.darkGray}
+        headline="Handout outlining research efforts given out to attendees of the Gala."
+      >
+        <StaticImage
+          src="../../images/work/american-cancer/ACS_Gala_Handout-1.jpg"
+          alt="ACS_Gala_Handout-1"
+          height={571}
+          width={571}
+          quality={100}
+        />
+        <StaticImage
+          src="../../images/work/american-cancer/ACS_Gala_Handout-2.jpg"
+          alt="ACS_Gala_Handout-2"
+          height={571}
+          quality={100}
+        />
+        <StaticImage
+          src="../../images/work/american-cancer/ACS_Gala_Handout-3.jpg"
+          alt="ACS_Gala_Handout-3"
+          height={571}
+          quality={100}
+        />
+        <StaticImage
+          src="../../images/work/american-cancer/ACS_Gala_Handout-4.jpg"
+          alt="ACS_Gala_Handout-4"
+          height={571}
+          quality={100}
+        />
+        <StaticImage
+          src="../../images/work/american-cancer/ACS_Gala_Handout-5.jpg"
+          alt="ACS_Gala_Handout-5"
+          height={571}
+          quality={100}
+        />
+        <StaticImage
+          src="../../images/work/american-cancer/ACS_Gala_Handout-6.jpg"
+          alt="ACS_Gala_Handout-6"
+          height={571}
+          quality={100}
+        />
+        <StaticImage
+          src="../../images/work/american-cancer/ACS_Gala_Handout-7.jpg"
+          alt="ACS_Gala_Handout-7"
+          height={571}
+          quality={100}
+        />
+        <StaticImage
+          src="../../images/work/american-cancer/ACS_Gala_Handout-8.jpg"
+          alt="ACS_Gala_Handout-8"
+          height={571}
+          quality={100}
+        />
+        <StaticImage
+          src="../../images/work/american-cancer/ACS_Gala_Handout-9.jpg"
+          alt="ACS_Gala_Handout-9"
+          height={571}
+          quality={100}
+        />
+        <StaticImage
+          src="../../images/work/american-cancer/ACS_Gala_Handout-10.jpg"
+          alt="ACS_Gala_Handout-10"
+          height={571}
+          quality={100}
+        />
+        <StaticImage
+          src="../../images/work/american-cancer/ACS_Gala_Handout-11.jpg"
+          alt="ACS_Gala_Handout-11"
+          height={571}
+          quality={100}
+        />
+        <StaticImage
+          src="../../images/work/american-cancer/ACS_Gala_Handout-12.jpg"
+          alt="ACS_Gala_Handout-12"
+          height={571}
+          quality={100}
+        />
+        <StaticImage
+          src="../../images/work/american-cancer/ACS_Gala_Handout-13.jpg"
+          alt="ACS_Gala_Handout-13"
+          height={571}
+          quality={100}
+        />
+      </WorkCarousel>
 
-      <WorkCarousel tab="Impact" backgroundColor={colors.black}>
+      <div
+        style={{ display: "flex", justifyContent: "center" }}
+        className="my-lg"
+      >
+        <StaticImage
+          src="../../images/work/american-cancer/ACS-Handout-Mockup.jpg"
+          alt="TODO"
+          height={700}
+          quality={100}
+        />
+      </div>
+
+      <Row>
+        <StaticImage
+          src="../../images/work/american-cancer/ACS-Handout-Mockup.jpg"
+          alt="TODO"
+          height={700}
+          quality={100}
+        />
+        <StaticImage
+          src="../../images/work/american-cancer/ACS-Handout-Mockup.jpg"
+          alt="TODO"
+          height={700}
+          quality={100}
+        />
+      </Row>
+
+      <WorkCarousel backgroundColor={colors.black}>
         <StaticImage
           src="../../images/work/american-cancer/ACS-1.jpg"
           alt="ACS-1"

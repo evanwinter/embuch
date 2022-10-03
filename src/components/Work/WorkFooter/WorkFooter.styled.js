@@ -22,21 +22,17 @@ export const FooterLink = styled(Link)`
       transform: translate(2px, -2px);
     }
   }
-
-  svg {
-    fill: currentColor;
-  }
 `;
 
 export const NextLink = styled(FooterLink)`
   align-items: flex-start;
+  svg {
+    transform: rotate(180deg);
+  }
 `;
 
 export const BackLink = styled(FooterLink)`
   align-items: flex-end;
-  svg {
-    transform: rotate(180deg);
-  }
 
   &:hover {
     span {
