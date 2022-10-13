@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { motion } from "framer-motion";
-import { colors } from "@styles";
 
 export const PreviewLink = styled(Link)`
   display: block;
@@ -16,8 +14,4 @@ export const PreviewLink = styled(Link)`
   }
 `;
 
-export const PreviewItem = styled(motion.div)`
-  > div {
-    border: 2px solid ${colors.black};
-  }
-`;
+export const PreviewItem = styled.div``;

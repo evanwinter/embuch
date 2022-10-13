@@ -5,7 +5,10 @@ import { WORK_PROJECTS } from "@data";
 
 export default function DesignsPage({ location }) {
   return (
-    <Grid gridGap="2rem 3rem" padding="2rem 3rem">
+    <Grid
+      gridGap="var(--spacing-xl) var(--spacing-lg)"
+      padding="var(--spacing-xl)"
+    >
       {WORK_PROJECTS.map((project, index) => (
         <Preview
           key={project.title}

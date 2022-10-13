@@ -1,16 +1,8 @@
-import { colors, colorVariables } from "@styles";
+import { App } from "@styles";
 import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
-import pointer from "../images/pointer.svg";
 
-export const AppLayout = styled.div`
-  ${colorVariables};
-  cursor: url(${pointer}), auto !important;
-
-  *:hover {
-    cursor: url(${pointer}), auto !important;
-  }
-
+export const AppLayout = styled(App)`
   width: 100%;
   height: auto;
   ${(props) =>

@@ -6,25 +6,25 @@ export const WORK_PROJECTS = [
     title: "American Cancer",
     slug: "american-cancer",
     coverImage: () => (
-      <StaticImage
-        src="../images/work/american-cancer/ACS-Cover-Image.jpg"
-        quality={100}
-        alt=""
-      />
+      <StaticImage src="../images/ACS-Cover.jpg" quality={100} alt="" />
     ),
   },
   {
     title: "HLK",
     slug: "hlk",
     coverImage: () => (
-      <StaticImage src="../images/HLK.jpg" quality={100} alt="HLK" />
+      <StaticImage src="../images/HLK-Cover.jpg" quality={100} alt="HLK" />
     ),
   },
   {
     title: "Audible",
     slug: "audible",
     coverImage: () => (
-      <StaticImage src="../images/Audible.jpg" quality={100} alt="Audible" />
+      <StaticImage
+        src="../images/Audible-Cover.jpg"
+        quality={100}
+        alt="Audible"
+      />
     ),
   },
   {
@@ -32,7 +32,7 @@ export const WORK_PROJECTS = [
     slug: "ambetter-nascar",
     coverImage: () => (
       <StaticImage
-        src="../images/AMB.png"
+        src="../images/AMB-Cover.jpg"
         quality={100}
         alt="Ambetter X NASCAR"
       />
@@ -42,14 +42,11 @@ export const WORK_PROJECTS = [
     title: "Medicaid",
     slug: "medicaid",
     coverImage: () => (
-      <StaticImage src="../images/medicaid.jpg" quality={100} alt="Medicaid" />
-    ),
-  },
-  {
-    title: "Ulta",
-    slug: "ulta",
-    coverImage: () => (
-      <StaticImage src="../images/ulta.jpg" quality={100} alt="Ulta" />
+      <StaticImage
+        src="../images/Medicaid-Cover.jpg"
+        quality={100}
+        alt="Medicaid"
+      />
     ),
   },
 ];
@@ -60,7 +57,7 @@ export const FUN_PROJECTS = [
     slug: "t-shirts",
     coverImage: () => (
       <StaticImage
-        src="../images/fun/Page-Hero-Images.jpg"
+        src="../images/T-Shirts-Cover.jpg"
         quality={100}
         alt="T-Shirts"
       />
@@ -70,11 +67,7 @@ export const FUN_PROJECTS = [
     title: "Logos",
     slug: "logos",
     coverImage: () => (
-      <StaticImage
-        src="../images/fun/prettygood.jpg"
-        quality={100}
-        alt="Logos"
-      />
+      <StaticImage src="../images/Logos-Cover.jpg" quality={100} alt="Logos" />
     ),
   },
   {
@@ -82,7 +75,7 @@ export const FUN_PROJECTS = [
     slug: "portaits",
     coverImage: () => (
       <StaticImage
-        src="../images/fun/kittysleep.jpg"
+        src="../images/Portraits-Cover.jpg"
         quality={100}
         alt="Portraits"
       />
@@ -93,7 +86,7 @@ export const FUN_PROJECTS = [
     slug: "custom-type",
     coverImage: () => (
       <StaticImage
-        src="../images/fun/customtype.jpg"
+        src="../images/Custom-Type-Cover.jpg"
         quality={100}
         alt="Custom Type"
       />

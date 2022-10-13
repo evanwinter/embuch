@@ -1,17 +1,17 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-export function PageTransition({
+const PageTransition = ({
   children,
   pathname,
-  duration = 0.15,
-  easing = "easeInOut",
-}) {
+  duration = 0.2,
+  ease = "easeInOut",
+}) => {
   return (
     <AnimatePresence exitBeforeEnter>
       <motion.div
         key={pathname}
-        transition={{ duration, easing }}
+        transition={{ duration, ease }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -20,4 +20,6 @@ export function PageTransition({
       </motion.div>
     </AnimatePresence>
   );
-}
+};
+
+export default PageTransition;

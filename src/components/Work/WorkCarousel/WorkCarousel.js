@@ -1,6 +1,10 @@
 import React, { useRef } from "react";
-import { colors } from "@styles";
+import PropTypes from "prop-types";
+
 import Arrow from "@images/arrow.inline.svg";
+import { colors } from "@styles";
+import { useCursorType } from "@utils";
+
 import {
   Container,
   InnerContainer,
@@ -13,7 +17,6 @@ const WorkCarousel = ({
   color = colors.white,
   children,
   style,
-  headline,
 }) => {
   const scrollContainer = useRef(null);
 
@@ -24,32 +27,28 @@ const WorkCarousel = ({
     });
   };
 
+  const handleCursor = useCursorType("arrow");
+
   return (
-    <Container style={{ backgroundColor, color, ...style }}>
-      {headline && (
-        <h2
-          style={{
-            color,
-            fontSize: "30px",
-            fontWeight: 700,
-            paddingTop: "3rem",
-            paddingLeft: "77px",
-          }}
-        >
-          {headline}
-        </h2>
-      )}
+    <Container style={{ backgroundColor, color, ...style }} {...handleCursor}>
       <InnerContainer ref={scrollContainer}>{children}</InnerContainer>
       <Navigation>
         <NavigationButton onClick={() => handleScroll("prev")} color={color}>
-          <Arrow style={{ color }} />
+          <Arrow style={{ fill: color }} />
         </NavigationButton>
         <NavigationButton onClick={() => handleScroll("next")} color={color}>
-          <Arrow style={{ color }} />
+          <Arrow style={{ fill: color }} />
         </NavigationButton>
       </Navigation>
     </Container>
   );
+};
+
+WorkCarousel.propTypes = {
+  backgroundColor: PropTypes.string,
+  color: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  style: PropTypes.object,
 };
 
 export default WorkCarousel;

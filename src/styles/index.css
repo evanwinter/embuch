@@ -46,6 +46,13 @@ body {
     sans-serif;
 }
 
+/* * {
+  cursor: none !important;
+}
+*:hover {
+  cursor: none !important;
+} */
+
 body {
   margin: 0;
   padding: 0;
@@ -53,7 +60,7 @@ body {
   min-height: 100vh;
 }
 
-@media (max-width: 32rem) {
+@media (max-width: 48rem) {
   html,
   body {
     font-size: 12px;
@@ -86,7 +93,7 @@ a.link::after {
   margin-block: 4rem;
 }
 
-.w-lg {
+/* .w-lg {
   max-width: 968px;
 }
 
@@ -105,9 +112,21 @@ a.link::after {
 .h-lg {
   max-height: 700px;
   width: auto;
-}
+} */
 
 ::selection {
   background-color: #c1ff31;
   color: #000;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.cursorText {
 }

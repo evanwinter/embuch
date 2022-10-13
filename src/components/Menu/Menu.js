@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 import { motion } from "framer-motion";
+
 import { colors } from "@styles";
+import { useCursorType } from "@utils";
+
 import {
   FlowerImage,
   Navigation,
@@ -10,12 +13,14 @@ import {
 } from "./Menu.styled";
 
 const Menu = ({ pathname }) => {
+  const handleCursor = useCursorType("clickable");
   return (
     <Navigation>
       <Link to="/designs" color="currentColor">
         <NavigationLink
           data-active={pathname.includes("/designs")}
           color={colors.pink}
+          {...handleCursor}
         >
           Work
         </NavigationLink>
@@ -24,6 +29,7 @@ const Menu = ({ pathname }) => {
         <NavigationLink
           data-active={pathname.includes("/fun")}
           color={colors.red}
+          {...handleCursor}
         >
           Fun
         </NavigationLink>
@@ -32,6 +38,7 @@ const Menu = ({ pathname }) => {
         <NavigationLink
           data-active={pathname.includes("/about")}
           color={colors.orange}
+          {...handleCursor}
         >
           Me
         </NavigationLink>
@@ -49,6 +56,7 @@ const Menu = ({ pathname }) => {
           <motion.div
             key="flower"
             whileTap={{ scale: 0.9, transition: { duration: 0.3 } }}
+            {...handleCursor}
           >
             <FlowerImage src="/daisy.svg" alt="Flower" />
           </motion.div>

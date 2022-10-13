@@ -1,17 +1,34 @@
-import React, { useEffect } from "react";
-import { Menu, Splash } from "@components";
+import React, { useContext, useRef } from "react";
+import { motion } from "framer-motion";
+import { Menu, Transition, Splash } from "@components";
+import { useCustomCursor } from "@utils";
 import { AppLayout, Sheet } from "./styled";
-import { PageTransition } from "../components/PageTransition";
+import { CursorProvider, CursorContext } from "@context";
 import "../styles/index.css";
 import "../styles/typography.css";
 
 const IDLE = "idle";
 const PINNED = "pinned";
 
+const WrappedLayout = ({ children, location }) => {
+  return (
+    <CursorProvider>
+      <Layout children={children} location={location} />
+    </CursorProvider>
+  );
+};
+
 const Layout = ({ children, location }) => {
   const isPinned = location.pathname !== "/";
+
+  // Cursor stuff
+  const { cursorType } = useContext(CursorContext);
+  const cursorRef = useRef(null);
+  // const { cursorProps } = useCustomCursor(cursorRef, cursorType);
+
   return (
-    <AppLayout pinned={isPinned}>
+    <AppLayout pinned={isPinned} ref={cursorRef}>
+      {/* <motion.div className="cursor" {...cursorProps}></motion.div> */}
       <Splash />
       <Sheet
         variants={{
@@ -30,10 +47,10 @@ const Layout = ({ children, location }) => {
         }}
       >
         <Menu pathname={location.pathname} />
-        <PageTransition pathname={location.pathname}>{children}</PageTransition>
+        <Transition pathname={location.pathname}>{children}</Transition>
       </Sheet>
     </AppLayout>
   );
 };
 
-export default Layout;
+export default WrappedLayout;

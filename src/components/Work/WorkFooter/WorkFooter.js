@@ -13,9 +13,6 @@ export default function WorkFooter({ pathname }) {
   const current = WORK_PROJECTS.findIndex(({ slug }) =>
     pathname.includes(slug)
   );
-
-  console.log(WORK_PROJECTS[0].coverImage());
-
   const nextProject = WORK_PROJECTS[current + 1] || WORK_PROJECTS[0];
   const previousProject =
     WORK_PROJECTS[current - 1] || WORK_PROJECTS[WORK_PROJECTS.length - 1];
@@ -27,7 +24,7 @@ export default function WorkFooter({ pathname }) {
             <Arrow />
             back
           </LinkText>
-          <LinkImage src={previousProject.coverImage} />
+          <previousProject.coverImage />
         </BackLink>
       )}
       {nextProject && (
@@ -36,7 +33,7 @@ export default function WorkFooter({ pathname }) {
             next
             <Arrow />
           </LinkText>
-          <LinkImage src={nextProject.coverImage} />
+          <nextProject.coverImage />
         </NextLink>
       )}
     </Footer>

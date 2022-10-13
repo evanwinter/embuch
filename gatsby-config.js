@@ -31,10 +31,11 @@ module.exports = {
       options: {
         alias: {
           "@components": "/src/components",
-          "@images": "/src/images",
-          "@utils": "/src/utils",
-          "@styles": "/src/styles",
+          "@context": "/src/context",
           "@data": "/src/data",
+          "@images": "/src/images",
+          "@styles": "/src/styles",
+          "@utils": "/src/utils",
         },
         extensions: ["js", "svg"],
       },
