@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
-import { Reveal, WorkLayout, WorkCarousel, WorkHeader } from "@components";
+import { Reveal, Row, WorkLayout, WorkCarousel, WorkHeader } from "@components";
 import { colors, Section } from "@styles";
 
 const AmericanCancerPage = ({ location }) => {
@@ -24,8 +24,8 @@ const AmericanCancerPage = ({ location }) => {
   }, {});
 
   const BannerImage = () => (
-    <GatsbyImage
-      image={images["ACS-Header1"]}
+    <StaticImage
+      src="../../images/work/american-cancer/ACS-Header1.png"
       alt="American Cancer Society Gala"
       style={{ borderBlock: `2px solid ${colors.black}` }}
     />
@@ -55,7 +55,7 @@ const AmericanCancerPage = ({ location }) => {
         </Reveal>
       </Section>
 
-      <Reveal effect="fadeIn" amount={0.25}>
+      <Reveal effect="fadeIn">
         <WorkCarousel backgroundColor={colors.darkGray}>
           <StaticImage
             src="../../images/work/american-cancer/ACS_Gala_Handout-1.jpg"
@@ -126,13 +126,82 @@ const AmericanCancerPage = ({ location }) => {
       </Reveal>
 
       <Section>
-        <Reveal effect="fadeInUp" amount={0.75}>
-          <GatsbyImage
-            image={images["ACS-Handout-Mockup-1"]}
+        <Reveal effect="fadeInUp">
+          <StaticImage
+            src="../../images/work/american-cancer/ACS-Handout-Mockup-1.jpg"
             alt="TODO"
             objectFit="contain"
           />
         </Reveal>
+      </Section>
+
+      <Section
+        style={{
+          backgroundColor: "var(--color-black)",
+          color: "var(--color-white)",
+        }}
+      >
+        <Row rowStyles={{ justifyContent: "space-between" }}>
+          <Reveal
+            effect="fadeInUp"
+            amount={0.25}
+            style={{
+              display: "flex",
+              // justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <StaticImage
+              src="../../images/work/american-cancer/ACS-5.jpg"
+              alt="TODO"
+              height={700}
+              quality={100}
+            />
+          </Reveal>
+          <Reveal effect="fadeInUp" amount={0.25} delay={0.5}>
+            <p
+              className="p1"
+              style={{
+                fontWeight: "lighter",
+              }}
+            >
+              The American Cancer Society asked us to create an immersive
+              experience for those attending the Gala. The visitors were able to
+              walk through an exhibit that highlighted their research efforts.
+              Visitors also connected to personal stories of those affected by
+              cancer through quotes and custom illustrations.
+            </p>
+          </Reveal>
+        </Row>
+        <Row
+          rowStyles={{
+            gap: "var(--spacing-xl)",
+            marginTop: "var(--spacing-xl)",
+            justifyContent: "space-between",
+          }}
+        >
+          <Reveal effect="fadeInUp" amount={0.25}>
+            <StaticImage
+              src="../../images/work/american-cancer/Research-Highlights-1.jpg"
+              quality={100}
+              height={571}
+            />
+          </Reveal>
+          <Reveal effect="fadeInUp" amount={0.25} delay={0.15}>
+            <StaticImage
+              src="../../images/work/american-cancer/Research-Highlights-2.jpg"
+              quality={100}
+              height={571}
+            />
+          </Reveal>
+          <Reveal effect="fadeInUp" amount={0.25} delay={0.3}>
+            <StaticImage
+              src="../../images/work/american-cancer/Research-Highlights-3.jpg"
+              quality={100}
+              height={571}
+            />
+          </Reveal>
+        </Row>
       </Section>
 
       <Reveal effect="fadeIn" amount={0.25}>

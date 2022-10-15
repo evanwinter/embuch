@@ -16,6 +16,7 @@ export const FooterLink = styled(Link)`
   text-decoration: none;
   color: currentColor;
   transition: color 0.2s ease;
+  max-width: 300px;
   &:hover {
     color: ${colors.lime};
     span {
