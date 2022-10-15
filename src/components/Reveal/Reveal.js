@@ -26,6 +26,7 @@ const Reveal = ({
       type: "spring",
       damping: 35,
       delay,
+      opacity: { ease: "easeIn", duration: 0.75 },
     }}
     {...restProps}
   >
