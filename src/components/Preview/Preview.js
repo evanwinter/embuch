@@ -11,7 +11,7 @@ export default function Preview({ project, kind = "designs", index = 0 }) {
   const Image = project["coverImage"];
   const handleCursor = useCursorType("clickable");
   return (
-    <Reveal effect="fadeInUp">
+    <Reveal effect="fadeInUp" delay={index * 0.1}>
       <PreviewItem key={project.slug}>
         <h3 className="h2">{project.title}</h3>
         <motion.div

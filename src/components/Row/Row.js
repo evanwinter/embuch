@@ -1,19 +1,13 @@
 import React from "react";
+import { RowContainer, RowItem } from "./Row.styled";
 
 const Row = ({ children, rowStyles, itemStyles }) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        ...rowStyles,
-      }}
-    >
+    <RowContainer style={{ ...rowStyles }}>
       {children.map((child) => (
-        <div style={{ flex: 1, ...itemStyles }}>{child}</div>
+        <RowItem style={{ ...itemStyles }}>{child}</RowItem>
       ))}
-    </div>
+    </RowContainer>
   );
 };
 

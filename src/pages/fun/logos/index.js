@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import { AnimatePresence } from "framer-motion";
-import audible from "../../../images/Audible.jpg";
-import hlk from "../../../images/HLK.jpg";
-import medicaid from "../../../images/medicaid.jpg";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+
+import audible from "../../../images/work/audible/Audible-Cover.jpg";
+import hlk from "../../../images/work/hlk/HLK-Cover.jpg";
+import medicaid from "../../../images/work/medicaid/Medicaid-Cover.jpg";
 
 const variants = {
   enter: (direction) => {
@@ -50,6 +49,7 @@ const LogoCollection = ({ children }) => {
       >
         {images.map((_, i) => (
           <button
+            key={i}
             style={{
               appearance: "none",
               border: "none",
@@ -59,7 +59,6 @@ const LogoCollection = ({ children }) => {
               backgroundColor: index === i ? "gray" : "lightgray",
               cursor: "pointer",
             }}
-            key={i}
             onClick={() =>
               setIndex(([prev]) => [i, prev < i ? "next" : "prev"])
             }
@@ -87,17 +86,7 @@ export default function LogosPage({ location }) {
     <div>
       <h1>Logos</h1>
 
-      <LogoCollection>
-        {/* <div style={{ minWidth: 625 }}>
-          <StaticImage src="../../../images/Audible.jpg" alt="" width={625} />
-        </div>
-        <div style={{ minWidth: 625 }}>
-          <StaticImage src="../../../images/Audible.jpg" alt="" width={625} />
-        </div>
-        <div style={{ minWidth: 625 }}>
-          <StaticImage src="../../../images/Audible.jpg" alt="" width={625} />
-        </div> */}
-      </LogoCollection>
+      <LogoCollection></LogoCollection>
     </div>
   );
 }

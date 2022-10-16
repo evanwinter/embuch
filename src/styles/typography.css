@@ -49,10 +49,11 @@ h6,
   font-size: 1.5rem;
   line-height: 1.3;
   margin-block: 1em;
+  font-weight: lighter;
 }
 
 /* Paragraph */
 .p2 {
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: lighter;
 }

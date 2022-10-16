@@ -1,14 +1,12 @@
 import React from "react";
-import { Preview } from "@components";
-import { Grid } from "@styles";
-import { WORK_PROJECTS } from "@data";
 
-export default function DesignsPage({ location }) {
+import { Preview } from "@components";
+import { WORK_PROJECTS } from "@data";
+import { Grid } from "@styles";
+
+export default function DesignsPage() {
   return (
-    <Grid
-      gridGap="var(--spacing-xl) var(--spacing-lg)"
-      padding="var(--spacing-xl)"
-    >
+    <Grid gridGap="var(--spacing-xl)" padding="var(--spacing-xl)">
       {WORK_PROJECTS.map((project, index) => (
         <Preview
           key={project.title}

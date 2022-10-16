@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { animateInY, stagger } from "@utils";
-import polaroidGif from "../images/polaroids.gif";
+import polaroidGif from "../images/about/polaroids.gif";
 
 const AboutPage = () => {
   return (

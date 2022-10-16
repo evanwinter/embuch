@@ -48,7 +48,7 @@ export const InnerContainer = styled.div`
   overflow-x: scroll;
 
   display: flex;
-  gap: 77px;
+  gap: var(--spacing-xl);
 
   /* display: grid;
   grid-auto-columns: minmax(25rem, auto);

@@ -10,6 +10,7 @@ export const colors = {
   pink: "#F3ACCC",
   lime: "#C1FF31",
   orange: "#FAB313",
+  pureBlack: "#000000",
 };
 
 export const colorsCssVariables = css`

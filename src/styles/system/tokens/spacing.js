@@ -1,20 +1,22 @@
 import { css } from "styled-components";
 
 export const spacing = {
+  none: "0",
   xs: "0.25rem",
   sm: "0.5rem",
   md: "1rem",
   lg: "2rem",
   xl: "4rem",
   xxl: "8rem",
+  auto: "auto",
 };
 
 export const spacingMobile = {
   xs: "0.25rem",
   sm: "0.5rem",
   md: "1rem",
-  lg: "1.5rem",
-  xl: "3rem",
+  lg: "1.25rem",
+  xl: "2rem",
   xxl: "4rem",
 };
 
@@ -35,14 +37,6 @@ export const spacingCssVariables = css`
 `;
 
 export const spacingClasses = css`
-  .mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .my-auto {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
   ${Object.keys(spacing).map(
     (size) => `
       .m-${size} {

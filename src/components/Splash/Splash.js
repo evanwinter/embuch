@@ -26,7 +26,12 @@ const Splash = () => {
         <source src={clouds} />
       </video>
       <Link to="/" ref={logoRef}>
-        <img style={{ marginBottom: '15vh' }} loading="priority" src={emilySvg} />
+        <img
+          style={{ marginBottom: "15vh" }}
+          loading="priority"
+          src={emilySvg}
+          alt=""
+        />
       </Link>
     </Background>
   );

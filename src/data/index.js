@@ -6,14 +6,22 @@ export const WORK_PROJECTS = [
     title: "American Cancer",
     slug: "american-cancer",
     coverImage: () => (
-      <StaticImage src="../images/ACS-Cover.jpg" quality={100} alt="" />
+      <StaticImage
+        src="../images/work/american-cancer/ACS-Cover.jpg"
+        quality={100}
+        alt=""
+      />
     ),
   },
   {
     title: "HLK",
     slug: "hlk",
     coverImage: () => (
-      <StaticImage src="../images/HLK-Cover.jpg" quality={100} alt="HLK" />
+      <StaticImage
+        src="../images/work/hlk/HLK-Cover.jpg"
+        quality={100}
+        alt="HLK"
+      />
     ),
   },
   {
@@ -21,7 +29,7 @@ export const WORK_PROJECTS = [
     slug: "audible",
     coverImage: () => (
       <StaticImage
-        src="../images/Audible-Cover.jpg"
+        src="../images/work/audible/Audible-Cover.jpg"
         quality={100}
         alt="Audible"
       />
@@ -32,7 +40,7 @@ export const WORK_PROJECTS = [
     slug: "ambetter-nascar",
     coverImage: () => (
       <StaticImage
-        src="../images/AMB-Cover.jpg"
+        src="../images/work/ambetter-nascar/AMB-Cover.jpg"
         quality={100}
         alt="Ambetter X NASCAR"
       />
@@ -43,7 +51,7 @@ export const WORK_PROJECTS = [
     slug: "medicaid",
     coverImage: () => (
       <StaticImage
-        src="../images/Medicaid-Cover.jpg"
+        src="../images/work/medicaid/Medicaid-Cover.jpg"
         quality={100}
         alt="Medicaid"
       />

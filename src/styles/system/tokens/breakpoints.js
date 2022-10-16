@@ -13,7 +13,8 @@ export const breakpointsClasses = css`
   ${Object.keys(breakpoints).map(
     (breakpoint) => `
       .w-${breakpoint} {
-        width: ${breakpoints[breakpoint]};
+        width: auto;
+        max-width: ${breakpoints[breakpoint]};
       }
     `
   )}

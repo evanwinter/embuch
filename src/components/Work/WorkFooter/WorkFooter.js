@@ -5,7 +5,7 @@ import {
   Footer,
   BackLink,
   NextLink,
-  LinkImage,
+  // LinkImage,
   LinkText,
 } from "./WorkFooter.styled";
 
