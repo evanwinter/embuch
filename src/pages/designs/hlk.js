@@ -131,12 +131,37 @@ export default function HlkPage({ location }) {
       >
         <StaticImage
           {...imageDefaults}
-          src={`${imagePath}/Read-1.jpg`}
+          src={`${imagePath}/Read-A-Book-Day-HLK-1.jpg`}
           height={571}
         />
         <StaticImage
           {...imageDefaults}
-          src={`${imagePath}/Read-2.jpg`}
+          src={`${imagePath}/Read-A-Book-Day-HLK-2.jpg`}
+          height={571}
+        />
+        <StaticImage
+          {...imageDefaults}
+          src={`${imagePath}/Read-A-Book-Day-HLK-3.jpg`}
+          height={571}
+        />
+        <StaticImage
+          {...imageDefaults}
+          src={`${imagePath}/Read-A-Book-Day-HLK-4.jpg`}
+          height={571}
+        />
+        <StaticImage
+          {...imageDefaults}
+          src={`${imagePath}/Read-A-Book-Day-HLK-5.jpg`}
+          height={571}
+        />
+        <StaticImage
+          {...imageDefaults}
+          src={`${imagePath}/Read-A-Book-Day-HLK-6.jpg`}
+          height={571}
+        />
+        <StaticImage
+          {...imageDefaults}
+          src={`${imagePath}/Read-A-Book-Day-HLK-7.jpg`}
           height={571}
         />
       </WorkCarousel>
