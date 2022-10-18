@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import PropTypes from "prop-types";
 
+import { Reveal } from "@components";
 import Arrow from "@images/arrow.inline.svg";
 import { colors } from "@styles";
 import { useCursorType } from "@utils";
@@ -31,7 +32,9 @@ const WorkCarousel = ({
 
   return (
     <Container style={{ backgroundColor, color, ...style }} {...handleCursor}>
-      <InnerContainer ref={scrollContainer}>{children}</InnerContainer>
+      <Reveal effect="fadeInRight" distance="xxl">
+        <InnerContainer ref={scrollContainer}>{children}</InnerContainer>
+      </Reveal>
       <Navigation>
         <NavigationButton onClick={() => handleScroll("prev")} color={color}>
           <Arrow style={{ fill: color }} />

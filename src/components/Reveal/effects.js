@@ -1,32 +1,32 @@
-const fadeIn = {
+const fadeIn = () => ({
   initial: { opacity: 0 },
   whileInView: { opacity: 1 },
-};
+});
 
-const fadeInUp = {
-  initial: { opacity: 0, translateY: "var(--spacing-xl)" },
+const fadeInUp = ({ distance = "xl" }) => ({
+  initial: { opacity: 0, translateY: `var(--spacing-${distance})` },
   whileInView: { opacity: 1, translateY: 0 },
-};
+});
 
-const fadeInDown = {
-  initial: { opacity: 0, translateY: "-var(--spacing-xl)" },
+const fadeInDown = ({ distance = "xl" }) => ({
+  initial: { opacity: 0, translateY: `-var(--spacing-${distance})` },
   whileInView: { opacity: 1, translateY: 0 },
-};
+});
 
-const fadeInLeft = {
-  initial: { opacity: 0, translateX: "-var(--spacing-xl)" },
+const fadeInLeft = ({ distance = "xl" }) => ({
+  initial: { opacity: 0, translateX: `calc(-1 * var(--spacing-${distance}))` },
   whileInView: { opacity: 1, translateX: 0 },
-};
+});
 
-const fadeInRight = {
-  initial: { opacity: 0, translateX: "var(--spacing-xl)" },
+const fadeInRight = ({ distance = "xl" }) => ({
+  initial: { opacity: 0, translateX: `var(--spacing-${distance})` },
   whileInView: { opacity: 1, translateX: 0 },
-};
+});
 
-const zoomIn = {
+const zoomIn = () => ({
   initial: { scale: 0.9 },
   whileInView: { scale: 1 },
-};
+});
 
 export const effects = {
   fadeIn,

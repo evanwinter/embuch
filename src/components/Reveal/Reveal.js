@@ -18,22 +18,26 @@ const Reveal = ({
   once = true,
   delay = 0,
   amount = "some",
+  distance = "xl",
   ...restProps
-}) => (
-  <motion.div
-    viewport={{ once, amount }}
-    {...effects[effect]}
-    transition={{
-      type: "spring",
-      damping: 35,
-      delay,
-      // opacity: { ease: "easeIn", duration: 0.75 },
-    }}
-    {...restProps}
-  >
-    {children}
-  </motion.div>
-);
+}) => {
+  const variants = effects[effect]({ distance });
+  return (
+    <motion.div
+      viewport={{ once, amount }}
+      {...variants}
+      transition={{
+        type: "spring",
+        damping: 35,
+        delay,
+        staggerChildren: 0.1,
+      }}
+      {...restProps}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 Reveal.propTypes = {
   children: PropTypes.node.isRequired,

@@ -28,7 +28,7 @@ const AmericanCancerPage = ({ location }) => {
         ]}
       />
 
-      <Reveal effect="fadeInUp">
+      <Reveal effect="fadeInUp" delay={0.6}>
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/ACS-Header1.png`}
@@ -39,7 +39,7 @@ const AmericanCancerPage = ({ location }) => {
       </Reveal>
 
       <Section>
-        <Reveal effect="fadeIn">
+        <Reveal effect="fadeInUp" distance="md">
           <p className="h2 my-none mx-auto">
             This booklet was created to highlight the research done by the
             American Cancer Society.
