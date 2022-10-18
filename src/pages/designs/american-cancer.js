@@ -28,7 +28,7 @@ const AmericanCancerPage = ({ location }) => {
         ]}
       />
 
-      <Reveal effect="fadeInUp" delay={0.6}>
+      <Reveal effect="fadeInUp" delay={0.3}>
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/ACS-Header1.png`}
@@ -277,6 +277,33 @@ const AmericanCancerPage = ({ location }) => {
           height={700}
         />
       </WorkCarousel>
+
+      <Section>
+        <div
+          style={{
+            position: "relative",
+            overflow: "hidden",
+            width: "100%",
+            paddingTop: "56.25%",
+          }}
+        >
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/1vTJ3nX1Bxg?start=8"
+            title="YouTube video player"
+            framerBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{
+              position: "absolute",
+              inset: 0,
+              width: "100%",
+              height: "100%",
+            }}
+          ></iframe>
+        </div>
+      </Section>
     </WorkLayout>
   );
 };

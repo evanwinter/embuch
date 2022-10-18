@@ -26,7 +26,7 @@ export default function HlkPage({ location }) {
         ]}
       />
 
-      <Reveal effect="fadeInUp">
+      <Reveal effect="fadeInUp" delay={0.3}>
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/Ripple-Banner.jpg`}

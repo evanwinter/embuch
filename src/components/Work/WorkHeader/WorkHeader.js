@@ -15,17 +15,17 @@ const WorkHeader = ({ title, tags, subtitle, description }) => {
           back
         </LinkText>
       </BackLink>
-      <Reveal effect="fadeInUp">
+      <Reveal effect="fadeInUp" distance="lg">
         <h1 className="mt-xl">{title}</h1>
       </Reveal>
       <TagList tags={tags} />
-      <Reveal effect="fadeInUp" delay={0.3}>
+      <Reveal effect="fadeInUp" distance="lg" delay={0.1}>
         <Separator />
       </Reveal>
-      <Reveal effect="fadeInUp" delay={0.4}>
+      <Reveal effect="fadeInUp" distance="lg" delay={0.2}>
         <h2 className="mb-none">{subtitle}</h2>
       </Reveal>
-      <Reveal effect="fadeInUp" delay={0.5}>
+      <Reveal effect="fadeInUp" distance="lg" delay={0.3}>
         <p className="p1 my-xs">{description}</p>
       </Reveal>
     </Header>
