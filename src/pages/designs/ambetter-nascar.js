@@ -1,7 +1,15 @@
 import React from "react";
-import { Reveal, Row, Section, WorkHeader, WorkLayout } from "@components";
-import { colors } from "@styles";
 import { StaticImage } from "gatsby-plugin-image";
+
+import {
+  Reveal,
+  Row,
+  Section,
+  WorkBanner,
+  WorkHeader,
+  WorkLayout,
+} from "@components";
+import { colors } from "@styles";
 
 const imageDefaults = { quality: 100, alt: "TODO" };
 const imagePath = "../../images/work/ambetter-nascar";
@@ -19,12 +27,14 @@ export default function AmbetterPage({ location }) {
         ]}
       />
 
-      <StaticImage
-        {...imageDefaults}
-        src={`${imagePath}/AMB-Banner.jpg`}
-        layout="fullWidth"
-        style={{ borderBlock: `3px solid var(--color-black)` }}
-      />
+      <WorkBanner>
+        <StaticImage
+          {...imageDefaults}
+          src={`${imagePath}/AMB-Banner.jpg`}
+          layout="fullWidth"
+          style={{ borderBlock: `3px solid var(--color-black)` }}
+        />
+      </WorkBanner>
 
       <Section
         style={{

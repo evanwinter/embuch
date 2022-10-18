@@ -5,9 +5,10 @@ import {
   Reveal,
   Row,
   Section,
-  WorkLayout,
+  WorkBanner,
   WorkCarousel,
   WorkHeader,
+  WorkLayout,
 } from "@components";
 import { colors } from "@styles";
 
@@ -28,7 +29,7 @@ const AmericanCancerPage = ({ location }) => {
         ]}
       />
 
-      <Reveal effect="fadeInUp" delay={0.3}>
+      <WorkBanner>
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/ACS-Header1.png`}
@@ -36,7 +37,7 @@ const AmericanCancerPage = ({ location }) => {
           layout="fullWidth"
           style={{ borderBlock: `2px solid ${colors.black}` }}
         />
-      </Reveal>
+      </WorkBanner>
 
       <Section>
         <Reveal effect="fadeInUp" distance="md">

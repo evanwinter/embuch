@@ -1,8 +1,8 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import {
-  Reveal,
   Section,
+  WorkBanner,
   WorkCarousel,
   WorkHeader,
   WorkLayout,
@@ -26,13 +26,13 @@ export default function HlkPage({ location }) {
         ]}
       />
 
-      <Reveal effect="fadeInUp" delay={0.3}>
+      <WorkBanner>
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/Ripple-Banner.jpg`}
           layout="fullWidth"
         />
-      </Reveal>
+      </WorkBanner>
 
       <WorkCarousel
         tab="Book"

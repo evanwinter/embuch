@@ -1,7 +1,14 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { Grid, Row, Section, WorkHeader, WorkLayout } from "@components";
+import {
+  Grid,
+  Row,
+  Section,
+  WorkBanner,
+  WorkHeader,
+  WorkLayout,
+} from "@components";
 import { colors } from "@styles";
 
 const imageDefaults = { quality: 100, alt: "TODO" };
@@ -17,12 +24,14 @@ export default function AudiblePage({ location }) {
         tags={[{ text: "product design", backgroundColor: colors.pink }]}
       />
 
-      <StaticImage
-        {...imageDefaults}
-        src={`${imagePath}/Audible-Banner.jpg`}
-        layout="fullWidth"
-        style={{ borderBlock: `3px solid var(--color-black)` }}
-      />
+      <WorkBanner>
+        <StaticImage
+          {...imageDefaults}
+          src={`${imagePath}/Audible-Banner.jpg`}
+          layout="fullWidth"
+          style={{ borderBlock: `3px solid var(--color-black)` }}
+        />
+      </WorkBanner>
 
       <Section style={{ backgroundColor: "var(--color-black)" }}>
         <StaticImage
