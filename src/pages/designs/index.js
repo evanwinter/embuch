@@ -1,8 +1,7 @@
 import React from "react";
 
-import { Preview } from "@components";
+import { Grid, Preview } from "@components";
 import { WORK_PROJECTS } from "@data";
-import { Grid } from "@styles";
 
 export default function DesignsPage() {
   return (

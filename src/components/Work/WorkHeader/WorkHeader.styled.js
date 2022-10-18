@@ -37,22 +37,6 @@ export const LinkText = styled.span`
   transition: transform 0.2s ease-in-out;
 `;
 
-export const Title = styled.h1`
-  margin-top: var(--spacing-xl);
-`;
-
-export const Subtitle = styled.h3`
-  font-size: 40px;
-  font-weight: 800;
-  margin-block: var(--spacing-xl) 0;
-`;
-
-export const Description = styled.p`
-  font-size: 40px;
-  font-weight: 300;
-  margin-block: 0;
-`;
-
 export const Separator = styled.div`
   width: 100vw;
   display: block;

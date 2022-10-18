@@ -1,6 +1,6 @@
 import React from "react";
-import { Reveal, Row, WorkHeader, WorkLayout } from "@components";
-import { colors, Section } from "@styles";
+import { Reveal, Row, Section, WorkHeader, WorkLayout } from "@components";
+import { colors } from "@styles";
 import { StaticImage } from "gatsby-plugin-image";
 
 const imageDefaults = { quality: 100, alt: "TODO" };

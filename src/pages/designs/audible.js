@@ -1,9 +1,8 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { Row, WorkHeader, WorkLayout } from "@components";
-import { colors, Grid, Section } from "@styles";
-import backgroundImage from "../../images/work/audible/Audible-Cover.jpg";
+import { Grid, Row, Section, WorkHeader, WorkLayout } from "@components";
+import { colors } from "@styles";
 
 const imageDefaults = { quality: 100, alt: "TODO" };
 const imagePath = "../../images/work/audible";

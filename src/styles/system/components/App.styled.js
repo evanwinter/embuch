@@ -11,4 +11,6 @@ export const App = styled.div`
   ${colorsCssVariables};
   ${spacingCssVariables};
   ${spacingClasses};
+
+  --menu-height: 108px;
 `;

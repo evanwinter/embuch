@@ -1,31 +1,20 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 
-import { Reveal, Row, WorkLayout, WorkCarousel, WorkHeader } from "@components";
-import { colors, Section } from "@styles";
+import {
+  Reveal,
+  Row,
+  Section,
+  WorkLayout,
+  WorkCarousel,
+  WorkHeader,
+} from "@components";
+import { colors } from "@styles";
 
 const imageDefaults = { quality: 100, alt: "TODO" };
 const imagePath = "../../images/work/american-cancer";
 
 const AmericanCancerPage = ({ location }) => {
-  // Load images
-  const images = useStaticQuery(graphql`
-    query {
-      allFile(filter: { relativeDirectory: { eq: "work/american-cancer" } }) {
-        nodes {
-          name
-          childImageSharp {
-            gatsbyImageData(quality: 100)
-          }
-        }
-      }
-    }
-  `).allFile.nodes.reduce((imageMap, image) => {
-    imageMap[image.name] = image.childImageSharp.gatsbyImageData;
-    return imageMap;
-  }, {});
-
   return (
     <WorkLayout pathname={location.pathname}>
       <WorkHeader
@@ -39,13 +28,15 @@ const AmericanCancerPage = ({ location }) => {
         ]}
       />
 
-      <StaticImage
-        {...imageDefaults}
-        src={`${imagePath}/ACS-Header1.png`}
-        alt="American Cancer Society Gala"
-        layout="fullWidth"
-        style={{ borderBlock: `2px solid ${colors.black}` }}
-      />
+      <Reveal effect="fadeInUp">
+        <StaticImage
+          {...imageDefaults}
+          src={`${imagePath}/ACS-Header1.png`}
+          alt="American Cancer Society Gala"
+          layout="fullWidth"
+          style={{ borderBlock: `2px solid ${colors.black}` }}
+        />
+      </Reveal>
 
       <Section>
         <Reveal effect="fadeIn">
@@ -168,7 +159,7 @@ const AmericanCancerPage = ({ location }) => {
               alignItems: "center",
             }}
           >
-            <GatsbyImage image={images["ACS-5"]} alt="TODO" />
+            <StaticImage {...imageDefaults} src={`${imagePath}/ACS-5.jpg`} />
           </Reveal>
           <Reveal effect="fadeInUp" delay={0.15}>
             <p className="p1 my-none">
@@ -188,24 +179,24 @@ const AmericanCancerPage = ({ location }) => {
           }}
         >
           <Reveal effect="fadeInUp" amount={0.25}>
-            <GatsbyImage
-              image={images["Research-Highlights-1"]}
+            <StaticImage
+              {...imageDefaults}
+              src={`${imagePath}/Research-Highlights-1.jpg`}
               height={571}
-              alt="TODO"
             />
           </Reveal>
           <Reveal effect="fadeInUp" amount={0.25} delay={0.15}>
-            <GatsbyImage
-              image={images["Research-Highlights-2"]}
+            <StaticImage
+              {...imageDefaults}
+              src={`${imagePath}/Research-Highlights-2.jpg`}
               height={571}
-              alt="TODO"
             />
           </Reveal>
           <Reveal effect="fadeInUp" amount={0.25} delay={0.3}>
-            <GatsbyImage
-              image={images["Research-Highlights-3"]}
+            <StaticImage
+              {...imageDefaults}
+              src={`${imagePath}/Research-Highlights-3.jpg`}
               height={571}
-              alt="TODO"
             />
           </Reveal>
         </Row>

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
 import { Reveal } from "@components";
@@ -36,3 +37,12 @@ export default function Preview({ project, kind = "designs", index = 0 }) {
     </Reveal>
   );
 }
+
+Preview.propTypes = {
+  project: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    coverImage: PropTypes.func.isRequired,
+  }).isRequired,
+  kind: PropTypes.oneOf(["designs", "fun"]),
+};

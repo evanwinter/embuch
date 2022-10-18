@@ -1,17 +1,12 @@
 import React from "react";
-import { TagList } from "../../TagList";
-import Arrow from "@images/arrow.inline.svg";
-import {
-  Header,
-  Description,
-  Separator,
-  Subtitle,
-  BackLink,
-  LinkText,
-  Title,
-} from "./WorkHeader.styled";
+import PropTypes from "prop-types";
 
-const WorkHeader = ({ title, tags, subtitle, description, HeaderImage }) => {
+import { Reveal, TagList } from "@components";
+import Arrow from "@images/arrow.inline.svg";
+
+import { Header, Separator, BackLink, LinkText } from "./WorkHeader.styled";
+
+const WorkHeader = ({ title, tags, subtitle, description }) => {
   return (
     <Header>
       <BackLink to="/designs">
@@ -20,14 +15,33 @@ const WorkHeader = ({ title, tags, subtitle, description, HeaderImage }) => {
           back
         </LinkText>
       </BackLink>
-      <Title>{title}</Title>
+      <Reveal effect="fadeInUp">
+        <h1 className="mt-xl">{title}</h1>
+      </Reveal>
       <TagList tags={tags} />
-      <Separator />
-      <Subtitle>{subtitle}</Subtitle>
-      <Description>{description}</Description>
-      {HeaderImage && <HeaderImage />}
+      <Reveal effect="fadeInUp" delay={0.3}>
+        <Separator />
+      </Reveal>
+      <Reveal effect="fadeInUp" delay={0.4}>
+        <h2 className="mb-none">{subtitle}</h2>
+      </Reveal>
+      <Reveal effect="fadeInUp" delay={0.5}>
+        <p className="p1 my-xs">{description}</p>
+      </Reveal>
     </Header>
   );
 };
 
 export default WorkHeader;
+
+WorkHeader.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      backgroundColor: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};

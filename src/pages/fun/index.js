@@ -1,9 +1,8 @@
 import React from "react";
-import { Preview } from "@components";
-import { Grid } from "@styles";
+import { Grid, Preview } from "@components";
 import { FUN_PROJECTS } from "@data";
 
-export default function FunPage({ location }) {
+export default function FunPage() {
   return (
     <div>
       <Grid gridGap="var(--spacing-xl)" padding="var(--spacing-xl)">

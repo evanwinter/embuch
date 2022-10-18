@@ -1,11 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { WorkFooter } from "@components";
 
-export default function WorkLayout({ children, pathname }) {
-  return (
-    <>
-      {children}
-      <WorkFooter pathname={pathname} />
-    </>
-  );
-}
+const WorkLayout = ({ children, pathname }) => (
+  <>
+    {children}
+    <WorkFooter pathname={pathname} />
+  </>
+);
+
+WorkLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+  pathname: PropTypes.string.isRequired,
+};
+
+export default WorkLayout;

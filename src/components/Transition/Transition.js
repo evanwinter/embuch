@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { AnimatePresence, motion } from "framer-motion";
 
 const PageTransition = ({
@@ -23,3 +24,10 @@ const PageTransition = ({
 };
 
 export default PageTransition;
+
+PageTransition.propTypes = {
+  children: PropTypes.node.isRequired,
+  pathname: PropTypes.string.isRequired,
+  duration: PropTypes.number,
+  ease: PropTypes.string,
+};

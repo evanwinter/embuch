@@ -10,6 +10,7 @@ import { effects } from "./effects";
  * @param {String} effect
  * @param {Number} delay
  * @param {String|Number} amount
+ * @param {Number} distance
  */
 const Reveal = ({
   children,
@@ -26,7 +27,7 @@ const Reveal = ({
       type: "spring",
       damping: 35,
       delay,
-      opacity: { ease: "easeIn", duration: 0.75 },
+      // opacity: { ease: "easeIn", duration: 0.75 },
     }}
     {...restProps}
   >

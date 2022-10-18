@@ -1,7 +1,13 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { WorkCarousel, WorkHeader, WorkLayout } from "@components";
-import { colors, Section } from "@styles";
+import {
+  Reveal,
+  Section,
+  WorkCarousel,
+  WorkHeader,
+  WorkLayout,
+} from "@components";
+import { colors } from "@styles";
 
 const imageDefaults = { quality: 100, alt: "TODO" };
 const imagePath = "../../images/work/hlk";
@@ -20,11 +26,13 @@ export default function HlkPage({ location }) {
         ]}
       />
 
-      <StaticImage
-        {...imageDefaults}
-        src={`${imagePath}/Ripple-Banner.jpg`}
-        layout="fullWidth"
-      />
+      <Reveal effect="fadeInUp">
+        <StaticImage
+          {...imageDefaults}
+          src={`${imagePath}/Ripple-Banner.jpg`}
+          layout="fullWidth"
+        />
+      </Reveal>
 
       <WorkCarousel
         tab="Book"
