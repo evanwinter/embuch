@@ -39,15 +39,6 @@ const AmericanCancerPage = ({ location }) => {
         />
       </WorkBanner>
 
-      <Section>
-        <Reveal effect="fadeInUp" distance="md">
-          <p className="h2 my-none mx-auto">
-            This booklet was created to highlight the research done by the
-            American Cancer Society.
-          </p>
-        </Reveal>
-      </Section>
-
       <WorkCarousel backgroundColor={colors.darkGray}>
         <StaticImage
           {...imageDefaults}
@@ -92,6 +83,18 @@ const AmericanCancerPage = ({ location }) => {
           height={571}
         />
       </WorkCarousel>
+
+      <Section className="pb-none">
+        <Reveal effect="fadeInUp" distance="md">
+          <p
+            className="h2 my-none mx-auto w-lg"
+            style={{ textAlign: "center" }}
+          >
+            This booklet was created to highlight the research done by the
+            American Cancer Society.
+          </p>
+        </Reveal>
+      </Section>
 
       <Section>
         <Reveal effect="fadeInUp">

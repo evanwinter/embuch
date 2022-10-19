@@ -65,7 +65,7 @@ export const FUN_PROJECTS = [
     slug: "t-shirts",
     coverImage: () => (
       <StaticImage
-        src="../images/T-Shirts-Cover.jpg"
+        src="../images/fun/T-Shirts-Cover.jpg"
         quality={100}
         alt="T-Shirts"
       />
@@ -75,7 +75,11 @@ export const FUN_PROJECTS = [
     title: "Logos",
     slug: "logos",
     coverImage: () => (
-      <StaticImage src="../images/Logos-Cover.jpg" quality={100} alt="Logos" />
+      <StaticImage
+        src="../images/fun/Logos-Cover.jpg"
+        quality={100}
+        alt="Logos"
+      />
     ),
   },
   {
@@ -83,7 +87,7 @@ export const FUN_PROJECTS = [
     slug: "portaits",
     coverImage: () => (
       <StaticImage
-        src="../images/Portraits-Cover.jpg"
+        src="../images/fun/Portraits-Cover.jpg"
         quality={100}
         alt="Portraits"
       />
@@ -94,7 +98,7 @@ export const FUN_PROJECTS = [
     slug: "custom-type",
     coverImage: () => (
       <StaticImage
-        src="../images/Custom-Type-Cover.jpg"
+        src="../images/fun/Custom-Type-Cover.jpg"
         quality={100}
         alt="Custom Type"
       />

@@ -58,10 +58,7 @@ export default function MedicaidPage({ location }) {
 
       <Section style={{ backgroundColor: "var(--color-black)" }}>
         <Reveal effect="fadeInUp">
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/Medicaid-Flyer-1.jpg`}
-          />
+          <StaticImage {...imageDefaults} src={`${imagePath}/IG-Posts.jpg`} />
         </Reveal>
       </Section>
 

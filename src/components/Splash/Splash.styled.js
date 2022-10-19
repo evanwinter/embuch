@@ -7,10 +7,4 @@ export const Background = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-
-  svg {
-    width: min(100vw, 595px);
-    padding: 0 2rem;
-    height: auto;
-  }
 `;

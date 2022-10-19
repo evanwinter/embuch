@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
 import { Link } from "gatsby";
+
+import cloudsVideo from "@images/clouds.mp4";
+import EmilyGraffiti from "@images/emily-graffiti.inline.svg";
 import { usePullEffect } from "@utils";
+
 import { Background } from "./Splash.styled";
-import emilySvg from "../../images/graffiti-2.svg";
-import clouds from "../../images/clouds.mp4";
 
 const Splash = () => {
   const logoRef = useRef(null);
@@ -23,15 +25,10 @@ const Splash = () => {
           zIndex: -1,
         }}
       >
-        <source src={clouds} />
+        <source src={cloudsVideo} />
       </video>
       <Link to="/" ref={logoRef}>
-        <img
-          style={{ marginBottom: "15vh" }}
-          loading="priority"
-          src={emilySvg}
-          alt=""
-        />
+        <EmilyGraffiti style={{ width: "min(700px, 90vw)" }} />
       </Link>
     </Background>
   );

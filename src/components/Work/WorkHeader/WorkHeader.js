@@ -23,7 +23,7 @@ const WorkHeader = ({ title, tags, subtitle, description }) => {
         <Separator />
       </Reveal>
       <Reveal effect="fadeInUp" distance="lg" delay={0.2}>
-        <h2 className="mb-none">{subtitle}</h2>
+        <h2 className="mb-none p1" style={{ fontWeight: 500 }}>{subtitle}</h2>
       </Reveal>
       <Reveal effect="fadeInUp" distance="lg" delay={0.3}>
         <p className="p1 my-xs">{description}</p>
