@@ -32,7 +32,7 @@ const WorkCarousel = ({
 
   return (
     <Container style={{ backgroundColor, color, ...style }} {...handleCursor}>
-      <Reveal effect="fadeInRight" distance="xxl">
+      <Reveal effect="fadeInUp" distance="xxl">
         <InnerContainer ref={scrollContainer}>{children}</InnerContainer>
       </Reveal>
       <Navigation>

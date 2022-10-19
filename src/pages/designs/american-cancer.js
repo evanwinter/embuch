@@ -51,80 +51,44 @@ const AmericanCancerPage = ({ location }) => {
       <WorkCarousel backgroundColor={colors.darkGray}>
         <StaticImage
           {...imageDefaults}
-          src={`${imagePath}/ACS_Gala_Handout-1.jpg`}
-          alt="ACS_Gala_Handout-1"
+          src={`${imagePath}/Handout-1.jpg`}
+          alt="Handout-1"
           height={571}
         />
         <StaticImage
           {...imageDefaults}
-          src={`${imagePath}/ACS_Gala_Handout-2.jpg`}
-          alt="ACS_Gala_Handout-2"
+          src={`${imagePath}/Handout-2.jpg`}
+          alt="Handout-2"
           height={571}
         />
         <StaticImage
           {...imageDefaults}
-          src={`${imagePath}/ACS_Gala_Handout-3.jpg`}
-          alt="ACS_Gala_Handout-3"
+          src={`${imagePath}/Handout-3.jpg`}
+          alt="Handout-3"
           height={571}
         />
         <StaticImage
           {...imageDefaults}
-          src={`${imagePath}/ACS_Gala_Handout-4.jpg`}
-          alt="ACS_Gala_Handout-4"
+          src={`${imagePath}/Handout-4.jpg`}
+          alt="Handout-4"
           height={571}
         />
         <StaticImage
           {...imageDefaults}
-          src={`${imagePath}/ACS_Gala_Handout-5.jpg`}
-          alt="ACS_Gala_Handout-5"
+          src={`${imagePath}/Handout-5.jpg`}
+          alt="Handout-5"
           height={571}
         />
         <StaticImage
           {...imageDefaults}
-          src={`${imagePath}/ACS_Gala_Handout-6.jpg`}
-          alt="ACS_Gala_Handout-6"
+          src={`${imagePath}/Handout-6.jpg`}
+          alt="Handout-6"
           height={571}
         />
         <StaticImage
           {...imageDefaults}
-          src={`${imagePath}/ACS_Gala_Handout-7.jpg`}
-          alt="ACS_Gala_Handout-7"
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS_Gala_Handout-8.jpg`}
-          alt="ACS_Gala_Handout-8"
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS_Gala_Handout-9.jpg`}
-          alt="ACS_Gala_Handout-9"
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS_Gala_Handout-10.jpg`}
-          alt="ACS_Gala_Handout-10"
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS_Gala_Handout-11.jpg`}
-          alt="ACS_Gala_Handout-11"
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS_Gala_Handout-12.jpg`}
-          alt="ACS_Gala_Handout-12"
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS_Gala_Handout-13.jpg`}
-          alt="ACS_Gala_Handout-13"
+          src={`${imagePath}/Handout-7.jpg`}
+          alt="Handout-7"
           height={571}
         />
       </WorkCarousel>

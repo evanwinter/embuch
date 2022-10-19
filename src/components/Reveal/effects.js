@@ -13,12 +13,12 @@ const fadeInDown = ({ distance = "xl" }) => ({
   whileInView: { opacity: 1, translateY: 0 },
 });
 
-const fadeInLeft = ({ distance = "xl" }) => ({
+const fadeInRight = ({ distance = "xl" }) => ({
   initial: { opacity: 0, translateX: `calc(-1 * var(--spacing-${distance}))` },
   whileInView: { opacity: 1, translateX: 0 },
 });
 
-const fadeInRight = ({ distance = "xl" }) => ({
+const fadeInLeft = ({ distance = "xl" }) => ({
   initial: { opacity: 0, translateX: `var(--spacing-${distance})` },
   whileInView: { opacity: 1, translateX: 0 },
 });
