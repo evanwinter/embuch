@@ -34,7 +34,7 @@ export default function MedicaidPage({ location }) {
           },
           {
             text: "animation",
-            backgroundColor: "var(--color-lime)",
+            backgroundColor: "var(--color-green)",
           },
         ]}
       />

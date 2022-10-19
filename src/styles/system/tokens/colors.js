@@ -11,6 +11,7 @@ export const colors = {
   lime: "#C1FF31",
   orange: "#FAB313",
   pureBlack: "#000000",
+  green: "#61ff00",
 };
 
 export const colorsCssVariables = css`
