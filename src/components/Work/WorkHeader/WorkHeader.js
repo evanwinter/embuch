@@ -16,18 +16,21 @@ const WorkHeader = ({ title, tags, subtitle, description }) => {
         </LinkText>
       </BackLink>
       <Reveal effect="fadeInUp" distance="lg">
-        <h1 className="mt-xl">{title}</h1>
+        <h1 className="mt-xl mb-sm">{title}</h1>
+      </Reveal>
+      <Reveal effect="fadeInUp" distance="lg" delay={0.1}>
+        <p className="p1 mt-sm mb-lg">{description}</p>
       </Reveal>
       <TagList tags={tags} />
-      <Reveal effect="fadeInUp" distance="lg" delay={0.1}>
+      {/* <Reveal effect="fadeInUp" distance="lg" delay={0.1}>
         <Separator />
-      </Reveal>
-      <Reveal effect="fadeInUp" distance="lg" delay={0.2}>
-        <h2 className="mb-none p1" style={{ fontWeight: 500 }}>{subtitle}</h2>
+      </Reveal> */}
+      {/* <Reveal effect="fadeInUp" distance="lg" delay={0.2}>
+        <h2 className="mb-none p1 mt-xl" style={{ fontWeight: 500 }}>{subtitle}</h2>
       </Reveal>
       <Reveal effect="fadeInUp" distance="lg" delay={0.3}>
         <p className="p1 my-xs">{description}</p>
-      </Reveal>
+      </Reveal> */}
     </Header>
   );
 };

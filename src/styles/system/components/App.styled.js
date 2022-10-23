@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {
+  breakpointsCssVariables,
   breakpointsClasses,
   colorsCssVariables,
   spacingCssVariables,
@@ -7,6 +8,7 @@ import {
 } from "../tokens";
 
 export const App = styled.div`
+  ${breakpointsCssVariables};
   ${breakpointsClasses};
   ${colorsCssVariables};
   ${spacingCssVariables};

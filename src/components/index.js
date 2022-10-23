@@ -1,5 +1,6 @@
 export * from "./Fun";
 export * from "./Grid";
+export * from "./LogoCollection";
 export * from "./Menu";
 export * from "./Preview";
 export * from "./Reveal";

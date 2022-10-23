@@ -1,92 +1,50 @@
-import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
+import { Grid, LogoCollection } from "@components";
 
-import audible from "../../../images/work/audible/Audible-Cover.jpg";
-import hlk from "../../../images/work/hlk/HLK-Cover.jpg";
-import medicaid from "../../../images/work/medicaid/Medicaid-Cover.jpg";
+import KonyKim1 from "@images/fun/logos/Logos-Website-KK-1.jpg";
+import KonyKim2 from "@images/fun/logos/Logos-Website-KK-2.jpg";
+import KonyKim3 from "@images/fun/logos/Logos-Website-KK-3.jpg";
+import KonyKim4 from "@images/fun/logos/Logos-Website-KK-4.jpg";
 
-const variants = {
-  enter: (direction) => {
-    return {
-      x: direction === "prev" ? 625 : -625,
-    };
-  },
-  center: {
-    zIndex: 1,
-    x: 0,
-  },
-  exit: (direction) => {
-    return {
-      zIndex: 0,
-      x: direction === "prev" ? 625 : -625,
-    };
-  },
-};
+import Coalfire1 from "@images/fun/logos/Logos-Website-Coalfire-1.jpg";
+import Coalfire2 from "@images/fun/logos/Logos-Website-Coalfire-2.jpg";
+import Coalfire3 from "@images/fun/logos/Logos-Website-Coalfire-3.jpg";
+import Coalfire4 from "@images/fun/logos/Logos-Website-Coalfire-4.jpg";
 
-const LogoCollection = ({ children }) => {
-  const [[index, direction], setIndex] = useState([0, "next"]);
-  const images = [audible, hlk, medicaid];
+import Lawndale1 from "@images/fun/logos/Logos-Website-Lawndale-1.jpg";
+import Lawndale2 from "@images/fun/logos/Logos-Website-Lawndale-2.jpg";
 
-  return (
-    <div
-      style={{
-        width: 625,
-        height: "auto",
-        overflow: "hidden",
-        display: "flex",
-        position: "relative",
-      }}
-    >
-      <div
-        style={{
-          position: "absolute",
-          zIndex: 10,
-          top: 16,
-          left: 16,
-          display: "flex",
-          gap: 8,
-        }}
-      >
-        {images.map((_, i) => (
-          <button
-            key={i}
-            style={{
-              appearance: "none",
-              border: "none",
-              width: 20,
-              height: 20,
-              borderRadius: "50%",
-              backgroundColor: index === i ? "gray" : "lightgray",
-              cursor: "pointer",
-            }}
-            onClick={() =>
-              setIndex(([prev]) => [i, prev < i ? "next" : "prev"])
-            }
-          ></button>
-        ))}
-      </div>
-      <AnimatePresence custom={direction}>
-        <motion.img
-          key={index}
-          src={images[index]}
-          custom={direction}
-          variants={variants}
-          initial="center"
-          animate="center"
-          exit="exit"
-          transition={{ ease: "linear" }}
-        />
-      </AnimatePresence>
-    </div>
-  );
-};
+import PrettyGood1 from "@images/fun/logos/Logos-Website-PG-1.jpg";
+import PrettyGood2 from "@images/fun/logos/Logos-Website-PG-2.jpg";
+import PrettyGood3 from "@images/fun/logos/Logos-Website-PG-3.jpg";
+import PrettyGood4 from "@images/fun/logos/Logos-Website-PG-4.jpg";
+
+import PipeLake from "@images/fun/logos/Logos-Website-PipeLake.jpg";
 
 export default function LogosPage({ location }) {
   return (
     <div>
       <h1>Logos</h1>
 
-      <LogoCollection></LogoCollection>
+      <Grid gridGap="var(--spacing-xl)" padding="var(--spacing-xl)">
+        <LogoCollection
+          images={[KonyKim1, KonyKim2, KonyKim3, KonyKim4]}
+          isDark={true}
+        />
+        <LogoCollection images={[Coalfire1, Coalfire2, Coalfire3, Coalfire4]} />
+        <LogoCollection images={[Lawndale1, Lawndale2]} />
+        <img
+          style={{
+            width: "100%",
+            display: "block",
+            border: "2px solid var(--color-black)",
+          }}
+          src={PipeLake}
+        />
+        <LogoCollection
+          images={[PrettyGood1, PrettyGood2, PrettyGood3, PrettyGood4]}
+        />
+      </Grid>
     </div>
   );
 }

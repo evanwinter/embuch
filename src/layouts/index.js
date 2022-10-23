@@ -1,9 +1,9 @@
-import React /* { useContext, useRef } */ from "react";
-// import { motion } from "framer-motion";
+import React, { useContext, useRef } from "react";
+import { motion } from "framer-motion";
 import { Menu, Transition, Splash } from "@components";
-// import { useCustomCursor } from "@utils";
+import { useCustomCursor } from "@utils";
 import { AppLayout, Sheet } from "./styled";
-import { CursorProvider /* CursorContext */ } from "@context";
+import { CursorProvider, CursorContext } from "@context";
 import "../styles/index.css";
 import "../styles/typography.css";
 
@@ -22,13 +22,13 @@ const Layout = ({ children, location }) => {
   const isPinned = location.pathname !== "/";
 
   // Cursor stuff
-  // const { cursorType } = useContext(CursorContext);
-  // const cursorRef = useRef(null);
-  // const { cursorProps } = useCustomCursor(cursorRef, cursorType);
+  const { cursorType } = useContext(CursorContext);
+  const cursorRef = useRef(null);
+  const { cursorProps } = useCustomCursor(cursorRef, cursorType);
 
   return (
-    <AppLayout pinned={isPinned} /* ref={cursorRef} */>
-      {/* <motion.div className="cursor" {...cursorProps}></motion.div> */}
+    <AppLayout pinned={isPinned} ref={cursorRef}>
+      <motion.div className="cursor" {...cursorProps}></motion.div>
       <Splash />
       <Sheet
         variants={{
@@ -41,9 +41,7 @@ const Layout = ({ children, location }) => {
         animate={isPinned ? PINNED : IDLE}
         transition={{
           type: "spring",
-          damping: 40,
-          stiffness: 400,
-          duration: 0.3,
+          mass: 0.2,
         }}
       >
         <Menu pathname={location.pathname} />

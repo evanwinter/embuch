@@ -76,7 +76,7 @@ export const FUN_PROJECTS = [
     slug: "logos",
     coverImage: () => (
       <StaticImage
-        src="../images/fun/Logos-Cover.jpg"
+        src="../images/fun/logos/Logos-Cover.jpg"
         quality={100}
         alt="Logos"
       />

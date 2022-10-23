@@ -1,6 +1,8 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+
 import {
+  Reveal,
   Section,
   WorkBanner,
   WorkCarousel,
@@ -26,19 +28,7 @@ export default function HlkPage({ location }) {
         ]}
       />
 
-      <WorkBanner>
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Ripple-Banner.jpg`}
-          layout="fullWidth"
-        />
-      </WorkBanner>
-
-      <WorkCarousel
-        tab="Book"
-        backgroundColor={colors.pureBlack}
-        color={colors.white}
-      >
+      <WorkCarousel backgroundColor={colors.white} color={colors.black}>
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/Ripple_Spread_1.jpg`}
@@ -57,7 +47,12 @@ export default function HlkPage({ location }) {
       </WorkCarousel>
 
       <Section>
-        <StaticImage {...imageDefaults} src={`${imagePath}/Ripple-Book.jpg`} />
+        <Reveal effect="fadeInUp">
+          <StaticImage
+            {...imageDefaults}
+            src={`${imagePath}/Ripple-Book.jpg`}
+          />
+        </Reveal>
       </Section>
 
       <Section
@@ -65,20 +60,17 @@ export default function HlkPage({ location }) {
           alignItems: "flex-start",
           backgroundColor: "var(--color-black)",
           color: "var(--color-white)",
+          paddingBottom: 0,
         }}
       >
-        <h2 className="mt-none">Walking Challenge</h2>
+        <h2 className="mt-none p1 mb-none" style={{ fontWeight: 500 }}>
+          Walking Challenge
+        </h2>
         <p className="p1 my-none">
           Mailer sent out to all employees inviting them to participate in a
           steps challenge.
         </p>
       </Section>
-
-      <StaticImage
-        {...imageDefaults}
-        src={`${imagePath}/Ripple-Banner-2.jpg`}
-        layout="fullWidth"
-      />
 
       <Section style={{ backgroundColor: "var(--color-black)" }}>
         <StaticImage
@@ -90,10 +82,12 @@ export default function HlkPage({ location }) {
       <Section
         style={{
           alignItems: "flex-start",
-          borderBottom: "3px solid var(--color-black)",
         }}
+        className="pb-none"
       >
-        <h2>Holiday Card</h2>
+        <h2 className="mt-none p1 mb-none" style={{ fontWeight: 500 }}>
+          Holiday Card
+        </h2>
         <p className="p1 my-none">
           Card thanking partners of HLK for a great year accompanying a gift.
         </p>
@@ -111,6 +105,7 @@ export default function HlkPage({ location }) {
           alignItems: "flex-start",
           backgroundColor: "var(--color-black)",
           color: "var(--color-white)",
+          paddingBottom: 0,
         }}
       >
         <h2 className="mt-none">Read a Book Day</h2>
@@ -118,12 +113,6 @@ export default function HlkPage({ location }) {
           Social posts highlighting books picked out by employees.
         </p>
       </Section>
-
-      <StaticImage
-        {...imageDefaults}
-        src={`${imagePath}/Ripple-Banner-3.jpg`}
-        layout="fullWidth"
-      />
 
       <WorkCarousel
         backgroundColor="var(--color-black)"
@@ -165,6 +154,12 @@ export default function HlkPage({ location }) {
           height={571}
         />
       </WorkCarousel>
+
+      <StaticImage
+        {...imageDefaults}
+        src={`${imagePath}/Ripple-Banner-3.jpg`}
+        layout="fullWidth"
+      />
     </WorkLayout>
   );
 }

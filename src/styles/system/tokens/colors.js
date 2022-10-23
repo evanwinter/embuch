@@ -5,6 +5,7 @@ export const colors = {
   transparent: "transparent",
   black: "#201D1D",
   darkGray: "#201D1D",
+  mediumGray: "#575B5E",
   lightGray: "#F3F6F8",
   red: "#FF2100",
   pink: "#F3ACCC",

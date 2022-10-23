@@ -3,6 +3,8 @@ import useMouse from "@react-hook/mouse-position";
 
 import { CursorContext } from "@context";
 
+import BackArrow from "@images/arrow-right-small.svg";
+
 export default function useCustomCursor(ref) {
   const { cursorType } = useContext(CursorContext);
   const [mouseX, setMouseX] = useState(0);
@@ -19,18 +21,21 @@ export default function useCustomCursor(ref) {
     }
   }, [mouse]);
 
+  const cursorSize = 20;
+
   const cursorStyles = {
     opacity: 1,
-    height: 20,
-    width: 20,
+    height: cursorSize,
+    width: cursorSize,
     backgroundColor: "var(--color-black)",
     borderRadius: "50%",
+    border: "2px solid var(--color-black)",
   };
 
   const defaults = {
     ...cursorStyles,
-    x: mouseX,
-    y: mouseY,
+    x: mouseX - cursorSize / 2,
+    y: mouseY - cursorSize / 2,
     // TODO: Make this snappier
     transition: {
       type: "spring",
@@ -43,20 +48,41 @@ export default function useCustomCursor(ref) {
   const variants = {
     default: {
       ...defaults,
-      border: "2px solid var(--color-black)",
     },
     clickable: {
       ...defaults,
       scale: 1.5,
+      x: mouseX - (cursorSize * 1.5) / 2,
+      y: mouseY - (cursorSize * 1.5) / 2,
       backgroundColor: "var(--color-lime)",
-      border: "2px solid var(--color-black)",
     },
     // TODO: show arrow when hovering over carousel
     arrow: {
       ...defaults,
-      // backgroundColor: "transparent",
-      // border: "2px solid transparent",
-      // borderRadius: 0,
+    },
+    prev: {
+      ...defaults,
+      backgroundImage: `url(${BackArrow})`,
+      backgroundColor: "transparent",
+      backgroundSize: "contain",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      border: "none",
+      width: 50,
+      height: 50,
+      rotate: "0deg",
+    },
+    next: {
+      ...defaults,
+      backgroundImage: `url(${BackArrow})`,
+      backgroundColor: "transparent",
+      backgroundSize: "contain",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      border: "none",
+      width: 50,
+      height: 50,
+      rotate: "180deg",
     },
   };
 
@@ -68,6 +94,7 @@ export default function useCustomCursor(ref) {
     variants,
     transition,
     animate: cursorType,
+    icon: BackArrow,
   };
 
   return { mouseX, mouseY, cursorProps, cursorType };

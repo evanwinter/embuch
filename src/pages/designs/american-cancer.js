@@ -28,7 +28,6 @@ const AmericanCancerPage = ({ location }) => {
           { text: "illustration", backgroundColor: colors.red },
         ]}
       />
-
       <WorkBanner>
         <StaticImage
           {...imageDefaults}
@@ -38,7 +37,6 @@ const AmericanCancerPage = ({ location }) => {
           style={{ borderBlock: `2px solid ${colors.black}` }}
         />
       </WorkBanner>
-
       <WorkCarousel backgroundColor={colors.darkGray}>
         <StaticImage
           {...imageDefaults}
@@ -83,9 +81,8 @@ const AmericanCancerPage = ({ location }) => {
           height={571}
         />
       </WorkCarousel>
-
       <Section className="pb-none">
-        <Reveal effect="fadeInUp" distance="md">
+        <Reveal effect="fadeInUp" distance="lg">
           <p
             className="h2 my-none mx-auto w-lg"
             style={{ textAlign: "center" }}
@@ -95,7 +92,6 @@ const AmericanCancerPage = ({ location }) => {
           </p>
         </Reveal>
       </Section>
-
       <Section>
         <Reveal effect="fadeInUp">
           <StaticImage
@@ -105,7 +101,6 @@ const AmericanCancerPage = ({ location }) => {
           />
         </Reveal>
       </Section>
-
       <Section
         style={{
           backgroundColor: "var(--color-black)",
@@ -169,7 +164,6 @@ const AmericanCancerPage = ({ location }) => {
           </Reveal>
         </Row>
       </Section>
-
       <WorkCarousel backgroundColor={colors.black}>
         <StaticImage
           {...imageDefaults}
@@ -202,7 +196,6 @@ const AmericanCancerPage = ({ location }) => {
           height={571}
         />
       </WorkCarousel>
-
       <Section>
         <Reveal effect="fadeInUp">
           <StaticImage
@@ -212,7 +205,6 @@ const AmericanCancerPage = ({ location }) => {
           />
         </Reveal>
       </Section>
-
       <WorkCarousel backgroundColor={colors.black} color={colors.white}>
         <StaticImage
           {...imageDefaults}
@@ -245,7 +237,6 @@ const AmericanCancerPage = ({ location }) => {
           height={700}
         />
       </WorkCarousel>
-
       <Section>
         <div
           style={{
@@ -260,7 +251,7 @@ const AmericanCancerPage = ({ location }) => {
             height="315"
             src="https://www.youtube.com/embed/1vTJ3nX1Bxg?start=8"
             title="YouTube video player"
-            framerBorder="0"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             style={{

@@ -19,3 +19,11 @@ export const breakpointsClasses = css`
     `
   )}
 `;
+
+export const breakpointsCssVariables = css`
+  ${Object.keys(breakpoints).map(
+    (breakpoint) => `
+      --breakpoints-${breakpoint}: ${breakpoints[breakpoint]};
+    `
+  )}
+`;

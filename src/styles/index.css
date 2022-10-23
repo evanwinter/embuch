@@ -39,6 +39,9 @@
 
 html,
 body {
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
   font-size: 16px;
   font-weight: 400;
   font-family: "National", serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -46,12 +49,12 @@ body {
     sans-serif;
 }
 
-/* * {
+* {
   cursor: none !important;
 }
 *:hover {
   cursor: none !important;
-} */
+}
 
 body {
   margin: 0;
@@ -101,8 +104,8 @@ a.link::after {
 .cursor {
   width: 20px;
   height: 20px;
-  background-color: blue;
   position: fixed;
   z-index: 1000;
   pointer-events: none;
+  opacity: 0.5;
 }

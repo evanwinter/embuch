@@ -30,9 +30,12 @@ const WorkCarousel = ({
 
   const handleCursor = useCursorType("arrow");
 
+  const nextCursor = useCursorType("next");
+  const prevCursor = useCursorType("prev");
+
   return (
     <Container style={{ backgroundColor, color, ...style }} {...handleCursor}>
-      <Reveal effect="fadeInUp" distance="xxl">
+      <Reveal effect="fadeInLeft" distance="xxl">
         <InnerContainer ref={scrollContainer}>{children}</InnerContainer>
       </Reveal>
       <Navigation>
@@ -43,6 +46,30 @@ const WorkCarousel = ({
           <Arrow style={{ fill: color }} />
         </NavigationButton>
       </Navigation>
+      <div
+        onClick={() => handleScroll("prev")}
+        {...prevCursor}
+        style={{
+          position: "absolute",
+          width: "50%",
+          height: "80%",
+          top: 0,
+          left: 0,
+          zIndex: 20,
+        }}
+      ></div>
+      <div
+        onClick={() => handleScroll("next")}
+        {...nextCursor}
+        style={{
+          position: "absolute",
+          width: "50%",
+          height: "80%",
+          top: 0,
+          right: 0,
+          zIndex: 20,
+        }}
+      ></div>
     </Container>
   );
 };
