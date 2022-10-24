@@ -63,20 +63,26 @@ export default function HlkPage({ location }) {
           paddingBottom: 0,
         }}
       >
-        <h2 className="mt-none p1 mb-none" style={{ fontWeight: 500 }}>
-          Walking Challenge
-        </h2>
-        <p className="p1 my-none">
-          Mailer sent out to all employees inviting them to participate in a
-          steps challenge.
-        </p>
+        <Reveal effect="fadeInUp">
+          <h2 className="mt-none p1 mb-none" style={{ fontWeight: 500 }}>
+            Walking Challenge
+          </h2>
+        </Reveal>
+        <Reveal effect="fadeInUp" delay={0.1}>
+          <p className="p1 my-none">
+            Mailer sent out to all employees inviting them to participate in a
+            steps challenge.
+          </p>
+        </Reveal>
       </Section>
 
       <Section style={{ backgroundColor: "var(--color-black)" }}>
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/HLK-Walking-Challenge.jpg`}
-        />
+        <Reveal effect="fadeInUp">
+          <StaticImage
+            {...imageDefaults}
+            src={`${imagePath}/HLK-Walking-Challenge.jpg`}
+          />
+        </Reveal>
       </Section>
 
       <Section
@@ -85,19 +91,25 @@ export default function HlkPage({ location }) {
         }}
         className="pb-none"
       >
-        <h2 className="mt-none p1 mb-none" style={{ fontWeight: 500 }}>
-          Holiday Card
-        </h2>
-        <p className="p1 my-none">
-          Card thanking partners of HLK for a great year accompanying a gift.
-        </p>
+        <Reveal effect="fadeInUp">
+          <h2 className="mt-none p1 mb-none" style={{ fontWeight: 500 }}>
+            Holiday Card
+          </h2>
+        </Reveal>
+        <Reveal effect="fadeInUp" delay={0.1}>
+          <p className="p1 my-none">
+            Card thanking partners of HLK for a great year accompanying a gift.
+          </p>
+        </Reveal>
       </Section>
 
       <Section>
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Ripple-Holiday-Card.jpg`}
-        />
+        <Reveal effect="fadeInUp">
+          <StaticImage
+            {...imageDefaults}
+            src={`${imagePath}/Ripple-Holiday-Card.jpg`}
+          />
+        </Reveal>
       </Section>
 
       <Section
@@ -108,10 +120,14 @@ export default function HlkPage({ location }) {
           paddingBottom: 0,
         }}
       >
-        <h2 className="mt-none">Read a Book Day</h2>
-        <p className="p1 my-none">
-          Social posts highlighting books picked out by employees.
-        </p>
+        <Reveal effect="fadeInUp">
+          <h2 className="mt-none">Read a Book Day</h2>
+        </Reveal>
+        <Reveal effect="fadeInUp" delay={0.1}>
+          <p className="p1 my-none">
+            Social posts highlighting books picked out by employees.
+          </p>
+        </Reveal>
       </Section>
 
       <WorkCarousel
@@ -155,11 +171,13 @@ export default function HlkPage({ location }) {
         />
       </WorkCarousel>
 
-      <StaticImage
-        {...imageDefaults}
-        src={`${imagePath}/Ripple-Banner-3.jpg`}
-        layout="fullWidth"
-      />
+      <Reveal effect="fadeInUp">
+        <StaticImage
+          {...imageDefaults}
+          src={`${imagePath}/Ripple-Banner-3.jpg`}
+          layout="fullWidth"
+        />
+      </Reveal>
     </WorkLayout>
   );
 }

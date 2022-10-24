@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, LogoCollection } from "@components";
+import { Grid, LogoCollection, Section } from "@components";
 
 import KonyKim1 from "@images/fun/logos/Logos-Website-KK-1.jpg";
 import KonyKim2 from "@images/fun/logos/Logos-Website-KK-2.jpg";
@@ -24,9 +24,16 @@ import PipeLake from "@images/fun/logos/Logos-Website-PipeLake.jpg";
 export default function LogosPage({ location }) {
   return (
     <div>
-      <h1>Logos</h1>
+      <h1
+        style={{
+          marginLeft: "var(--spacing-xl)",
+          marginTop: "var(--spacing-xl)",
+        }}
+      >
+        Logos
+      </h1>
 
-      <Grid gridGap="var(--spacing-xl)" padding="var(--spacing-xl)">
+      <Grid gridGap="4vw" padding="var(--spacing-xl)">
         <LogoCollection
           images={[KonyKim1, KonyKim2, KonyKim3, KonyKim4]}
           isDark={true}
@@ -39,6 +46,7 @@ export default function LogosPage({ location }) {
             display: "block",
             border: "2px solid var(--color-black)",
           }}
+          className="w-lg"
           src={PipeLake}
         />
         <LogoCollection

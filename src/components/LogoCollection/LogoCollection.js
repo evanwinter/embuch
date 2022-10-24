@@ -2,6 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import useCursorType from "../../utils/useCursorType";
+import {
+  ClickZoneNext,
+  ClickZonePrev,
+  Navigation,
+  NavigationButton,
+} from "./LogoCollection.styled";
 
 const variants = {
   enter: (direction) => {
@@ -47,7 +53,6 @@ const LogoCollection = ({ images, isDark }) => {
 
   // wrap image index
   const imageIndex = (page + images.length) % images.length;
-  console.log(imageIndex);
 
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
@@ -68,7 +73,6 @@ const LogoCollection = ({ images, isDark }) => {
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           key={page}
-          className="w-lg"
           style={{
             maxWidth: "100%",
             height: "auto",
@@ -125,40 +129,41 @@ const LogoCollection = ({ images, isDark }) => {
         }}
       ></div>
 
-      <div
-        style={{
-          position: "absolute",
-          top: "1rem",
-          left: "1rem",
-          zIndex: 21,
-          display: "flex",
-          gap: "0.5rem",
-        }}
-      >
-        {images.map((index) => {
+      <Navigation>
+        {images.map((_, index) => {
           return (
-            <div
+            <NavigationButton
               key={index}
-              style={{
-                width: 16,
-                height: 16,
-                borderRadius: "50%",
-                backgroundColor:
-                  imageIndex === index
-                    ? "var(--color-mediumGray)"
-                    : "var(--color-lightGray)",
-              }}
-            ></div>
+              backgroundColor={
+                imageIndex == index
+                  ? "var(--color-mediumGray)"
+                  : "var(--color-lightGray)"
+              }
+              onClick={() => setPage([index, 0])}
+            ></NavigationButton>
           );
         })}
-      </div>
+      </Navigation>
 
-      {/* TODO */}
-      <motion.div
-        style={{ height: "5px", width: 0, backgroundColor: "red" }}
-        animate={{ width: imageIndex / images.length }}
-      ></motion.div>
+      {/* <Progress images={images} imageIndex={imageIndex} /> */}
     </div>
+  );
+};
+
+const Progress = ({ images, imageIndex }) => {
+  return (
+    <div
+      style={{
+        height: "5px",
+        backgroundColor: "red",
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        zIndex: 21,
+        width: ((imageIndex + 1) / images.length) * 100 + "%",
+        transition: "width 0.5s",
+      }}
+    ></div>
   );
 };
 

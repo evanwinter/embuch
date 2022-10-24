@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const Splash = () => {
   const logoRef = useRef(null);
-  usePullEffect(logoRef);
+  const { x, y } = usePullEffect(logoRef);
   return (
     <Background>
       <video
@@ -27,7 +27,14 @@ const Splash = () => {
       >
         <source src={cloudsVideo} />
       </video>
-      <motion.div ref={logoRef}>
+      <motion.div
+        ref={logoRef}
+        animate={{
+          translateX: x * 20,
+          translateY: y * 20,
+        }}
+        transition={{ type: "spring" }}
+      >
         <EmilyGraffiti style={{ width: "min(700px, 90vw)" }} />
       </motion.div>
     </Background>
