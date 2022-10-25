@@ -1,7 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import useCursorType from "../../utils/useCursorType";
+import { useCursorType } from "@utils";
 import {
   ClickZoneNext,
   ClickZonePrev,
@@ -150,21 +149,21 @@ const LogoCollection = ({ images, isDark }) => {
   );
 };
 
-const Progress = ({ images, imageIndex }) => {
-  return (
-    <div
-      style={{
-        height: "5px",
-        backgroundColor: "red",
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        zIndex: 21,
-        width: ((imageIndex + 1) / images.length) * 100 + "%",
-        transition: "width 0.5s",
-      }}
-    ></div>
-  );
-};
+// const Progress = ({ images, imageIndex }) => {
+//   return (
+//     <div
+//       style={{
+//         height: "5px",
+//         backgroundColor: "red",
+//         position: "absolute",
+//         bottom: 0,
+//         left: 0,
+//         zIndex: 21,
+//         width: ((imageIndex + 1) / images.length) * 100 + "%",
+//         transition: "width 0.5s",
+//       }}
+//     ></div>
+//   );
+// };
 
 export default LogoCollection;

@@ -1,22 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Clickable, Reveal, TagList } from "@components";
-import Arrow from "@images/arrow.inline.svg";
+import { BackLink, Reveal, TagList } from "@components";
 
-import { Header, BackLink, LinkText } from "./WorkHeader.styled";
+import { Header } from "./WorkHeader.styled";
 
 const WorkHeader = ({ description, tags, title }) => {
   return (
     <Header>
-      <Clickable>
-        <BackLink to="/designs">
-          <LinkText>
-            <Arrow style={{ transform: "rotateX(180deg)" }} />
-            back
-          </LinkText>
-        </BackLink>
-      </Clickable>
+      <BackLink to="/designs">back</BackLink>
       <Reveal effect="fadeInUp" distance="lg">
         <h1 className="mt-xl mb-sm">{title}</h1>
       </Reveal>

@@ -4,12 +4,13 @@ import { StaticImage } from "gatsby-plugin-image";
 import {
   Reveal,
   Section,
-  WorkBanner,
   WorkCarousel,
   WorkHeader,
   WorkLayout,
 } from "@components";
 import { colors } from "@styles";
+
+import ReadABookGif from "@images/work/hlk/Read-a-Book-Day-GIF.gif";
 
 const imageDefaults = { quality: 100, alt: "TODO" };
 const imagePath = "../../images/work/hlk";
@@ -172,10 +173,10 @@ export default function HlkPage({ location }) {
       </WorkCarousel>
 
       <Reveal effect="fadeInUp">
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Ripple-Banner-3.jpg`}
-          layout="fullWidth"
+        <img
+          src={ReadABookGif}
+          alt="Read a Book Day"
+          style={{ width: "100%", height: "auto", display: "block" }}
         />
       </Reveal>
     </WorkLayout>

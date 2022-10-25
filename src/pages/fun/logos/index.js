@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, LogoCollection, Section } from "@components";
+import { BackLink, Grid, LogoCollection } from "@components";
 
 import KonyKim1 from "@images/fun/logos/Logos-Website-KK-1.jpg";
 import KonyKim2 from "@images/fun/logos/Logos-Website-KK-2.jpg";
@@ -24,6 +24,15 @@ import PipeLake from "@images/fun/logos/Logos-Website-PipeLake.jpg";
 export default function LogosPage({ location }) {
   return (
     <div>
+      <div
+        style={{
+          marginLeft: "var(--spacing-xl)",
+          marginTop: "var(--spacing-xl)",
+        }}
+      >
+        <BackLink to="/fun">back</BackLink>
+      </div>
+
       <h1
         style={{
           marginLeft: "var(--spacing-xl)",
@@ -32,7 +41,6 @@ export default function LogosPage({ location }) {
       >
         Logos
       </h1>
-
       <Grid gridGap="4vw" padding="var(--spacing-xl)">
         <LogoCollection
           images={[KonyKim1, KonyKim2, KonyKim3, KonyKim4]}

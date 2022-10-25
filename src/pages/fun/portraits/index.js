@@ -1,11 +1,20 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { Grid, Reveal } from "@components";
+import { BackLink, Grid, Reveal } from "@components";
 
 export default function PortraitsPage({ location }) {
   return (
     <div>
+      <div
+        style={{
+          marginLeft: "var(--spacing-xl)",
+          marginTop: "var(--spacing-xl)",
+        }}
+      >
+        <BackLink to="/fun">back</BackLink>
+      </div>
+
       <h1
         style={{
           marginLeft: "var(--spacing-xl)",
