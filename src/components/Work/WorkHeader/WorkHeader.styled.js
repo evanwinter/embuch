@@ -11,19 +11,19 @@ export const BackLink = styled(Link)`
   display: inline-block;
   color: currentColor;
   text-decoration: none;
-  transition: color 0.2s ease;
   padding: var(--spacing-md);
   margin: calc(-1 * var(--spacing-md));
 
   svg {
+    transition: color 0.2s ease;
     fill: currentColor;
     transform: rotate(180deg);
   }
 
   &:hover {
-    color: ${colors.lime};
-    span {
-      transform: translate(-2px, -2px);
+    svg {
+      color: ${colors.lime};
+      transform: rotate(180deg) translate(-2px, -2px);
     }
   }
 `;

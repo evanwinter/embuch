@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Menu, Transition, Splash } from "@components";
 import { useCustomCursor } from "@utils";
@@ -22,9 +22,14 @@ const Layout = ({ children, location }) => {
   const isPinned = location.pathname !== "/";
 
   // Cursor stuff
-  const { cursorType } = useContext(CursorContext);
+  const { cursorType, setCursorType } = useContext(CursorContext);
   const cursorRef = useRef(null);
   const { cursorProps } = useCustomCursor(cursorRef, cursorType);
+
+  // On route change, reset cursor type
+  useEffect(() => {
+    setCursorType("default");
+  }, [location, setCursorType]);
 
   return (
     <AppLayout pinned={isPinned} ref={cursorRef}>
@@ -34,7 +39,8 @@ const Layout = ({ children, location }) => {
         variants={{
           [IDLE]: { translateY: 0 },
           [PINNED]: {
-            translateY: `calc(-100vh + 108px + 16px)`,
+            // translateY: `calc(-100vh + 108px + 18px)`,
+            translateY: "calc(-100vh + 118px + 24px)",
           },
         }}
         initial={isPinned ? PINNED : IDLE}
@@ -45,7 +51,9 @@ const Layout = ({ children, location }) => {
         }}
       >
         <Menu pathname={location.pathname} />
-        <Transition pathname={location.pathname}>{children}</Transition>
+        <div style={{ marginTop: "-118px" }}>
+          <Transition pathname={location.pathname}>{children}</Transition>
+        </div>
       </Sheet>
     </AppLayout>
   );

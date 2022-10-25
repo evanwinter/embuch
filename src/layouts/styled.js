@@ -29,6 +29,6 @@ export const Sheet = styled(motion.div)`
   top: 100vh;
   left: 0;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 118px);
   background-color: var(--color-white);
 `;

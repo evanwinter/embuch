@@ -3,9 +3,10 @@ import styled from "styled-components";
 import { colors } from "@styles";
 
 export const Navigation = styled.nav`
+  position: relative;
   display: flex;
   width: 100%;
-  margin-top: -108px;
+  transform: translateY(-100%);
   a {
     text-decoration: none;
     color: currentColor;

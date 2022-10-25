@@ -1,3 +1,4 @@
+export * from "./Clickable";
 export * from "./Fun";
 export * from "./Grid";
 export * from "./LogoCollection";

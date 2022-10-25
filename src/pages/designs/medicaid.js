@@ -3,11 +3,16 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import {
   Reveal,
+  Row,
   Section,
   WorkBanner,
   WorkHeader,
   WorkLayout,
 } from "@components";
+
+import video1 from "@images/work/medicaid/1.mp4";
+import video2 from "@images/work/medicaid/2.mp4";
+import video3 from "@images/work/medicaid/3.mp4";
 
 const imageDefaults = { quality: 100, alt: "TODO" };
 const imagePath = "../../images/work/medicaid";
@@ -62,10 +67,57 @@ export default function MedicaidPage({ location }) {
         </Reveal>
       </Section>
 
-      <Section>
-        <Reveal effect="fadeInUp">
-          <h1>MP4s</h1>
-        </Reveal>
+      <Section style={{ paddingBlock: "var(--spacing-xxl)" }}>
+        <Row rowStyles={{ gap: "var(--spacing-xl)" }}>
+          <Reveal effect="fadeInUp">
+            <video
+              style={{
+                display: "inline-flex",
+                flex: 1,
+                width: "100%",
+                height: "auto",
+              }}
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src={video1} type="video/mp4" />
+            </video>
+          </Reveal>
+          <Reveal effect="fadeInUp" delay={0.15}>
+            <video
+              style={{
+                display: "inline-flex",
+                flex: 1,
+                width: "100%",
+                height: "auto",
+              }}
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src={video2} type="video/mp4" />
+            </video>
+          </Reveal>
+          <Reveal effect="fadeInUp" delay={0.3}>
+            <video
+              style={{
+                display: "inline-flex",
+                flex: 1,
+                width: "100%",
+                height: "auto",
+              }}
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src={video3} type="video/mp4" />
+            </video>
+          </Reveal>
+        </Row>
       </Section>
 
       <Section style={{ backgroundColor: "var(--color-black)" }}>

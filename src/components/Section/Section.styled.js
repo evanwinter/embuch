@@ -8,8 +8,4 @@ export const Section = styled.div`
   padding-block: var(--spacing-xl);
   padding-inline: var(--spacing-xl);
   min-height: ${({ fullScreen }) => (fullScreen ? "100vh" : "auto")};
-
-  /* .gatsby-image-wrapper {
-    max-width: var(--breakpoints-xl);
-  } */
 `;

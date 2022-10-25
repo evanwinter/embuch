@@ -84,7 +84,7 @@ export const FUN_PROJECTS = [
   },
   {
     title: "Portraits",
-    slug: "portaits",
+    slug: "portraits",
     coverImage: () => (
       <StaticImage
         src="../images/fun/Portraits-Cover.jpg"

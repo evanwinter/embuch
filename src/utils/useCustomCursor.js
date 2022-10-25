@@ -29,7 +29,7 @@ export default function useCustomCursor(ref) {
     width: cursorSize,
     backgroundColor: "var(--color-black)",
     borderRadius: "50%",
-    border: "2px solid var(--color-black)",
+    border: "1px solid var(--color-lime)",
   };
 
   const defaults = {
@@ -55,6 +55,7 @@ export default function useCustomCursor(ref) {
       x: mouseX - (cursorSize * 1.5) / 2,
       y: mouseY - (cursorSize * 1.5) / 2,
       backgroundColor: "var(--color-lime)",
+      borderColor: "var(--color-black)",
     },
     // TODO: show arrow when hovering over carousel
     arrow: {

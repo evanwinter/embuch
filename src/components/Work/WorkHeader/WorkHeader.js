@@ -1,20 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Reveal, TagList } from "@components";
+import { Clickable, Reveal, TagList } from "@components";
 import Arrow from "@images/arrow.inline.svg";
 
-import { Header, Separator, BackLink, LinkText } from "./WorkHeader.styled";
+import { Header, BackLink, LinkText } from "./WorkHeader.styled";
 
-const WorkHeader = ({ title, tags, subtitle, description }) => {
+const WorkHeader = ({ description, tags, title }) => {
   return (
     <Header>
-      <BackLink to="/designs">
-        <LinkText>
-          <Arrow style={{ transform: "rotateX(180deg)" }} />
-          back
-        </LinkText>
-      </BackLink>
+      <Clickable>
+        <BackLink to="/designs">
+          <LinkText>
+            <Arrow style={{ transform: "rotateX(180deg)" }} />
+            back
+          </LinkText>
+        </BackLink>
+      </Clickable>
       <Reveal effect="fadeInUp" distance="lg">
         <h1 className="mt-xl mb-sm">{title}</h1>
       </Reveal>
@@ -22,15 +24,6 @@ const WorkHeader = ({ title, tags, subtitle, description }) => {
         <p className="p1 mt-sm mb-lg">{description}</p>
       </Reveal>
       <TagList tags={tags} />
-      {/* <Reveal effect="fadeInUp" distance="lg" delay={0.1}>
-        <Separator />
-      </Reveal> */}
-      {/* <Reveal effect="fadeInUp" distance="lg" delay={0.2}>
-        <h2 className="mb-none p1 mt-xl" style={{ fontWeight: 500 }}>{subtitle}</h2>
-      </Reveal>
-      <Reveal effect="fadeInUp" distance="lg" delay={0.3}>
-        <p className="p1 my-xs">{description}</p>
-      </Reveal> */}
     </Header>
   );
 };
@@ -38,8 +31,6 @@ const WorkHeader = ({ title, tags, subtitle, description }) => {
 export default WorkHeader;
 
 WorkHeader.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(
     PropTypes.shape({
@@ -47,4 +38,5 @@ WorkHeader.propTypes = {
       backgroundColor: PropTypes.string.isRequired,
     })
   ).isRequired,
+  title: PropTypes.string.isRequired,
 };
