@@ -71,6 +71,7 @@ export default function LogosPage({ location }) {
           }}
           className="w-lg"
           src={PipeLake}
+          alt="Pipe Lake"
         />
         <LogoCollection
           images={[PrettyGood1, PrettyGood2, PrettyGood3, PrettyGood4]}

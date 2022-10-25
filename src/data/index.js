@@ -3,8 +3,8 @@ import { StaticImage } from "gatsby-plugin-image";
 
 export const WORK_PROJECTS = [
   {
-    title: "American Cancer",
-    slug: "american-cancer",
+    title: "American Cancer Society",
+    slug: "american-cancer-society",
     coverImage: () => (
       <StaticImage
         src="../images/work/american-cancer/ACS-Cover.jpg"
