@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { CursorContext } from "@context";
 
-export default function useCursorType(cursorType) {
+export default function useCursorType(cursorType, condition = true) {
   const { setCursorType } = useContext(CursorContext);
   return {
-    onMouseEnter: () => setCursorType(cursorType),
+    onMouseEnter: () => condition && setCursorType(cursorType),
     onMouseLeave: () => setCursorType("default"),
   };
 }

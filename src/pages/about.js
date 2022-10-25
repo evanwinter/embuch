@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Reveal, Row, Section } from "@components";
+import { Reveal, Row } from "@components";
 
 import polaroidGif from "@images/about/polaroids.gif";
 
@@ -34,7 +34,7 @@ const AboutPage = () => {
 const AboutImage = styled.img`
   display: block;
   justify-self: center;
-  max-height: calc(100vh - 118px);
+  max-height: calc(100vh - 118px - 24px - 24px);
   margin: 0 auto;
 `;
 

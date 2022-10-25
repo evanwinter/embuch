@@ -34,12 +34,11 @@ const Layout = ({ children, location }) => {
   return (
     <AppLayout pinned={isPinned} ref={cursorRef}>
       <motion.div className="cursor" {...cursorProps}></motion.div>
-      <Splash />
+      <Splash isPinned={isPinned} />
       <Sheet
         variants={{
           [IDLE]: { translateY: 0 },
           [PINNED]: {
-            // translateY: `calc(-100vh + 108px + 18px)`,
             translateY: "calc(-100vh + 118px + 24px)",
           },
         }}

@@ -7,9 +7,11 @@ export const Navigation = styled.nav`
   display: flex;
   width: 100%;
   transform: translateY(-100%);
+  pointer-events: none;
   a {
     text-decoration: none;
     color: currentColor;
+    pointer-events: all;
   }
 `;
 
@@ -50,4 +52,5 @@ export const FlowerImage = styled.img`
 export const Sticker = styled(motion.div)`
   position: absolute;
   right: 2.25rem;
+  z-index: 20;
 `;
