@@ -20,6 +20,7 @@ import PrettyGood3 from "@images/fun/logos/Logos-Website-PG-3.jpg";
 import PrettyGood4 from "@images/fun/logos/Logos-Website-PG-4.jpg";
 
 import PipeLake from "@images/fun/logos/Logos-Website-PipeLake.jpg";
+import FreshPicks from "@images/fun/logos/Logos-Fresh-Picks.gif";
 
 export default function LogosPage({ location }) {
   return (
@@ -47,6 +48,15 @@ export default function LogosPage({ location }) {
           isDark={true}
         />
         <LogoCollection images={[Coalfire1, Coalfire2, Coalfire3, Coalfire4]} />
+        <img
+          src={FreshPicks}
+          alt="Fresh Picks"
+          style={{
+            width: "100%",
+            display: "block",
+            border: "2px solid var(--color-black)",
+          }}
+        />
         <LogoCollection images={[Lawndale1, Lawndale2]} />
         <img
           style={{
