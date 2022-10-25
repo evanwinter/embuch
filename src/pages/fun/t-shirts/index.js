@@ -24,6 +24,10 @@ export default function TShirtsPage() {
         T-Shirts
       </h1>
 
+      <p className="p1" style={{ marginLeft: "var(--spacing-xl)" }}>
+        Custom commissioned designs.
+      </p>
+
       <Grid gridTemplateColumns="1fr" padding="var(--spacing-xl)">
         <Reveal effect="fadeInUp">
           <StaticImage src={"../../../images/fun/t-shirts/1.jpg"} alt="TODO" />

@@ -24,6 +24,10 @@ export default function PortraitsPage({ location }) {
         Portraits
       </h1>
 
+      <p className="p1" style={{ marginLeft: "var(--spacing-xl)" }}>
+        Illustrations for friends and thier babies.
+      </p>
+
       <Grid
         gridGap="4vw"
         padding="var(--spacing-xl)"

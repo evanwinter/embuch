@@ -3,6 +3,10 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import { BackLink, Section, Reveal, Row } from "@components";
 
+import LoveThingsGif from "@images/fun/custom-type/3.gif";
+import ShiftFocusGif from "@images/fun/custom-type/5.gif";
+import ExperienceGif from "@images/fun/custom-type/8.gif";
+
 export default function CustomTypePage() {
   return (
     <div>
@@ -23,6 +27,11 @@ export default function CustomTypePage() {
         Custom Type
       </h1>
 
+      <p className="p1" style={{ marginLeft: "var(--spacing-xl)" }}>
+        Self-led projects playing with layout and experimenting with custom
+        type.
+      </p>
+
       <Section>
         <Reveal effect="fadeInUp">
           <StaticImage
@@ -31,9 +40,9 @@ export default function CustomTypePage() {
           />
         </Reveal>
 
-        <div style={{ marginTop: "var(--spacing-sm)" }}></div>
+        <div style={{ marginTop: "var(--spacing-md)" }}></div>
 
-        <Row rowStyles={{ alignItems: "flex-start", gap: "var(--spacing-sm)" }}>
+        <Row rowStyles={{ alignItems: "flex-start", gap: "var(--spacing-md)" }}>
           <Reveal effect="fadeInUp">
             <StaticImage
               src={"../../../images/fun/custom-type/2.jpg"}
@@ -41,14 +50,15 @@ export default function CustomTypePage() {
             />
           </Reveal>
           <Reveal effect="fadeInUp" delay={0.15}>
-            <StaticImage
-              src="../../../images/fun/custom-type/3.jpg"
+            <img
+              src={LoveThingsGif}
               alt="TODO"
+              style={{ width: "100%", height: "auto", display: "block" }}
             />
           </Reveal>
         </Row>
 
-        <div style={{ marginTop: "var(--spacing-sm)" }}></div>
+        <div style={{ marginTop: "var(--spacing-md)" }}></div>
 
         <Reveal effect="fadeInUp">
           <StaticImage
@@ -57,18 +67,20 @@ export default function CustomTypePage() {
           />
         </Reveal>
 
-        <div style={{ marginTop: "var(--spacing-sm)" }}></div>
+        <div style={{ marginTop: "var(--spacing-md)" }}></div>
 
         <Reveal effect="fadeInUp">
-          <StaticImage
-            src={"../../../images/fun/custom-type/5.jpg"}
+          <img
+            src={ShiftFocusGif}
+            style={{ width: "100%", height: "auto", display: "block" }}
+            className="w-lg"
             alt="TODO"
           />
         </Reveal>
 
-        <div style={{ marginTop: "var(--spacing-sm)" }}></div>
+        <div style={{ marginTop: "var(--spacing-md)" }}></div>
 
-        <Row rowStyles={{ alignItems: "flex-start", gap: "var(--spacing-sm)" }}>
+        <Row rowStyles={{ alignItems: "flex-start", gap: "var(--spacing-md)" }}>
           <Reveal effect="fadeInUp">
             <StaticImage
               src={"../../../images/fun/custom-type/6.jpg"}
@@ -83,11 +95,12 @@ export default function CustomTypePage() {
           </Reveal>
         </Row>
 
-        <div style={{ marginTop: "var(--spacing-sm)" }}></div>
+        <div style={{ marginTop: "var(--spacing-md)" }}></div>
 
         <Reveal effect="fadeInUp">
-          <StaticImage
-            src={"../../../images/fun/custom-type/8.jpg"}
+          <img
+            style={{ width: "100%", height: "auto", display: "block" }}
+            src={ExperienceGif}
             alt="TODO"
           />
         </Reveal>

@@ -42,6 +42,11 @@ export default function LogosPage({ location }) {
       >
         Logos
       </h1>
+
+      <p className="p1" style={{ marginLeft: "var(--spacing-xl)" }}>
+        Various logos for branding projects.
+      </p>
+
       <Grid gridGap="4vw" padding="var(--spacing-xl)">
         <LogoCollection
           images={[KonyKim1, KonyKim2, KonyKim3, KonyKim4]}
