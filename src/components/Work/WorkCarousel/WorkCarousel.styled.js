@@ -10,6 +10,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  overflow: hidden;
 `;
 
 export const InnerContainer = styled.div`

@@ -1,15 +1,15 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { BackLink, Section, Reveal, Row } from "@components";
+import { BackLink, FunLayout, Section, Reveal, Row } from "@components";
 
 import LoveThingsGif from "@images/fun/custom-type/3.gif";
 import ShiftFocusGif from "@images/fun/custom-type/5.gif";
 import ExperienceGif from "@images/fun/custom-type/8.gif";
 
-export default function CustomTypePage() {
+export default function CustomTypePage({ location }) {
   return (
-    <div>
+    <FunLayout pathname={location.pathname}>
       <div
         style={{
           marginLeft: "var(--spacing-xl)",
@@ -34,10 +34,7 @@ export default function CustomTypePage() {
 
       <Section>
         <Reveal effect="fadeInUp">
-          <StaticImage
-            src={"../../../images/fun/custom-type/1.jpg"}
-            alt="TODO"
-          />
+          <StaticImage src={"../../images/fun/custom-type/1.jpg"} alt="TODO" />
         </Reveal>
 
         <div style={{ marginTop: "var(--spacing-md)" }}></div>
@@ -45,7 +42,7 @@ export default function CustomTypePage() {
         <Row rowStyles={{ alignItems: "flex-start", gap: "var(--spacing-md)" }}>
           <Reveal effect="fadeInUp">
             <StaticImage
-              src={"../../../images/fun/custom-type/2.jpg"}
+              src={"../../images/fun/custom-type/2.jpg"}
               alt="TODO"
             />
           </Reveal>
@@ -61,10 +58,7 @@ export default function CustomTypePage() {
         <div style={{ marginTop: "var(--spacing-md)" }}></div>
 
         <Reveal effect="fadeInUp">
-          <StaticImage
-            src={"../../../images/fun/custom-type/4.jpg"}
-            alt="TODO"
-          />
+          <StaticImage src={"../../images/fun/custom-type/4.jpg"} alt="TODO" />
         </Reveal>
 
         <div style={{ marginTop: "var(--spacing-md)" }}></div>
@@ -83,15 +77,12 @@ export default function CustomTypePage() {
         <Row rowStyles={{ alignItems: "flex-start", gap: "var(--spacing-md)" }}>
           <Reveal effect="fadeInUp">
             <StaticImage
-              src={"../../../images/fun/custom-type/6.jpg"}
+              src={"../../images/fun/custom-type/6.jpg"}
               alt="TODO"
             />
           </Reveal>
           <Reveal effect="fadeInUp" delay={0.15}>
-            <StaticImage
-              src="../../../images/fun/custom-type/7.jpg"
-              alt="TODO"
-            />
+            <StaticImage src="../../images/fun/custom-type/7.jpg" alt="TODO" />
           </Reveal>
         </Row>
 
@@ -105,6 +96,6 @@ export default function CustomTypePage() {
           />
         </Reveal>
       </Section>
-    </div>
+    </FunLayout>
   );
 }

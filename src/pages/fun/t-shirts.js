@@ -1,11 +1,11 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { BackLink, Grid, Reveal } from "@components";
+import { BackLink, FunLayout, Grid, Reveal } from "@components";
 
-export default function TShirtsPage() {
+export default function TShirtsPage({ location }) {
   return (
-    <div>
+    <FunLayout pathname={location.pathname}>
       <div
         style={{
           marginLeft: "var(--spacing-xl)",
@@ -30,15 +30,15 @@ export default function TShirtsPage() {
 
       <Grid gridTemplateColumns="1fr" padding="var(--spacing-xl)">
         <Reveal effect="fadeInUp">
-          <StaticImage src={"../../../images/fun/t-shirts/1.jpg"} alt="TODO" />
+          <StaticImage src={"../../images/fun/t-shirts/1.jpg"} alt="TODO" />
         </Reveal>
         <Reveal effect="fadeInUp">
-          <StaticImage src={"../../../images/fun/t-shirts/2.jpg"} alt="TODO" />
+          <StaticImage src={"../../images/fun/t-shirts/2.jpg"} alt="TODO" />
         </Reveal>
         <Reveal effect="fadeInUp">
-          <StaticImage src={"../../../images/fun/t-shirts/3.jpg"} alt="TODO" />
+          <StaticImage src={"../../images/fun/t-shirts/3.jpg"} alt="TODO" />
         </Reveal>
       </Grid>
-    </div>
+    </FunLayout>
   );
 }

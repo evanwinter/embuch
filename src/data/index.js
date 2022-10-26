@@ -61,13 +61,13 @@ export const WORK_PROJECTS = [
 
 export const FUN_PROJECTS = [
   {
-    title: "T-Shirts",
-    slug: "t-shirts",
+    title: "Custom Type",
+    slug: "custom-type",
     coverImage: () => (
       <StaticImage
-        src="../images/fun/T-Shirts-Cover.jpg"
+        src="../images/fun/Custom-Type-Cover.jpg"
         quality={100}
-        alt="T-Shirts"
+        alt="Custom Type"
       />
     ),
   },
@@ -94,13 +94,13 @@ export const FUN_PROJECTS = [
     ),
   },
   {
-    title: "Custom Type",
-    slug: "custom-type",
+    title: "T-Shirts",
+    slug: "t-shirts",
     coverImage: () => (
       <StaticImage
-        src="../images/fun/Custom-Type-Cover.jpg"
+        src="../images/fun/T-Shirts-Cover.jpg"
         quality={100}
-        alt="Custom Type"
+        alt="T-Shirts"
       />
     ),
   },

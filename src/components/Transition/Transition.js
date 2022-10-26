@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { AnimatePresence, motion } from "framer-motion";
 
-const PageTransition = ({
+const Transition = ({
   children,
   pathname,
   duration = 0.2,
@@ -23,9 +23,9 @@ const PageTransition = ({
   );
 };
 
-export default PageTransition;
+export default Transition;
 
-PageTransition.propTypes = {
+Transition.propTypes = {
   children: PropTypes.node.isRequired,
   pathname: PropTypes.string.isRequired,
   duration: PropTypes.number,

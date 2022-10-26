@@ -1,5 +1,5 @@
 import React from "react";
-import { BackLink, Grid, LogoCollection } from "@components";
+import { BackLink, FunLayout, Grid, LogoCollection } from "@components";
 
 import KonyKim1 from "@images/fun/logos/Logos-Website-KK-1.jpg";
 import KonyKim2 from "@images/fun/logos/Logos-Website-KK-2.jpg";
@@ -24,7 +24,7 @@ import FreshPicks from "@images/fun/logos/Logos-Fresh-Picks.gif";
 
 export default function LogosPage({ location }) {
   return (
-    <div>
+    <FunLayout pathname={location.pathname}>
       <div
         style={{
           marginLeft: "var(--spacing-xl)",
@@ -77,6 +77,6 @@ export default function LogosPage({ location }) {
           images={[PrettyGood1, PrettyGood2, PrettyGood3, PrettyGood4]}
         />
       </Grid>
-    </div>
+    </FunLayout>
   );
 }
