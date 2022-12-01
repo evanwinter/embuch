@@ -9,11 +9,11 @@ const TagList = ({ tags = [] }) => {
   return (
     <List>
       {tags.map(({ text, backgroundColor }, index) => (
-        <Reveal effect="fadeInUp" distance="lg" key={text} delay={0.2}>
-          <Tag key={text} style={{ backgroundColor }}>
-            {text}
-          </Tag>
-        </Reveal>
+        // <Reveal effect="fadeIn" distance="lg" key={text} delay={0.2}>
+        <Tag key={text} style={{ backgroundColor }}>
+          {text}
+        </Tag>
+        // </Reveal>
       ))}
     </List>
   );

@@ -14,21 +14,12 @@ export const AppLayout = styled(App)`
     `}
 `;
 
-export const Background = styled.div`
-  background-color: lightskyblue;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url("/clouds.png");
-`;
-
 export const Sheet = styled(motion.div)`
   position: absolute;
   top: 100vh;
   left: 0;
   width: 100%;
-  min-height: calc(100vh - 118px - 24px);
+  min-height: calc(100vh - 118px);
   background-color: var(--color-white);
+  border-top: 2px solid var(--color-black);
 `;

@@ -5,6 +5,12 @@ export const RowContainer = styled.div`
   align-items: center;
   justify-content: center;
 
+  border: ${({ debug }) => (debug ? "1px solid blue" : "none")};
+
+  > * {
+    border: ${({ debug }) => (debug ? "1px solid red" : "none")};
+  }
+
   @media (max-width: 48rem) {
     flex-direction: column;
   }

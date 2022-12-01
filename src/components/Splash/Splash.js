@@ -1,52 +1,23 @@
-import React, { useRef } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 
-import { Clickable } from "@components";
-import cloudsVideo from "@images/clouds.mp4";
-import EmilyGraffiti from "@images/emily-graffiti.inline.svg";
-import { usePullEffect } from "@utils";
+import Spiral from "@images/spiral.png";
+import { Background, Content } from "./Splash.styled";
 
-import { Background } from "./Splash.styled";
-import { motion } from "framer-motion";
-
-const Splash = ({ isPinned }) => {
-  const logoRef = useRef(null);
-  const { x, y } = usePullEffect(logoRef);
+const Splash = () => {
   return (
-    // <Clickable condition={isPinned}>
-      <Background to="/">
-        <video
-          autoPlay
-          muted
-          loop={true}
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100vh",
-            objectFit: "cover",
-            zIndex: -1,
-          }}
-        >
-          <source src={cloudsVideo} />
-        </video>
-        <motion.div
-          ref={logoRef}
-          animate={{
-            translateX: x * 20,
-            translateY: y * 20,
-          }}
-          transition={{ type: "spring" }}
-        >
-          <EmilyGraffiti style={{ width: "min(700px, 90vw)" }} />
-        </motion.div>
-      </Background>
-    // {/* </Clickable> */}
+    <Background>
+      <Content>
+        <h1 className="h2 mb-md">
+          <span>welcome,</span> i'm emily
+        </h1>
+        <h2 className="my-md">
+          <span>this is my digital scrapbook,</span>
+          &nbsp; take a look inside
+        </h2>
+        <img className="mt-lg" src={Spiral} alt="spiral" />
+      </Content>
+    </Background>
   );
 };
 
 export default Splash;
-
-Splash.propTypes = {
-  isPinned: PropTypes.bool,
-};

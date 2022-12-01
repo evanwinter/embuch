@@ -1,71 +1,31 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "gatsby";
-import { motion } from "framer-motion";
-
-import { Clickable } from "@components";
-import { colors } from "@styles";
-
-import {
-  FlowerImage,
-  Navigation,
-  NavigationLink,
-  Sticker,
-} from "./Menu.styled";
+import Spiral from "../../images/spiral.png";
+import { Navigation, NavigationLink } from "./Menu.styled";
 
 const Menu = ({ pathname }) => {
   return (
     <Navigation>
-      <Clickable>
-        <Link to="/designs" color="currentColor">
-          <NavigationLink
-            data-active={pathname.includes("/designs")}
-            color={colors.pink}
-          >
-            Work
-          </NavigationLink>
-        </Link>
-      </Clickable>
-      <Clickable>
-        <Link to="/fun" color="currentColor">
-          <NavigationLink
-            data-active={pathname.includes("/fun")}
-            color={colors.red}
-          >
-            Fun
-          </NavigationLink>
-        </Link>
-      </Clickable>
-      <Clickable>
-        <Link to="/about" color="currentColor">
-          <NavigationLink
-            data-active={pathname.includes("/about")}
-            color={colors.orange}
-          >
-            Me
-          </NavigationLink>
-        </Link>
-      </Clickable>
-      <Clickable>
-        <Sticker
-          variants={{
-            idle: { translateY: 0 },
-            pinned: { translateY: 70 },
-          }}
-          initial="idle"
-          animate={pathname !== "/" ? "pinned" : "idle"}
-          style={{ right: "2.25rem", position: "absolute" }}
-        >
-          <Link to="/">
-            <motion.div
-              key="flower"
-              whileTap={{ scale: 0.9, transition: { duration: 0.3 } }}
-            >
-              <FlowerImage src="/daisy.svg" alt="Flower" />
-            </motion.div>
-          </Link>
-        </Sticker>
-      </Clickable>
+      {pathname !== "/" && (
+        <NavigationLink to="/" className="py-none px-md m-none mr-sm">
+          <img
+            style={{ width: 32, height: "auto" }}
+            src={Spiral}
+            alt="spiral"
+          />
+        </NavigationLink>
+      )}
+      <NavigationLink to="/designs" data-active={pathname.includes("/designs")}>
+        work
+      </NavigationLink>
+
+      <NavigationLink to="/fun" data-active={pathname.includes("/fun")}>
+        fun
+      </NavigationLink>
+
+      <NavigationLink to="/about" data-active={pathname.includes("/about")}>
+        me
+      </NavigationLink>
     </Navigation>
   );
 };

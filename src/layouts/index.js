@@ -18,28 +18,30 @@ const WrappedLayout = ({ children, location }) => {
   );
 };
 
+const NAVIGATION_HEIGHT = 70;
+
 const Layout = ({ children, location }) => {
   const isPinned = location.pathname !== "/";
 
   // Cursor stuff
-  const { cursorType, setCursorType } = useContext(CursorContext);
-  const cursorRef = useRef(null);
-  const { cursorProps } = useCustomCursor(cursorRef, cursorType);
+  // const { cursorType, setCursorType } = useContext(CursorContext);
+  // const cursorRef = useRef(null);
+  // const { cursorProps } = useCustomCursor(cursorRef, cursorType);
 
   // On route change, reset cursor type
-  useEffect(() => {
-    setCursorType("default");
-  }, [location, setCursorType]);
+  // useEffect(() => {
+  //   setCursorType("default");
+  // }, [location, setCursorType]);
 
   return (
-    <AppLayout pinned={isPinned} ref={cursorRef}>
-      <motion.div className="cursor" {...cursorProps}></motion.div>
-      <Splash isPinned={isPinned} />
+    <AppLayout pinned={isPinned} /*ref={cursorRef}*/>
+      {/* <motion.div className="cursor" {...cursorProps}></motion.div> */}
+      <Splash />
       <Sheet
         variants={{
           [IDLE]: { translateY: 0 },
           [PINNED]: {
-            translateY: "calc(-100vh + 118px + 24px)",
+            translateY: "calc(-100vh + 118px)",
           },
         }}
         initial={isPinned ? PINNED : IDLE}
@@ -50,7 +52,11 @@ const Layout = ({ children, location }) => {
         }}
       >
         <Menu pathname={location.pathname} />
-        <div style={{ marginTop: "-118px" }}>
+        <div
+          style={{
+            marginTop: -1 * NAVIGATION_HEIGHT,
+          }}
+        >
           <Transition pathname={location.pathname}>{children}</Transition>
         </div>
       </Sheet>

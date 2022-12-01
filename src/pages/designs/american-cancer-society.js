@@ -12,10 +12,26 @@ import {
 } from "@components";
 import { colors } from "@styles";
 
+function useWindowSize() {
+  const [size, setSize] = React.useState([0, 0]);
+  React.useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+  return { width: size[0], height: size[1] };
+}
+
 const imageDefaults = { quality: 100, alt: "TODO" };
 const imagePath = "../../images/work/american-cancer";
 
 const AmericanCancerPage = ({ location }) => {
+  const { width } = useWindowSize();
+  const isMobile = width < 768;
+  const carouselImageHeight = isMobile ? 300 : 571;
   return (
     <WorkLayout pathname={location.pathname}>
       <WorkHeader
@@ -28,60 +44,63 @@ const AmericanCancerPage = ({ location }) => {
           { text: "illustration", backgroundColor: colors.red },
         ]}
       />
+
       <WorkBanner>
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/ACS-Header1.png`}
           alt="American Cancer Society Gala"
           layout="fullWidth"
-          style={{ borderBlock: `2px solid ${colors.black}` }}
+          style={{ borderBlock: `2px solid ${colors.black}`, minHeight: 100 }}
         />
       </WorkBanner>
+
       <WorkCarousel backgroundColor={colors.darkGray}>
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/Handout-1.jpg`}
           alt="Handout-1"
-          height={571}
+          height={571 || carouselImageHeight}
         />
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/Handout-2.jpg`}
           alt="Handout-2"
-          height={571}
+          height={571 || carouselImageHeight}
         />
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/Handout-3.jpg`}
           alt="Handout-3"
-          height={571}
+          height={571 || carouselImageHeight}
         />
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/Handout-4.jpg`}
           alt="Handout-4"
-          height={571}
+          height={571 || carouselImageHeight}
         />
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/Handout-5.jpg`}
           alt="Handout-5"
-          height={571}
+          height={571 || carouselImageHeight}
         />
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/Handout-6.jpg`}
           alt="Handout-6"
-          height={571}
+          height={571 || carouselImageHeight}
         />
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/Handout-7.jpg`}
           alt="Handout-7"
-          height={571}
+          height={571 || carouselImageHeight}
         />
       </WorkCarousel>
-      <Section className="pb-none">
+
+      <Section className="pt-xxl">
         <Reveal effect="fadeInUp" distance="lg">
           <p
             className="h2 my-none mx-auto w-lg"
@@ -92,6 +111,7 @@ const AmericanCancerPage = ({ location }) => {
           </p>
         </Reveal>
       </Section>
+
       <Section>
         <Reveal effect="fadeInUp">
           <StaticImage
@@ -101,11 +121,12 @@ const AmericanCancerPage = ({ location }) => {
           />
         </Reveal>
       </Section>
+
       <Section
         style={{
           backgroundColor: "var(--color-black)",
           color: "var(--color-white)",
-          paddingBottom: 0,
+          paddingTop: "var(--spacing-xxl)",
         }}
       >
         <Row
@@ -137,25 +158,26 @@ const AmericanCancerPage = ({ location }) => {
         <Row
           rowStyles={{
             gap: "var(--spacing-xl)",
-            marginTop: "var(--spacing-xl)",
+            paddingTop: "var(--spacing-xxl)",
+            paddingBottom: 0,
             justifyContent: "space-between",
           }}
         >
-          <Reveal effect="fadeInUp" amount={0.25}>
+          <Reveal effect="fadeInRight" amount={0.25}>
             <StaticImage
               {...imageDefaults}
               src={`${imagePath}/Research-Highlights-1.jpg`}
               height={571}
             />
           </Reveal>
-          <Reveal effect="fadeInUp" amount={0.25} delay={0.15}>
+          <Reveal effect="fadeInRight" amount={0.25} delay={0.15}>
             <StaticImage
               {...imageDefaults}
               src={`${imagePath}/Research-Highlights-2.jpg`}
               height={571}
             />
           </Reveal>
-          <Reveal effect="fadeInUp" amount={0.25} delay={0.3}>
+          <Reveal effect="fadeInRight" amount={0.25} delay={0.3}>
             <StaticImage
               {...imageDefaults}
               src={`${imagePath}/Research-Highlights-3.jpg`}
@@ -196,7 +218,7 @@ const AmericanCancerPage = ({ location }) => {
           height={571}
         />
       </WorkCarousel>
-      <Section>
+      <Section style={{ paddingBlock: "var(--spacing-xxl)" }}>
         <Reveal effect="fadeInUp">
           <StaticImage
             {...imageDefaults}
@@ -237,7 +259,7 @@ const AmericanCancerPage = ({ location }) => {
           height={700}
         />
       </WorkCarousel>
-      <Section>
+      <Section style={{ paddingTop: "var(--spacing-xxl)" }}>
         <div
           style={{
             position: "relative",

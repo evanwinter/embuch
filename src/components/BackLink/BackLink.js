@@ -10,7 +10,7 @@ const BackLink = ({ children, to }) => {
   return (
     <Clickable>
       <LinkWrapper to={to} className="back-link">
-        <LinkText>
+        <LinkText className="h5">
           <Arrow />
           {children}
         </LinkText>

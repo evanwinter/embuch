@@ -2,9 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useCursorType } from "@utils";
 
-const Clickable = ({ children, condition }) => {
+const Clickable = ({ children, condition, ...props }) => {
   const handleCursor = useCursorType("clickable", condition);
-  return <div {...handleCursor}>{children}</div>;
+  return (
+    <div {...props} {...handleCursor}>
+      {children}
+    </div>
+  );
 };
 
 export default Clickable;

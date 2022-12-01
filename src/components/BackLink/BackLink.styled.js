@@ -10,23 +10,28 @@ export const LinkWrapper = styled(Link)`
   margin: calc(-1 * var(--spacing-md));
 
   svg {
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: transform 0.2s ease;
     color: currentColor;
+    width: 2rem;
+    height: 2rem;
   }
 
   &:hover {
     svg {
-      color: ${colors.lime};
-      transform: translate(-2px, -2px);
+      transform: translateX(-2px);
     }
   }
 `;
 
 export const LinkText = styled.span`
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 1rem;
+  /* font-weight: 300; */
   display: flex;
   align-items: center;
   gap: 0.6725rem;
   transition: transform 0.2s ease-in-out;
+
+  @media (max-width: 48rem) {
+    font-size: 16px;
+  }
 `;

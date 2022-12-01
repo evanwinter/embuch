@@ -64,12 +64,12 @@ export default function HlkPage({ location }) {
           paddingBottom: 0,
         }}
       >
-        <Reveal effect="fadeInUp">
+        <Reveal effect="fadeInLeft">
           <h2 className="mt-none p1 mb-none" style={{ fontWeight: 500 }}>
             Walking Challenge
           </h2>
         </Reveal>
-        <Reveal effect="fadeInUp" delay={0.1}>
+        <Reveal effect="fadeInLeft" delay={0.1}>
           <p className="p1 my-none">
             Mailer sent out to all employees inviting them to participate in a
             steps challenge.
@@ -121,10 +121,10 @@ export default function HlkPage({ location }) {
           paddingBottom: 0,
         }}
       >
-        <Reveal effect="fadeInUp">
+        <Reveal effect="fadeInLeft">
           <h2 className="mt-none">Read a Book Day</h2>
         </Reveal>
-        <Reveal effect="fadeInUp" delay={0.1}>
+        <Reveal effect="fadeInLeft" delay={0.1}>
           <p className="p1 my-none">
             Social posts highlighting books picked out by employees.
           </p>

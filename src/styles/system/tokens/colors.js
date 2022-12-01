@@ -13,6 +13,9 @@ export const colors = {
   orange: "#FAB313",
   pureBlack: "#000000",
   green: "#61ff00",
+
+  cream: "#F9F8F4",
+  charcoal: "#656565",
 };
 
 export const colorsCssVariables = css`

@@ -10,6 +10,10 @@ export const breakpoints = {
 };
 
 export const breakpointsClasses = css`
+  .w-100 {
+    width: 100%;
+  }
+
   ${Object.keys(breakpoints).map(
     (breakpoint) => `
       .w-${breakpoint} {

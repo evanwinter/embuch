@@ -5,6 +5,17 @@ import { colors } from "@styles";
 export const Header = styled.header`
   padding-block: var(--spacing-xl);
   padding-inline: var(--spacing-xl);
+
+  @media (max-width: 48rem) {
+    h1.title {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+
+    p.desc {
+      margin-bottom: 2.5rem;
+    }
+  }
 `;
 
 export const BackLink = styled(Link)`

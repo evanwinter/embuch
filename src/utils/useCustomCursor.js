@@ -36,11 +36,10 @@ export default function useCustomCursor(ref) {
     ...cursorStyles,
     x: mouseX - cursorSize / 2,
     y: mouseY - cursorSize / 2,
-    // TODO: Make this snappier
     transition: {
       type: "spring",
       mass: 0.5,
-      damping: 20,
+      damping: 15,
       stiffness: 200,
     },
   };

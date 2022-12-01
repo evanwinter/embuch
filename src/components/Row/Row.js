@@ -4,9 +4,9 @@ import { v4 as uuid } from "uuid";
 
 import { RowContainer, RowItem } from "./Row.styled";
 
-const Row = ({ children, rowStyles, itemStyles }) => {
+const Row = ({ children, rowStyles, itemStyles, debug = false }) => {
   return (
-    <RowContainer style={{ ...rowStyles }}>
+    <RowContainer debug={debug} style={{ ...rowStyles }}>
       {children.map((child) => (
         <RowItem key={uuid()} style={{ ...itemStyles }}>
           {child}
