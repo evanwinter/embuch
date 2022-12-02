@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { colors } from "@styles";
 
 export const LinkWrapper = styled(Link)`
   display: inline-block;
@@ -25,7 +24,6 @@ export const LinkWrapper = styled(Link)`
 
 export const LinkText = styled.span`
   font-size: 1rem;
-  /* font-weight: 300; */
   display: flex;
   align-items: center;
   gap: 0.6725rem;

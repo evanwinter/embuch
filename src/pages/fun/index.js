@@ -18,3 +18,13 @@ export default function FunPage() {
     </div>
   );
 }
+
+export const Head = () => (
+  <>
+    <title>Fun | Emily Buchberger</title>
+    <meta
+      name="description"
+      content="Personal projects made by Emily Buchberger, a designer in Chicago."
+    />
+  </>
+);

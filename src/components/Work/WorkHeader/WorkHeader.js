@@ -9,12 +9,8 @@ const WorkHeader = ({ description, tags, title }) => {
   return (
     <Header>
       <BackLink to="/designs">back</BackLink>
-      {/* <Reveal effect="fadeIn" distance="lg"> */}
-      <h1 className="title mt-xl mb-sm">{title}</h1>
-      {/* </Reveal> */}
-      {/* <Reveal effect="fadeIn" distance="lg" delay={0.1}> */}
-      <p className="desc p1 mt-sm mb-lg">{description}</p>
-      {/* </Reveal> */}
+      <h1 className="h2 mt-xl mb-sm">{title}</h1>
+      <p className="p1 mb-xl">{description}</p>
       <TagList tags={tags} />
     </Header>
   );

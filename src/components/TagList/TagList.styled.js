@@ -3,11 +3,13 @@ import { colors } from "@styles";
 
 export const Tag = styled.div`
   display: inline-block;
-  padding: 0px var(--spacing-md);
+  padding: 2px var(--spacing-md);
   border-radius: var(--spacing-md);
-  font-size: 1.5rem;
-  font-weight: 300;
-  border: 1px solid ${colors.black};
+  font-size: 1rem;
+  font-weight: 400;
+  border: 2px solid ${colors.black};
+  background-color: var(--color-cream);
+  color: var(--color-black);
 `;
 
 export const List = styled.div`

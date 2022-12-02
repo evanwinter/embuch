@@ -7,13 +7,13 @@ import { colors } from "@styles";
 
 import { PreviewItem, PreviewLink } from "./Preview.styled";
 
-export default function Preview({ project, kind = "designs", index = 0 }) {
+export default function Preview({ project, kind = "designs" }) {
   const Image = project["coverImage"];
   return (
-    <Reveal effect="fadeInUp" delay={index * 0.1}>
+    <Reveal effect="fadeInUp">
       <Clickable>
         <PreviewItem key={project.slug}>
-          <h3 className="h2">{project.title}</h3>
+          <h3>{project.title}</h3>
           <motion.div
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
             whileTap={{

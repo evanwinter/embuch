@@ -1,19 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Reveal } from "@components";
-
 import { List, Tag } from "./TagList.styled";
 
 const TagList = ({ tags = [] }) => {
   return (
     <List>
-      {tags.map(({ text, backgroundColor }, index) => (
-        // <Reveal effect="fadeIn" distance="lg" key={text} delay={0.2}>
-        <Tag key={text} style={{ backgroundColor }}>
-          {text}
-        </Tag>
-        // </Reveal>
+      {tags.map(({ text }) => (
+        <Tag key={text}>{text}</Tag>
       ))}
     </List>
   );

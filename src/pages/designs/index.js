@@ -17,3 +17,13 @@ export default function DesignsPage() {
     </Grid>
   );
 }
+
+export const Head = () => (
+  <>
+    <title>Work | Emily Buchberger</title>
+    <meta
+      name="description"
+      content="Design work by Emily Buchberger, a designer in Chicago."
+    />
+  </>
+);

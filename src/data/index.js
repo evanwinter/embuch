@@ -61,7 +61,7 @@ export const WORK_PROJECTS = [
 
 export const FUN_PROJECTS = [
   {
-    title: "Custom Type",
+    title: "custom type",
     slug: "custom-type",
     coverImage: () => (
       <StaticImage
@@ -72,7 +72,7 @@ export const FUN_PROJECTS = [
     ),
   },
   {
-    title: "Logos",
+    title: "logos",
     slug: "logos",
     coverImage: () => (
       <StaticImage
@@ -83,7 +83,7 @@ export const FUN_PROJECTS = [
     ),
   },
   {
-    title: "Portraits",
+    title: "portaits",
     slug: "portraits",
     coverImage: () => (
       <StaticImage
@@ -94,7 +94,7 @@ export const FUN_PROJECTS = [
     ),
   },
   {
-    title: "T-Shirts",
+    title: "t-shirts",
     slug: "t-shirts",
     coverImage: () => (
       <StaticImage

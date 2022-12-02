@@ -22,7 +22,7 @@ export const NavigationLink = styled(Link)`
   align-items: center;
   font-family: "Space Grotesk";
   font-size: 1.5rem;
-  font-weight: 600;
+  /* font-weight: 600; */
   text-align: center;
   padding: var(--spacing-md);
   margin-inline: var(--spacing-sm);
