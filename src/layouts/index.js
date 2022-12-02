@@ -21,7 +21,6 @@ const NAVIGATION_HEIGHT = 70;
 
 const Layout = ({ children, location }) => {
   const isPinned = location.pathname !== "/";
-  const status = isPinned ? PINNED : IDLE;
 
   // Cursor stuff
   // const { cursorType, setCursorType } = useContext(CursorContext);
@@ -36,7 +35,7 @@ const Layout = ({ children, location }) => {
   return (
     <AppLayout pinned={isPinned} /*ref={cursorRef}*/>
       {/* <motion.div className="cursor" {...cursorProps}></motion.div> */}
-      <Splash />
+      <Splash pathname={location.pathname} />
       <Sheet
         variants={{
           [IDLE]: { translateY: "0px" },

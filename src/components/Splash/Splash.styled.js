@@ -32,8 +32,6 @@ export const Content = styled.div`
     height: auto;
   }
 
-  @media (max-width: 48rem) {
-    .h2, h2, span {
-      line-height: 1.2;
-    }
+  transition: opacity 0.1s ease-in-out;
+  opacity: ${({ hide }) => (hide ? 0 : 1)};
 `;
