@@ -112,7 +112,7 @@ const AmericanCancerPage = ({ location }) => {
         </Reveal>
       </Section>
 
-      <Section>
+      <Section className="pb-xxl">
         <Reveal effect="fadeInUp">
           <StaticImage
             {...imageDefaults}

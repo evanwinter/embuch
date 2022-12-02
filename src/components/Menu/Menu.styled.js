@@ -22,7 +22,7 @@ export const NavigationLink = styled(Link)`
   align-items: center;
   font-family: "Space Grotesk";
   font-size: 1.5rem;
-  /* font-weight: 600; */
+  font-weight: 600;
   text-align: center;
   padding: var(--spacing-md);
   margin-inline: var(--spacing-sm);
@@ -32,6 +32,6 @@ export const NavigationLink = styled(Link)`
   &[data-active="true"] {
     z-index: 14;
     background-color: var(--color-black);
-    color: var(--color-lime);
+    color: var(--color-cream);
   }
 `;

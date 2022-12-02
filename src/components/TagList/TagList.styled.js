@@ -6,7 +6,7 @@ export const Tag = styled.div`
   padding: 2px var(--spacing-md);
   border-radius: var(--spacing-md);
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   border: 2px solid ${colors.black};
   background-color: var(--color-cream);
   color: var(--color-black);

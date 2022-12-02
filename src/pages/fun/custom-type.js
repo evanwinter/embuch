@@ -10,24 +10,11 @@ import ExperienceGif from "@images/fun/custom-type/8.gif";
 export default function CustomTypePage({ location }) {
   return (
     <FunLayout pathname={location.pathname}>
-      <div
-        style={{
-          marginLeft: "var(--spacing-xl)",
-          marginTop: "var(--spacing-xl)",
-        }}
-      >
+      <div className="ml-xl mt-xl">
         <BackLink to="/fun">back</BackLink>
       </div>
-      <h1
-        style={{
-          marginLeft: "var(--spacing-xl)",
-          marginTop: "var(--spacing-xl)",
-        }}
-      >
-        Custom Type
-      </h1>
-
-      <p className="p1" style={{ marginLeft: "var(--spacing-xl)" }}>
+      <h1 className="ml-xl mt-xl">custom type</h1>
+      <p className="p1 ml-xl">
         Self-led projects playing with layout and experimenting with custom
         type.
       </p>

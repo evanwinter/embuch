@@ -47,7 +47,7 @@ export default function HlkPage({ location }) {
         />
       </WorkCarousel>
 
-      <Section>
+      <Section className="py-xxl">
         <Reveal effect="fadeInUp">
           <StaticImage
             {...imageDefaults}
@@ -57,27 +57,29 @@ export default function HlkPage({ location }) {
       </Section>
 
       <Section
+        className="pt-xxl pb-none"
         style={{
           alignItems: "flex-start",
           backgroundColor: "var(--color-black)",
           color: "var(--color-white)",
-          paddingBottom: 0,
         }}
       >
         <Reveal effect="fadeInLeft">
-          <h2 className="mt-none p1 mb-none" style={{ fontWeight: 500 }}>
+          <p className="mt-none p1 mb-sm" style={{ fontWeight: 500 }}>
             Walking Challenge
-          </h2>
+          </p>
         </Reveal>
         <Reveal effect="fadeInLeft" delay={0.1}>
-          <p className="p1 my-none">
+          <p className="p2 my-none">
             Mailer sent out to all employees inviting them to participate in a
             steps challenge.
           </p>
         </Reveal>
       </Section>
-
-      <Section style={{ backgroundColor: "var(--color-black)" }}>
+      <Section
+        className="pb-xxl"
+        style={{ backgroundColor: "var(--color-black)" }}
+      >
         <Reveal effect="fadeInUp">
           <StaticImage
             {...imageDefaults}
@@ -86,12 +88,7 @@ export default function HlkPage({ location }) {
         </Reveal>
       </Section>
 
-      <Section
-        style={{
-          alignItems: "flex-start",
-        }}
-        className="pb-none"
-      >
+      <Section className="pt-xxl pb-none" style={{ alignItems: "flex-start" }}>
         <Reveal effect="fadeInUp">
           <h2 className="mt-none p1 mb-none" style={{ fontWeight: 500 }}>
             Holiday Card
@@ -103,8 +100,7 @@ export default function HlkPage({ location }) {
           </p>
         </Reveal>
       </Section>
-
-      <Section>
+      <Section className="pb-xxl">
         <Reveal effect="fadeInUp">
           <StaticImage
             {...imageDefaults}
@@ -114,18 +110,18 @@ export default function HlkPage({ location }) {
       </Section>
 
       <Section
+        className="pt-xxl pb-none"
         style={{
           alignItems: "flex-start",
           backgroundColor: "var(--color-black)",
           color: "var(--color-white)",
-          paddingBottom: 0,
         }}
       >
         <Reveal effect="fadeInLeft">
-          <h2 className="mt-none">Read a Book Day</h2>
+          <p className="mt-none mb-sm p1">Read a Book Day</p>
         </Reveal>
         <Reveal effect="fadeInLeft" delay={0.1}>
-          <p className="p1 my-none">
+          <p className="p2 my-none">
             Social posts highlighting books picked out by employees.
           </p>
         </Reveal>

@@ -37,6 +37,7 @@ export default function AmbetterPage({ location }) {
       </WorkBanner>
 
       <Section
+        className="py-xxl"
         style={{
           backgroundColor: "var(--color-black)",
           color: "var(--color-white)",
@@ -62,7 +63,7 @@ export default function AmbetterPage({ location }) {
           <StaticImage
             {...imageDefaults}
             src={`${imagePath}/Speed-Swap.jpg`}
-            className="mb-xl"
+            className="mb-xxl"
           />
         </Reveal>
         <Reveal effect="fadeInUp">
@@ -70,7 +71,7 @@ export default function AmbetterPage({ location }) {
         </Reveal>
       </Section>
 
-      <Section>
+      <Section className="py-xxl">
         <Row rowStyles={{ gap: "var(--spacing-xl)" }}>
           <Reveal effect="fadeInUp">
             <StaticImage
@@ -87,12 +88,15 @@ export default function AmbetterPage({ location }) {
         </Row>
       </Section>
 
-      <Section style={{ backgroundColor: "var(--color-black)" }}>
+      <Section
+        className="py-xxl"
+        style={{ backgroundColor: "var(--color-black)" }}
+      >
         <Reveal effect="fadeInUp">
           <StaticImage
             {...imageDefaults}
             src={`${imagePath}/Signs-1.jpg`}
-            className="mb-xl"
+            className="mb-xxl"
           />
         </Reveal>
         <Reveal effect="fadeInUp">

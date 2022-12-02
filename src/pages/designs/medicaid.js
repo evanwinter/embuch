@@ -52,7 +52,7 @@ export default function MedicaidPage({ location }) {
         />
       </WorkBanner>
 
-      <Section>
+      <Section className="py-xxl">
         <Reveal effect="fadeInUp">
           <StaticImage
             {...imageDefaults}
@@ -61,7 +61,10 @@ export default function MedicaidPage({ location }) {
         </Reveal>
       </Section>
 
-      <Section style={{ backgroundColor: "var(--color-black)" }}>
+      <Section
+        className="py-xxl"
+        style={{ backgroundColor: "var(--color-black)" }}
+      >
         <Reveal effect="fadeInUp">
           <StaticImage {...imageDefaults} src={`${imagePath}/IG-Posts.jpg`} />
         </Reveal>
@@ -120,31 +123,31 @@ export default function MedicaidPage({ location }) {
         </Row>
       </Section>
 
-      <Section style={{ backgroundColor: "var(--color-black)" }}>
+      <Section className="py-xxl" style={{ backgroundColor: "var(--color-black)" }}>
         <Reveal effect="fadeInUp">
           <StaticImage {...imageDefaults} src={`${imagePath}/OOH-1.jpg`} />
         </Reveal>
       </Section>
-      <Section>
+      <Section className="py-xxl">
         <Reveal effect="fadeInUp">
           <StaticImage
             {...imageDefaults}
             src={`${imagePath}/Social-1.jpg`}
-            className="mb-lg"
+            className="mb-xl"
           />
         </Reveal>
         <Reveal effect="fadeInUp">
           <StaticImage
             {...imageDefaults}
             src={`${imagePath}/Social-2.jpg`}
-            className="mb-lg"
+            className="mb-xl"
           />
         </Reveal>
         <Reveal effect="fadeInUp">
           <StaticImage
             {...imageDefaults}
             src={`${imagePath}/Social-3.jpg`}
-            className="mb-lg"
+            className="mb-xl"
           />
         </Reveal>
         <Reveal effect="fadeInUp">

@@ -24,6 +24,7 @@ export const LinkWrapper = styled(Link)`
 
 export const LinkText = styled.span`
   font-size: 1rem;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 0.6725rem;

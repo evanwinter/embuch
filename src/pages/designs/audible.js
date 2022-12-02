@@ -33,7 +33,10 @@ export default function AudiblePage({ location }) {
         />
       </WorkBanner>
 
-      <Section style={{ backgroundColor: "var(--color-black)" }}>
+      <Section
+        className="py-xxl"
+        style={{ backgroundColor: "var(--color-black)" }}
+      >
         <StaticImage
           {...imageDefaults}
           src={`${imagePath}/Audible-Plans.jpg`}
@@ -41,10 +44,10 @@ export default function AudiblePage({ location }) {
       </Section>
 
       <Section
+        className="pt-none pb-xxl"
         style={{
           backgroundColor: "var(--color-black)",
           color: "var(--color-white)",
-          paddingBlock: "var(--spacing-xxl)",
         }}
       >
         <p className="h2 w-lg my-none">
@@ -55,11 +58,12 @@ export default function AudiblePage({ location }) {
         </p>
       </Section>
 
-      <Section>
+      <Section className="py-xxl">
         <StaticImage {...imageDefaults} src={`${imagePath}/Audible-Web.jpg`} />
       </Section>
 
       <Section
+        className="py-xxl"
         style={{
           backgroundColor: "var(--color-black)",
           color: "var(--color-white)",
@@ -72,7 +76,7 @@ export default function AudiblePage({ location }) {
         <Row
           rowStyles={{
             gap: "var(--spacing-xl)",
-            marginTop: "var(--spacing-xl)",
+            marginTop: "var(--spacing-xxl)",
           }}
         >
           <StaticImage
@@ -87,7 +91,7 @@ export default function AudiblePage({ location }) {
         </Row>
       </Section>
 
-      <Section>
+      <Section className="py-xxl">
         <Grid
           gridGap="var(--spacing-xl)"
           style={{ gridTemplateColumns: "1fr 279px", alignItems: "start" }}
