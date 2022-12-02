@@ -95,3 +95,7 @@ a.link::after {
 .fw-600 {
   font-weight: 600;
 }
+
+.text-center {
+  text-align: center;
+}

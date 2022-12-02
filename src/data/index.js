@@ -83,7 +83,7 @@ export const FUN_PROJECTS = [
     ),
   },
   {
-    title: "portaits",
+    title: "portraits",
     slug: "portraits",
     coverImage: () => (
       <StaticImage

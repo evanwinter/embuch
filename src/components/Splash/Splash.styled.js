@@ -4,7 +4,7 @@ export const Background = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   overflow: hidden;
   background-color: var(--color-cream);

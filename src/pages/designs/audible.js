@@ -50,10 +50,10 @@ export default function AudiblePage({ location }) {
           color: "var(--color-white)",
         }}
       >
-        <p className="h2 w-lg my-none">
+        <p className="h2 w-lg my-none text-center">
           Audible has multiple forms of membership for their customers. In order
           to make the tiers more easily digestible, we redesigned their plans
-          page. We also made a recommendation based on thier current use of the
+          page. We also made a recommendation based on their current use of the
           platform.
         </p>
       </Section>
