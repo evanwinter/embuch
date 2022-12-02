@@ -44,7 +44,7 @@ export default function LogosPage({ location }) {
       </h1>
 
       <p className="p1" style={{ marginLeft: "var(--spacing-xl)" }}>
-        Various logos for branding projects.
+        Various logos for freelance branding projects.
       </p>
 
       <Grid gridGap="4vw" padding="var(--spacing-xl)">
@@ -80,3 +80,13 @@ export default function LogosPage({ location }) {
     </FunLayout>
   );
 }
+
+export const Head = () => (
+  <>
+    <title>Logos | Emily Buchberger</title>
+    <meta
+      name="description"
+      content="Various logos for freelance branding projects."
+    />
+  </>
+);

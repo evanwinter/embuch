@@ -160,3 +160,13 @@ export default function MedicaidPage({ location }) {
     </WorkLayout>
   );
 }
+
+export const Head = () => (
+  <>
+    <title>Medicaid | Emily Buchberger</title>
+    <meta
+      name="description"
+      content="The design system for Medicaid had to flex for each state while staying uniform."
+    />
+  </>
+);

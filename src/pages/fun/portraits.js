@@ -31,7 +31,7 @@ export default function PortraitsPage({ location }) {
           marginBottom: "var(--spacing-xl)",
         }}
       >
-        Illustrations for friends and their babies.
+        Illustrations for friends and their loved ones.
       </p>
 
       <Grid
@@ -67,3 +67,13 @@ export default function PortraitsPage({ location }) {
     </FunLayout>
   );
 }
+
+export const Head = () => (
+  <>
+    <title>Portraits | Emily Buchberger</title>
+    <meta
+      name="description"
+      content="Illustrations for friends and their loved ones."
+    />
+  </>
+);

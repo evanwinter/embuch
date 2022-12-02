@@ -290,3 +290,13 @@ const AmericanCancerPage = ({ location }) => {
 };
 
 export default AmericanCancerPage;
+
+export const Head = () => (
+  <>
+    <title>American Cancer Society | Emily Buchberger</title>
+    <meta
+      name="description"
+      content="The American Cancer Society asked us to create an immersive experience for those attending the Gala. The visitors were able to walk through an exhibit that highlighted their research efforts. Visitors also connected to personal stories of those affected by cancer through quotes and custom illustrations."
+    />
+  </>
+);

@@ -13,8 +13,7 @@ const Splash = () => {
         <h2 className="my-md">
           {/* <span>this is my portfolio,</span>
           &nbsp; take a look inside! */}
-          <span>i'm a designer in Chicago &mdash;</span> and this this my
-          portfolio site.
+          <span>i'm a designer in Chicago &mdash;</span> and this this my portfolio site.
         </h2>
         <img className="mt-lg" src={Spiral} alt="spiral" />
       </Content>

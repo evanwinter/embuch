@@ -25,7 +25,7 @@ export default function TShirtsPage({ location }) {
       </h1>
 
       <p className="p1" style={{ marginLeft: "var(--spacing-xl)" }}>
-        Custom commissioned designs.
+        Custom commissioned t-shirt designs.
       </p>
 
       <Grid gridTemplateColumns="1fr" padding="var(--spacing-xl)">
@@ -42,3 +42,10 @@ export default function TShirtsPage({ location }) {
     </FunLayout>
   );
 }
+
+export const Head = () => (
+  <>
+    <title>T-Shirts | Emily Buchberger</title>
+    <meta name="description" content="Custom commissioned t-shirt designs." />
+  </>
+);

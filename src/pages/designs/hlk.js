@@ -178,3 +178,13 @@ export default function HlkPage({ location }) {
     </WorkLayout>
   );
 }
+
+export const Head = () => (
+  <>
+    <title>HLK Brand | Emily Buchberger</title>
+    <meta
+      name="description"
+      content="Book containing HLK's weekly internal communication newsletters from 2020-2021."
+    />
+  </>
+);

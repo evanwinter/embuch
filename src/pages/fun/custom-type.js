@@ -66,3 +66,13 @@ export default function CustomTypePage({ location }) {
     </FunLayout>
   );
 }
+
+export const Head = () => (
+  <>
+    <title>Custom Type | Emily Buchberger</title>
+    <meta
+      name="description"
+      content="Self-led projects playing with layout and experimenting with custom type."
+    />
+  </>
+);

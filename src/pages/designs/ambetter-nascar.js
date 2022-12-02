@@ -106,3 +106,13 @@ export default function AmbetterPage({ location }) {
     </WorkLayout>
   );
 }
+
+export const Head = () => (
+  <>
+    <title>Ambetter x NASCAR | Emily Buchberger</title>
+    <meta
+      name="description"
+      content="Ambetter activation at a NASCAR race track, complete with games and swag."
+    />
+  </>
+);

@@ -109,3 +109,13 @@ export default function AudiblePage({ location }) {
     </WorkLayout>
   );
 }
+
+export const Head = () => (
+  <>
+    <title>Audible | Emily Buchberger</title>
+    <meta
+      name="description"
+      content="Rethinking Audible’s plans page and product description pages."
+    />
+  </>
+);
