@@ -123,7 +123,10 @@ export default function MedicaidPage({ location }) {
         </Row>
       </Section>
 
-      <Section className="py-xxl" style={{ backgroundColor: "var(--color-black)" }}>
+      <Section
+        className="py-xxl"
+        style={{ backgroundColor: "var(--color-black)" }}
+      >
         <Reveal effect="fadeInUp">
           <StaticImage {...imageDefaults} src={`${imagePath}/OOH-1.jpg`} />
         </Reveal>

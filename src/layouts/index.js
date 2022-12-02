@@ -5,7 +5,6 @@ import { useCustomCursor } from "@utils";
 import { AppLayout, Sheet } from "./styled";
 import { CursorProvider, CursorContext } from "@context";
 import "../styles/index.css";
-import "../styles/typography.css";
 
 const IDLE = "idle";
 const PINNED = "pinned";
@@ -22,6 +21,7 @@ const NAVIGATION_HEIGHT = 70;
 
 const Layout = ({ children, location }) => {
   const isPinned = location.pathname !== "/";
+  const status = isPinned ? PINNED : IDLE;
 
   // Cursor stuff
   // const { cursorType, setCursorType } = useContext(CursorContext);
@@ -39,10 +39,8 @@ const Layout = ({ children, location }) => {
       <Splash />
       <Sheet
         variants={{
-          [IDLE]: { translateY: 0 },
-          [PINNED]: {
-            translateY: "calc(-100vh + 118px)",
-          },
+          [IDLE]: { translateY: "0px" },
+          [PINNED]: { translateY: "calc(-100vh + 95px)" },
         }}
         initial={isPinned ? PINNED : IDLE}
         animate={isPinned ? PINNED : IDLE}

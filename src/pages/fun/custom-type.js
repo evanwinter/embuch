@@ -20,68 +20,48 @@ export default function CustomTypePage({ location }) {
       </p>
 
       <Section>
-        <Reveal effect="fadeInUp">
-          <StaticImage src={"../../images/fun/custom-type/1.jpg"} alt="TODO" />
-        </Reveal>
+        <StaticImage src={"../../images/fun/custom-type/1.jpg"} alt="TODO" />
 
         <div style={{ marginTop: "var(--spacing-md)" }}></div>
 
         <Row rowStyles={{ alignItems: "flex-start", gap: "var(--spacing-md)" }}>
-          <Reveal effect="fadeInUp">
-            <StaticImage
-              src={"../../images/fun/custom-type/2.jpg"}
-              alt="TODO"
-            />
-          </Reveal>
-          <Reveal effect="fadeInUp" delay={0.15}>
-            <img
-              src={LoveThingsGif}
-              alt="TODO"
-              style={{ width: "100%", height: "auto", display: "block" }}
-            />
-          </Reveal>
+          <StaticImage src={"../../images/fun/custom-type/2.jpg"} alt="TODO" />
+
+          <img
+            src={LoveThingsGif}
+            alt="TODO"
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
         </Row>
 
         <div style={{ marginTop: "var(--spacing-md)" }}></div>
 
-        <Reveal effect="fadeInUp">
-          <StaticImage src={"../../images/fun/custom-type/4.jpg"} alt="TODO" />
-        </Reveal>
+        <StaticImage src={"../../images/fun/custom-type/4.jpg"} alt="TODO" />
 
         <div style={{ marginTop: "var(--spacing-md)" }}></div>
 
-        <Reveal effect="fadeInUp">
-          <img
-            src={ShiftFocusGif}
-            style={{ width: "100%", height: "auto", display: "block" }}
-            className="w-lg"
-            alt="TODO"
-          />
-        </Reveal>
+        <img
+          src={ShiftFocusGif}
+          style={{ width: "100%", height: "auto", display: "block" }}
+          className="w-lg"
+          alt="TODO"
+        />
 
         <div style={{ marginTop: "var(--spacing-md)" }}></div>
 
         <Row rowStyles={{ alignItems: "flex-start", gap: "var(--spacing-md)" }}>
-          <Reveal effect="fadeInUp">
-            <StaticImage
-              src={"../../images/fun/custom-type/6.jpg"}
-              alt="TODO"
-            />
-          </Reveal>
-          <Reveal effect="fadeInUp" delay={0.15}>
-            <StaticImage src="../../images/fun/custom-type/7.jpg" alt="TODO" />
-          </Reveal>
+          <StaticImage src={"../../images/fun/custom-type/6.jpg"} alt="TODO" />
+
+          <StaticImage src="../../images/fun/custom-type/7.jpg" alt="TODO" />
         </Row>
 
         <div style={{ marginTop: "var(--spacing-md)" }}></div>
 
-        <Reveal effect="fadeInUp">
-          <img
-            style={{ width: "100%", height: "auto", display: "block" }}
-            src={ExperienceGif}
-            alt="TODO"
-          />
-        </Reveal>
+        <img
+          style={{ width: "100%", height: "auto", display: "block" }}
+          src={ExperienceGif}
+          alt="TODO"
+        />
       </Section>
     </FunLayout>
   );

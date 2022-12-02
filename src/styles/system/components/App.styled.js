@@ -14,5 +14,6 @@ export const App = styled.div`
   ${spacingCssVariables};
   ${spacingClasses};
 
-  --menu-height: 108px;
+  --menu-height: 70px;
+  --sheet-offset: 118px;
 `;

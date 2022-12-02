@@ -7,7 +7,7 @@ export const Tag = styled.div`
   border-radius: var(--spacing-md);
   font-size: 1rem;
   font-weight: 500;
-  border: 2px solid ${colors.black};
+  border: 2px solid var(--color-charcoal);
   background-color: var(--color-cream);
   color: var(--color-black);
 `;
