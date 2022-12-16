@@ -30,6 +30,15 @@ export const InnerContainer = styled.div`
   .gatsby-image-wrapper {
     flex-shrink: 0;
   }
+
+  .image img {
+    height: 571px;
+
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+    /* width: 100%; */
+  }
 `;
 
 export const Navigation = styled.div`

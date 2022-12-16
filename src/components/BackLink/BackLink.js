@@ -6,13 +6,12 @@ import Arrow from "@images/back-arrow.inline.svg";
 
 import { LinkText, LinkWrapper } from "./BackLink.styled";
 
-const BackLink = ({ children, to }) => {
+const BackLink = ({ to }) => {
   return (
     <Clickable>
       <LinkWrapper to={to} className="back-link">
         <LinkText className="h5">
           <Arrow />
-          {children}
         </LinkText>
       </LinkWrapper>
     </Clickable>
@@ -22,6 +21,5 @@ const BackLink = ({ children, to }) => {
 export default BackLink;
 
 BackLink.propTypes = {
-  children: PropTypes.node.isRequired,
   to: PropTypes.string.isRequired,
 };

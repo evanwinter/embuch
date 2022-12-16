@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Emily Buchberger`,
@@ -25,6 +29,21 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: `gatsby-source-cloudinary`,
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        maxResults: 500,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-cloudinary`,
+      options: {
+        transformTypes: [`CloudinaryMedia`],
+      },
     },
     {
       resolve: `gatsby-plugin-alias-imports`,

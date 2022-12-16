@@ -22,7 +22,6 @@ const WorkFooter = ({ pathname }) => {
           <BackLink to={`/designs/${previousProject.slug}`}>
             <LinkText>
               <Arrow />
-              back
             </LinkText>
             <previousProject.coverImage />
           </BackLink>
@@ -32,7 +31,6 @@ const WorkFooter = ({ pathname }) => {
         <Clickable>
           <NextLink to={`/designs/${nextProject.slug}`}>
             <LinkText>
-              next
               <Arrow />
             </LinkText>
             <nextProject.coverImage />

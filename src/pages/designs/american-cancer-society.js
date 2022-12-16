@@ -1,5 +1,6 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import {
   Reveal,
@@ -12,26 +13,15 @@ import {
 } from "@components";
 import { colors } from "@styles";
 
-function useWindowSize() {
-  const [size, setSize] = React.useState([0, 0]);
-  React.useLayoutEffect(() => {
-    function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
-    }
-    window.addEventListener("resize", updateSize);
-    updateSize();
-    return () => window.removeEventListener("resize", updateSize);
-  }, []);
-  return { width: size[0], height: size[1] };
-}
+const AmericanCancerPage = ({ data, location }) => {
+  const media = data.allCloudinaryMedia.nodes;
+  const banner = media.find(({ public_id }) => public_id.includes("Banner"));
+  const carousel1 = media.filter(({ public_id }) => public_id.includes("carousel-1"));
+  const handout = media.find(({ public_id }) => public_id.includes("Handout-Mockup"));
+  const carousel2 = media.filter(({ public_id }) => public_id.includes("Poster-"));
+  const research = media.filter(({ public_id }) => public_id.includes("Research-Highlights-"));
+  const carousel3 = media.filter(({ public_id }) => public_id.includes("Gala-Images-"));
 
-const imageDefaults = { quality: 100, alt: "TODO" };
-const imagePath = "../../images/work/american-cancer";
-
-const AmericanCancerPage = ({ location }) => {
-  const { width } = useWindowSize();
-  const isMobile = width < 768;
-  const carouselImageHeight = isMobile ? 300 : 571;
   return (
     <WorkLayout pathname={location.pathname}>
       <WorkHeader
@@ -46,58 +36,13 @@ const AmericanCancerPage = ({ location }) => {
       />
 
       <WorkBanner>
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS-Header1.png`}
-          alt="American Cancer Society Gala"
-          layout="fullWidth"
-          style={{ borderBlock: `2px solid ${colors.black}`, minHeight: 100 }}
-        />
+        <GatsbyImage class="banner-image" image={getImage(banner)} alt={"TODO"} />
       </WorkBanner>
 
       <WorkCarousel backgroundColor={colors.darkGray}>
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Handout-1.jpg`}
-          alt="Handout-1"
-          height={571 || carouselImageHeight}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Handout-2.jpg`}
-          alt="Handout-2"
-          height={571 || carouselImageHeight}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Handout-3.jpg`}
-          alt="Handout-3"
-          height={571 || carouselImageHeight}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Handout-4.jpg`}
-          alt="Handout-4"
-          height={571 || carouselImageHeight}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Handout-5.jpg`}
-          alt="Handout-5"
-          height={571 || carouselImageHeight}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Handout-6.jpg`}
-          alt="Handout-6"
-          height={571 || carouselImageHeight}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Handout-7.jpg`}
-          alt="Handout-7"
-          height={571 || carouselImageHeight}
-        />
+        {carousel1.map((image) => (
+          <GatsbyImage class="image" key={image.public_id} image={getImage(image)} alt={"TODO"} />
+        ))}
       </WorkCarousel>
 
       <Section className="pt-xxl">
@@ -114,11 +59,7 @@ const AmericanCancerPage = ({ location }) => {
 
       <Section className="pb-xxl">
         <Reveal effect="fadeInUp">
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/ACS-Handout-Mockup-1.jpg`}
-            objectFit="contain"
-          />
+          <GatsbyImage image={getImage(handout)} alt="TODO" />
         </Reveal>
       </Section>
 
@@ -143,7 +84,7 @@ const AmericanCancerPage = ({ location }) => {
               alignItems: "center",
             }}
           >
-            <StaticImage {...imageDefaults} src={`${imagePath}/ACS-5.jpg`} />
+            <GatsbyImage image={getImage(carousel2.find(({ public_id }) => public_id.includes("Poster-5")))} alt="TODO" />
           </Reveal>
           <Reveal effect="fadeInUp" delay={0.15}>
             <p className="p1 my-none">
@@ -163,101 +104,33 @@ const AmericanCancerPage = ({ location }) => {
             justifyContent: "space-between",
           }}
         >
-          <Reveal effect="fadeInRight" amount={0.25}>
-            <StaticImage
-              {...imageDefaults}
-              src={`${imagePath}/Research-Highlights-1.jpg`}
-              height={571}
-            />
-          </Reveal>
-          <Reveal effect="fadeInRight" amount={0.25} delay={0.15}>
-            <StaticImage
-              {...imageDefaults}
-              src={`${imagePath}/Research-Highlights-2.jpg`}
-              height={571}
-            />
-          </Reveal>
-          <Reveal effect="fadeInRight" amount={0.25} delay={0.3}>
-            <StaticImage
-              {...imageDefaults}
-              src={`${imagePath}/Research-Highlights-3.jpg`}
-              height={571}
-            />
-          </Reveal>
+          {research.sort((a, b) => b.public_id > a.public_id).map((image, index) => (
+            <Reveal
+              effect="fadeInRight"
+              amount={0.25}
+              delay={index * 0.15}
+              key={image.public_id}
+            >
+              <GatsbyImage image={getImage(image)} alt="TODO" />
+            </Reveal>
+          ))
+          }
         </Row>
       </Section>
       <WorkCarousel backgroundColor={colors.black}>
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS-1.jpg`}
-          alt="ACS-1"
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS-2.jpg`}
-          alt="ACS-2"
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS-3.jpg`}
-          alt="ACS-3"
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS-4.jpg`}
-          alt="ACS-4"
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS-5.jpg`}
-          alt="ACS-5"
-          height={571}
-        />
+        {carousel2.map((image) => (
+          <GatsbyImage class="image" key={image.public_id} image={getImage(image)} alt={"TODO"} />
+        ))}
       </WorkCarousel>
       <Section style={{ paddingBlock: "var(--spacing-xxl)" }}>
         <Reveal effect="fadeInUp">
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/Wall-Print.jpg`}
-            objectFit="contain"
-          />
+          <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Wall-Print")))} alt="TODO" />
         </Reveal>
       </Section>
       <WorkCarousel backgroundColor={colors.black} color={colors.white}>
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS-Gala-Images-1.jpg`}
-          alt="ACS-Gala-Images-1"
-          height={700}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS-Gala-Images-2.jpg`}
-          alt="ACS-Gala-Images-2"
-          height={700}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS-Gala-Images-3.jpg`}
-          alt="ACS-Gala-Images-3"
-          height={700}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS-Gala-Images-4.jpg`}
-          alt="ACS-Gala-Images-4"
-          height={700}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/ACS-Gala-Images-5.jpg`}
-          alt="ACS-Gala-Images-5"
-          height={700}
-        />
+        {carousel3.map((image) => (
+          <GatsbyImage class="image" key={image.public_id} image={getImage(image)} alt={"TODO"} />
+        ))}
       </WorkCarousel>
       <Section style={{ paddingTop: "var(--spacing-xxl)" }}>
         <div
@@ -300,3 +173,17 @@ export const Head = () => (
     />
   </>
 );
+
+
+export const query = graphql`
+  query {
+    allCloudinaryMedia(
+      filter: {folder: {regex: "/.*work\\/american-cancer.*/"}}
+    ) {
+      nodes {
+        gatsbyImageData
+        public_id
+      }
+    }
+  }
+`;

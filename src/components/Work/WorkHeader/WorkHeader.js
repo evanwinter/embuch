@@ -8,7 +8,7 @@ import { Header } from "./WorkHeader.styled";
 const WorkHeader = ({ description, tags, title }) => {
   return (
     <Header>
-      <BackLink to="/designs">back</BackLink>
+      <BackLink to="/designs"></BackLink>
       <h1 className="h2 mt-xl mb-md">{title}</h1>
       <p className="p1 mb-xl">{description}</p>
       <TagList tags={tags} />
