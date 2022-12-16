@@ -16,7 +16,7 @@ export const AppLayout = styled(App)`
 
 export const Sheet = styled(motion.div)`
   position: absolute;
-  top: 100vh;
+  top: calc(100vh - env(safe-area-inset-bottom));
   left: 0;
   width: 100%;
   min-height: calc(100vh - 118px);
