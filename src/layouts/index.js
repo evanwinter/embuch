@@ -39,7 +39,7 @@ const Layout = ({ children, location }) => {
       <Sheet
         variants={{
           [IDLE]: { translateY: "0px" },
-          [PINNED]: { translateY: "calc(-100vh + 95px)" },
+          [PINNED]: { translateY: "calc(-100dvh + 95px)" },
         }}
         initial={isPinned ? PINNED : IDLE}
         animate={isPinned ? PINNED : IDLE}
