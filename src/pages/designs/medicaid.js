@@ -1,5 +1,6 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
 
 import {
   Reveal,
@@ -10,14 +11,10 @@ import {
   WorkLayout,
 } from "@components";
 
-import video1 from "@images/work/medicaid/1.mp4";
-import video2 from "@images/work/medicaid/2.mp4";
-import video3 from "@images/work/medicaid/3.mp4";
-
-const imageDefaults = { quality: 100, alt: "TODO" };
-const imagePath = "../../images/work/medicaid";
-
-export default function MedicaidPage({ location }) {
+export default function MedicaidPage({ data, location }) {
+  const media = data.allCloudinaryMedia.nodes;
+  const socials = media.filter(({ public_id }) => public_id.includes("/Social-"));
+  const videos = media.filter(({ public_id }) => public_id.includes("/Video-"));
   return (
     <WorkLayout pathname={location.pathname}>
       <WorkHeader
@@ -44,19 +41,18 @@ export default function MedicaidPage({ location }) {
         ]}
       />
       <WorkBanner>
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Medicaid-Banner.jpg`}
-          layout="fullWidth"
-          style={{ borderBlock: "3px solid var(--color-black)" }}
+        <GatsbyImage
+          class="banner-image"
+          image={getImage(media.find(({ public_id }) => public_id.includes("Medicaid-Banner_")))}
+          alt="Medicaid Banner"
         />
       </WorkBanner>
 
       <Section className="py-xxl">
         <Reveal effect="fadeInUp">
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/Medicaid-Flyer-1.jpg`}
+          <GatsbyImage
+            image={getImage(media.find(({ public_id }) => public_id.includes("Medicaid-Flyer_")))}
+            alt="Medicaid Flyer"
           />
         </Reveal>
       </Section>
@@ -66,60 +62,33 @@ export default function MedicaidPage({ location }) {
         style={{ backgroundColor: "var(--color-black)" }}
       >
         <Reveal effect="fadeInUp">
-          <StaticImage {...imageDefaults} src={`${imagePath}/IG-Posts.jpg`} />
+          <GatsbyImage
+            image={getImage(media.find(({ public_id }) => public_id.includes("IG-Posts_")))}
+            alt="Medicaid IG Posts"
+          />
         </Reveal>
       </Section>
 
       <Section style={{ paddingBlock: "var(--spacing-xxl)" }}>
         <Row rowStyles={{ gap: "var(--spacing-xl)" }}>
-          <Reveal effect="fadeInUp">
-            <video
-              style={{
-                display: "inline-flex",
-                flex: 1,
-                width: "100%",
-                height: "auto",
-              }}
-              autoPlay
-              loop
-              muted
-              playsInline
-            >
-              <source src={video1} type="video/mp4" />
-            </video>
-          </Reveal>
-          <Reveal effect="fadeInUp" delay={0.15}>
-            <video
-              style={{
-                display: "inline-flex",
-                flex: 1,
-                width: "100%",
-                height: "auto",
-              }}
-              autoPlay
-              loop
-              muted
-              playsInline
-            >
-              <source src={video2} type="video/mp4" />
-            </video>
-          </Reveal>
-          <Reveal effect="fadeInUp" delay={0.3}>
-            <video
-              style={{
-                display: "inline-flex",
-                flex: 1,
-                width: "100%",
-                height: "auto",
-              }}
-              autoPlay
-              loop
-              muted
-              playsInline
-            >
-              <source src={video3} type="video/mp4" />
-            </video>
-          </Reveal>
+          {videos.map((video, index) => (
+            <Reveal key={video.public_id} effect="fadeInUp" delay={index * 0.15}>
+              <video
+                style={{
+                  display: "inline-flex",
+                  flex: 1,
+                  width: "100%",
+                  height: "auto",
+                }}
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={video.secure_url} type="video/mp4" />
+              </video>
+            </Reveal>
+          ))}
         </Row>
       </Section>
 
@@ -128,34 +97,22 @@ export default function MedicaidPage({ location }) {
         style={{ backgroundColor: "var(--color-black)" }}
       >
         <Reveal effect="fadeInUp">
-          <StaticImage {...imageDefaults} src={`${imagePath}/OOH-1.jpg`} />
+          <GatsbyImage
+            image={getImage(media.find(({ public_id }) => public_id.includes("/OOH_")))}
+            alt="Medicaid out-of-home"
+          />
         </Reveal>
       </Section>
       <Section className="py-xxl">
-        <Reveal effect="fadeInUp">
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/Social-1.jpg`}
-            className="mb-xl"
-          />
-        </Reveal>
-        <Reveal effect="fadeInUp">
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/Social-2.jpg`}
-            className="mb-xl"
-          />
-        </Reveal>
-        <Reveal effect="fadeInUp">
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/Social-3.jpg`}
-            className="mb-xl"
-          />
-        </Reveal>
-        <Reveal effect="fadeInUp">
-          <StaticImage {...imageDefaults} src={`${imagePath}/Social-4.jpg`} />
-        </Reveal>
+        {socials.map((image, index) => (
+          <Reveal key={image.public_id} effect="fadeInUp">
+            <GatsbyImage
+              image={getImage(image)}
+              alt="Medicaid social media"
+              className={index === socials.length - 1 ? "" : "mb-xl"}
+            />
+          </Reveal>
+        ))}
       </Section>
     </WorkLayout>
   );
@@ -170,3 +127,17 @@ export const Head = () => (
     />
   </>
 );
+
+export const query = graphql`
+  query {
+    allCloudinaryMedia(
+      filter: {folder: {regex: "/.*work\\/medicaid.*/"}}
+    ) {
+      nodes {
+        gatsbyImageData
+        public_id
+        secure_url
+      }
+    }
+  }
+`;

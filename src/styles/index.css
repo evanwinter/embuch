@@ -26,6 +26,7 @@ body {
 }
 
 @media (max-width: 48rem) {
+
   html,
   body {
     font-size: 12px;
@@ -98,4 +99,20 @@ a.link::after {
 
 .text-center {
   text-align: center;
+}
+
+.banner-image {
+  border: 2px solid var(--color-black);
+  min-height: 100px;
+  object-fit: cover;
+}
+
+.break-md {
+  align-items: "start";
+}
+
+@media (max-width: 48rem) {
+  .break-md {
+    grid-template-columns: 1fr
+  }
 }

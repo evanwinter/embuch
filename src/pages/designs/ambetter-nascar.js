@@ -1,5 +1,6 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import {
   Reveal,
@@ -11,10 +12,8 @@ import {
 } from "@components";
 import { colors } from "@styles";
 
-const imageDefaults = { quality: 100, alt: "TODO" };
-const imagePath = "../../images/work/ambetter-nascar";
-
-export default function AmbetterPage({ location }) {
+export default function AmbetterPage({ data, location }) {
+  const media = data.allCloudinaryMedia.nodes;
   return (
     <WorkLayout pathname={location.pathname}>
       <WorkHeader
@@ -28,12 +27,7 @@ export default function AmbetterPage({ location }) {
       />
 
       <WorkBanner>
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/AMB-Banner.jpg`}
-          layout="fullWidth"
-          style={{ borderBlock: `3px solid var(--color-black)` }}
-        />
+        <GatsbyImage class="banner-image" image={getImage(media.find(({ public_id }) => public_id.includes("AMB-Banner")))} />
       </WorkBanner>
 
       <Section
@@ -45,10 +39,10 @@ export default function AmbetterPage({ location }) {
       >
         <Row rowStyles={{ gap: "var(--spacing-xl)" }}>
           <Reveal effect="fadeInUp">
-            <StaticImage {...imageDefaults} src={`${imagePath}/Ad-1.jpg`} />
+            <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Ad-1")))} />
           </Reveal>
           <Reveal effect="fadeInUp" delay={0.15}>
-            <StaticImage {...imageDefaults} src={`${imagePath}/Ad-2.jpg`} />
+            <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Ad-2")))} />
           </Reveal>
         </Row>
 
@@ -60,30 +54,20 @@ export default function AmbetterPage({ location }) {
         </Reveal>
 
         <Reveal effect="fadeInUp">
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/Speed-Swap.jpg`}
-            className="mb-xxl"
-          />
+          <GatsbyImage class="mb-xxl" image={getImage(media.find(({ public_id }) => public_id.includes("Speed-Swap")))} />
         </Reveal>
         <Reveal effect="fadeInUp">
-          <StaticImage {...imageDefaults} src={`${imagePath}/Fan-Zone.jpg`} />
+          <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Fan-Zone")))} />
         </Reveal>
       </Section>
 
       <Section className="py-xxl">
         <Row rowStyles={{ gap: "var(--spacing-xl)" }}>
           <Reveal effect="fadeInUp">
-            <StaticImage
-              {...imageDefaults}
-              src={`${imagePath}/Handout-1.jpg`}
-            />
+            <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Handout-1")))} />
           </Reveal>
           <Reveal effect="fadeInUp" delay={0.15}>
-            <StaticImage
-              {...imageDefaults}
-              src={`${imagePath}/Handout-2.jpg`}
-            />
+            <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Handout-2")))} />
           </Reveal>
         </Row>
       </Section>
@@ -93,14 +77,10 @@ export default function AmbetterPage({ location }) {
         style={{ backgroundColor: "var(--color-black)" }}
       >
         <Reveal effect="fadeInUp">
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/Signs-1.jpg`}
-            className="mb-xxl"
-          />
+          <GatsbyImage class="mb-xxl" image={getImage(media.find(({ public_id }) => public_id.includes("Signs-1")))} />
         </Reveal>
         <Reveal effect="fadeInUp">
-          <StaticImage {...imageDefaults} src={`${imagePath}/Signs-2.jpg`} />
+          <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Signs-2")))} />
         </Reveal>
       </Section>
     </WorkLayout>
@@ -116,3 +96,16 @@ export const Head = () => (
     />
   </>
 );
+
+export const query = graphql`
+  query {
+    allCloudinaryMedia(
+      filter: {folder: {regex: "/.*work\\/ambetter-nascar.*/"}}
+    ) {
+      nodes {
+        gatsbyImageData
+        public_id
+      }
+    }
+  }
+`;

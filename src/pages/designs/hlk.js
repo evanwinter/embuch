@@ -1,5 +1,6 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
 
 import {
   Reveal,
@@ -10,12 +11,8 @@ import {
 } from "@components";
 import { colors } from "@styles";
 
-import ReadABookGif from "@images/work/hlk/Read-a-Book-Day-GIF.gif";
-
-const imageDefaults = { quality: 100, alt: "TODO" };
-const imagePath = "../../images/work/hlk";
-
-export default function HlkPage({ location }) {
+export default function HlkPage({ data, location }) {
+  const media = data.allCloudinaryMedia.nodes;
   return (
     <WorkLayout pathname={location.pathname}>
       <WorkHeader
@@ -30,29 +27,14 @@ export default function HlkPage({ location }) {
       />
 
       <WorkCarousel backgroundColor={colors.white} color={colors.black}>
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Ripple_Spread_1.jpg`}
-          height={600}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Ripple_Spread_3.jpg`}
-          height={600}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Ripple_Spread_4.jpg`}
-          height={600}
-        />
+        {media.filter(({ public_id }) => public_id.includes("Ripple_Spread_")).map((image) => (
+          <GatsbyImage key={image.public_id} class="image" image={getImage(image)} alt="TODO" />
+        ))}
       </WorkCarousel>
 
       <Section className="py-xxl">
         <Reveal effect="fadeInUp">
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/Ripple-Book.jpg`}
-          />
+          <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Ripple-Book_")))} />
         </Reveal>
       </Section>
 
@@ -81,10 +63,7 @@ export default function HlkPage({ location }) {
         style={{ backgroundColor: "var(--color-black)" }}
       >
         <Reveal effect="fadeInUp">
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/HLK-Walking-Challenge.jpg`}
-          />
+          <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Walking-Challenge_")))} />
         </Reveal>
       </Section>
 
@@ -102,10 +81,7 @@ export default function HlkPage({ location }) {
       </Section>
       <Section className="pb-xxl">
         <Reveal effect="fadeInUp">
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/Ripple-Holiday-Card.jpg`}
-          />
+          <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Ripple-Holiday-Card_")))} />
         </Reveal>
       </Section>
 
@@ -131,49 +107,13 @@ export default function HlkPage({ location }) {
         backgroundColor="var(--color-black)"
         color="var(--color-white)"
       >
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Read-A-Book-Day-HLK-1.jpg`}
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Read-A-Book-Day-HLK-2.jpg`}
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Read-A-Book-Day-HLK-3.jpg`}
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Read-A-Book-Day-HLK-4.jpg`}
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Read-A-Book-Day-HLK-5.jpg`}
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Read-A-Book-Day-HLK-6.jpg`}
-          height={571}
-        />
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Read-A-Book-Day-HLK-7.jpg`}
-          height={571}
-        />
+        {media.filter(({ public_id }) => public_id.includes("Read-A-Book-Day-HLK-")).map((image) => (
+          <GatsbyImage key={image.public_id} class="image" image={getImage(image)} alt="TODO" />
+        ))}
       </WorkCarousel>
 
       <Reveal effect="fadeInUp">
-        <img
-          src={ReadABookGif}
-          alt="Read a Book Day"
-          style={{ width: "100%", height: "auto", display: "block" }}
-        />
+        <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Read-a-Book-Day-GIF_")))} />
       </Reveal>
     </WorkLayout>
   );
@@ -188,3 +128,16 @@ export const Head = () => (
     />
   </>
 );
+
+export const query = graphql`
+  query {
+    allCloudinaryMedia(
+      filter: {folder: {regex: "/.*work\\/hlk.*/"}}
+    ) {
+      nodes {
+        gatsbyImageData
+        public_id
+      }
+    }
+  }
+`;

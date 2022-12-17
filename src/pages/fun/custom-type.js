@@ -1,7 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { BackLink, FunLayout, Section, Reveal, Row } from "@components";
+import { BackLink, FunLayout, Section, Row } from "@components";
 
 import LoveThingsGif from "@images/fun/custom-type/3.gif";
 import ShiftFocusGif from "@images/fun/custom-type/5.gif";

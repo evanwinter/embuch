@@ -18,9 +18,15 @@ export const FooterLink = styled(Link)`
   transition: color 0.2s ease;
   max-width: 300px;
   &:hover {
-    color: ${colors.lime};
+    /* color: ${colors.lime}; */
     span {
-      transform: translate(2px, -2px);
+      transform: translate(-2px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .gatsby-image-wrapper {
+      display: none;
     }
   }
 `;
@@ -30,16 +36,16 @@ export const NextLink = styled(FooterLink)`
   svg {
     transform: rotate(180deg);
   }
+
+  &:hover {
+    span {
+      transform: translate(2px);
+    }
+  }
 `;
 
 export const BackLink = styled(FooterLink)`
   align-items: flex-end;
-
-  &:hover {
-    span {
-      transform: translate(-2px, -2px);
-    }
-  }
 `;
 
 export const LinkText = styled.span`
@@ -50,6 +56,10 @@ export const LinkText = styled.span`
   font-size: 1.25rem;
   font-weight: 300;
   transition: transform 0.2s ease-in-out;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const LinkImage = styled.img`
