@@ -10,7 +10,7 @@ import { PreviewItem, PreviewLink } from "./Preview.styled";
 export default function Preview({ project, kind = "designs" }) {
   const Image = project["coverImage"];
   return (
-    <Reveal effect="fadeInUp">
+    // <Reveal effect="fadeInUp">
       <Clickable>
         <PreviewItem key={project.slug}>
           <h3>{project.title}</h3>
@@ -33,7 +33,7 @@ export default function Preview({ project, kind = "designs" }) {
           </motion.div>
         </PreviewItem>
       </Clickable>
-    </Reveal>
+    // </Reveal>
   );
 }
 
