@@ -5,6 +5,10 @@ import { v4 as uuid } from "uuid";
 import { RowContainer, RowItem } from "./Row.styled";
 
 const Row = ({ children, rowStyles, itemStyles, debug = false }) => {
+  if (!children) {
+    return null;
+  }
+
   return (
     <RowContainer debug={debug} style={{ ...rowStyles }}>
       {children.map((child) => (

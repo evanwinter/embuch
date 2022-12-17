@@ -174,7 +174,6 @@ export const Head = () => (
   </>
 );
 
-
 export const query = graphql`
   query {
     allCloudinaryMedia(

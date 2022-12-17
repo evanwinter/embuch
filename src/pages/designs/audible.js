@@ -1,5 +1,6 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
 
 import {
   Grid,
@@ -11,10 +12,8 @@ import {
 } from "@components";
 import { colors } from "@styles";
 
-const imageDefaults = { quality: 100, alt: "TODO" };
-const imagePath = "../../images/work/audible";
-
-export default function AudiblePage({ location }) {
+export default function AudiblePage({ data, location }) {
+  const media = data.allCloudinaryMedia.nodes;
   return (
     <WorkLayout pathname={location.pathname}>
       <WorkHeader
@@ -25,11 +24,9 @@ export default function AudiblePage({ location }) {
       />
 
       <WorkBanner>
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Audible-Banner.jpg`}
-          layout="fullWidth"
-          style={{ borderBlock: `3px solid var(--color-black)` }}
+        <GatsbyImage
+          class="banner-image"
+          image={getImage(media.find(({ public_id }) => public_id.includes("Audible-Banner")))}
         />
       </WorkBanner>
 
@@ -37,10 +34,7 @@ export default function AudiblePage({ location }) {
         className="py-xxl"
         style={{ backgroundColor: "var(--color-black)" }}
       >
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Audible-Plans.jpg`}
-        />
+        <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Audible-Plans")))} />
       </Section>
 
       <Section
@@ -59,7 +53,7 @@ export default function AudiblePage({ location }) {
       </Section>
 
       <Section className="py-xxl">
-        <StaticImage {...imageDefaults} src={`${imagePath}/Audible-Web.jpg`} />
+        <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Audible-Web")))} />
       </Section>
 
       <Section
@@ -69,20 +63,14 @@ export default function AudiblePage({ location }) {
           color: "var(--color-white)",
         }}
       >
-        <StaticImage
-          {...imageDefaults}
-          src={`${imagePath}/Audible-Desktop-Mobile.jpg`}
-        />
+        <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Audible-Desktop-Mobile")))} />
         <Row
           rowStyles={{
             gap: "var(--spacing-xl)",
             marginTop: "var(--spacing-xxl)",
           }}
         >
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/Audible-Mobile.jpg`}
-          />
+          <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Audible-Mobile_")))} />
           <p className="p1 my-none">
             Along with the plans page, Audible wanted to make more immersive and
             engaging product description pages. We added extra content to pair
@@ -94,16 +82,12 @@ export default function AudiblePage({ location }) {
       <Section className="py-xxl">
         <Grid
           gridGap="var(--spacing-xl)"
-          style={{ gridTemplateColumns: "1fr 279px", alignItems: "start" }}
+          gridTemplateColumns="1fr 279px"
+          alignItems="flex-start"
+          className="break-md"
         >
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/Audible-Desktop.jpg`}
-          />
-          <StaticImage
-            {...imageDefaults}
-            src={`${imagePath}/Audible-Mobile-Layout.jpg`}
-          />
+          <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Audible-Desktop_")))} objectFit="contain" />
+          <GatsbyImage image={getImage(media.find(({ public_id }) => public_id.includes("Audible-Mobile-Layout_")))} />
         </Grid>
       </Section>
     </WorkLayout>
@@ -119,3 +103,16 @@ export const Head = () => (
     />
   </>
 );
+
+export const query = graphql`
+  query {
+    allCloudinaryMedia(
+      filter: {folder: {regex: "/.*work\\/audible.*/"}}
+    ) {
+      nodes {
+        gatsbyImageData
+        public_id
+      }
+    }
+  }
+`;
