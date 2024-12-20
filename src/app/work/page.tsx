@@ -37,7 +37,7 @@ export default function WorkPage() {
             alt="Closeup of Vestwell mobile app mockup"
           />
         </div>
-        <div>
+        <div className="hidden lg:block">
           <Image src={MobileAppLaunch2} alt="Vestwell iconography" />
         </div>
       </WorkPreview>
@@ -50,7 +50,7 @@ export default function WorkPage() {
         description="Web Design"
         href="/work/vestwell/blog"
       >
-        <div>
+        <div className="hidden lg:block">
           <Image src={Blog1} alt="TODO" />
         </div>
         <div>
@@ -69,7 +69,7 @@ export default function WorkPage() {
         <div>
           <Image src={ConferenceBooth1} alt="TODO" />
         </div>
-        <div>
+        <div className="hidden lg:block">
           <Image src={ConferenceBooth2} alt="TODO" />
         </div>
       </WorkPreview>
@@ -80,7 +80,7 @@ export default function WorkPage() {
         description="Illustration, Presentation Design, Layout"
         href="/work/vestwell/brand-collateral"
       >
-        <div>
+        <div className="hidden lg:block">
           <Image src={BrandCollateral1} alt="TODO" />
         </div>
         <div>
@@ -93,7 +93,7 @@ export default function WorkPage() {
         description="experiential"
         href="/work/american-cancer-society"
       >
-        <div>
+        <div className="hidden lg:block">
           <Image src={ACS1} alt="TODO" />
         </div>
         <div>
@@ -109,7 +109,7 @@ export default function WorkPage() {
         <div>
           <Image src={HLK1} alt="TODO" />
         </div>
-        <div>
+        <div className="hidden lg:block">
           <Image src={HLK2} alt="TODO" />
         </div>
       </WorkPreview>

@@ -1,10 +1,47 @@
-import { WorkHeader } from "../../header";
+import { WorkHeader } from "@/app/work/header";
+import Image from "next/image";
+import Booth1 from "@/app/public/vestwell/booth-1.jpg";
+import Booth2 from "@/app/public/vestwell/booth-2.jpg";
+import Booth3 from "@/app/public/vestwell/booth-3.jpg";
+import Booth4 from "@/app/public/vestwell/booth-4.jpg";
 
-export default function MobileAppLaunchPage() {
+import { TwoColumn } from "@/app/components/two-column";
+import { Reveal } from "@/app/components/Reveal";
+
+export default function ConferenceBoothPage() {
   return (
-    <div className="grid gap-12">
+    <div className="flex flex-col gap-4 sm:gap-8 lg:gap-12">
       {/* Header */}
-      <WorkHeader brand="Vestwell" title="Conference Booth" types="Type" />
+      <WorkHeader
+        brand="Vestwell"
+        title="Design for Vestwell's booth at a conference."
+        types="Experiential Design"
+      />
+
+      <div className="flex flex-col gap-8 xl:gap-24">
+        <div className="">
+          <Image alt="TODO" src={Booth1} />
+        </div>
+
+        <div className="">
+          <Reveal>
+            <Image alt="TODO" src={Booth2} />
+          </Reveal>
+        </div>
+
+        <TwoColumn span={[4, 6]}>
+          <div className="sticky top-8">
+            <Reveal>
+              <Image alt="TODO" src={Booth3} />
+            </Reveal>
+          </div>
+          <div className="">
+            <Reveal>
+              <Image alt="TODO" src={Booth4} />
+            </Reveal>
+          </div>
+        </TwoColumn>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { WorkHeader } from "../../header";
-import Hero from "@/app/public/hero.jpg";
+import MobileAppLaunch1 from "@/app/public/vestwell/mobile-app-launch-1.jpg";
 import AppStore from "@/app/public/03.jpg";
 import MobileMockup from "@/app/public/mockup-2.jpg";
 import VestwellMobile from "@/app/public/vestwell-mobile.jpg";
@@ -23,7 +23,7 @@ export default function MobileAppLaunchPage() {
 
       <div className="flex flex-col gap-24">
         <div className="flex flex-col gap-8">
-          <Image alt="TODO" src={Hero} />
+          <Image alt="TODO" src={MobileAppLaunch1} />
         </div>
 
         <div className="">
