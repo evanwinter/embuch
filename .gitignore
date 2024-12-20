@@ -1,5 +1,5 @@
 node_modules/
-.cache/
+.next/
 public
 .DS_Store
 .env*
