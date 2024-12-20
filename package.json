@@ -2,11 +2,6 @@
   "name": "emilybuchberger",
   "version": "0.1.0",
   "private": true,
-  "description": "emily-gatsby",
-  "author": "Evan Winter",
-  "keywords": [
-    "gatsby"
-  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,13 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@evanwinter/cn": "^1.0.2",
-    "@evanwinter/reveal": "^1.0.1",
-    "motion": "^11.15.0",
-    "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18",
-    "vaul": "^1.1.2"
+    "next": "14.2.15"
   },
   "devDependencies": {
     "typescript": "^5",
