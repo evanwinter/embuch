@@ -12,12 +12,12 @@ interface RevealProps extends MotionProps {
 }
 
 const defaultVariants: Variants = {
-  offscreen: { opacity: 0, y: 20 },
+  offscreen: { opacity: 0, y: 32 },
   onscreen: { opacity: 1, y: 0 },
 };
 
 const defaultTransition: Transition = {
-  duration: 0.5,
+  duration: 0.75,
 };
 
 const defaultViewport = {

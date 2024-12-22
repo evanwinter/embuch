@@ -39,10 +39,10 @@ export function Nav() {
         </Link>
         <Link
           className="p-4 -m-4"
-          href="/contact"
+          href="/about"
           onMouseLeave={() => setIndex(null)}
         >
-          Contact
+          About
         </Link>
       </nav>
     </div>

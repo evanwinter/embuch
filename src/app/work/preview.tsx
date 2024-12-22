@@ -15,7 +15,9 @@ export function WorkPreview(props: WorkPreviewProps) {
       <div className="flex justify-start gap-2 border-t-[1px] pt-4 border-foreground">
         <span className="font-semibold">{props.brand}</span>
         {props.title && <span>{props.title}</span>}
-        <span className="ml-auto text-gray-600">{props.description}</span>
+        <span className="ml-auto text-foregroundMuted">
+          {props.description}
+        </span>
       </div>
     </Link>
   );

@@ -1,10 +1,12 @@
+import { cn } from "@evanwinter/cn";
 import React from "react";
 
 interface TwoColumnProps extends React.HTMLAttributes<HTMLDivElement> {
+  colReverse?: boolean;
   span?: [number, number];
 }
 
-export function TwoColumn({ children, span }: TwoColumnProps) {
+export function TwoColumn({ children, colReverse, span }: TwoColumnProps) {
   const [left = 6, right = 6] = span ?? [];
   const [leftChild, rightChild] = React.Children.toArray(children);
 
@@ -20,7 +22,12 @@ export function TwoColumn({ children, span }: TwoColumnProps) {
   const rightFlex = `${right * 10}%`;
 
   return (
-    <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 relative">
+    <div
+      className={cn(
+        "flex flex-col lg:flex-row gap-4 sm:gap-8 relative",
+        colReverse ?? "flex-col-reverse",
+      )}
+    >
       <div style={{ flexBasis: leftFlex }}>{leftChild}</div>
       <div style={{ flexBasis: rightFlex }}>{rightChild}</div>
     </div>

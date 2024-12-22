@@ -38,7 +38,7 @@ export function Sidebar(
             </NavLink>
             <NavLink href="/work/hlk">HLK</NavLink>
           </div>
-          <NavLink href="/contact">Contact</NavLink>
+          <NavLink href="/about">About</NavLink>
         </nav>
       </div>
     </div>

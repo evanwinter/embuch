@@ -14,7 +14,7 @@ export default function WorkLayout({ children }: WorkLayoutProps) {
         </SideDrawer>
       </div>
       <Sidebar className="sticky top-12 hidden shrink-0 xl:flex xl:flex-col xl:col-span-2" />
-      <main className="mt-16">{children}</main>
+      <main className="mt-16 xl:mt-0">{children}</main>
     </div>
   );
 }

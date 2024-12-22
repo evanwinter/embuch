@@ -45,7 +45,7 @@ export default function MobileAppLaunchPage() {
           </div>
         </TwoColumn>
 
-        <TwoColumn span={[7, 3]}>
+        <TwoColumn span={[7, 3]} colReverse={true}>
           <div className="">
             <Reveal>
               <Image alt="TODO" src={DesktopScreenshot} />
@@ -87,7 +87,7 @@ export default function MobileAppLaunchPage() {
           </div>
         </TwoColumn>
 
-        <TwoColumn span={[7, 3]}>
+        <TwoColumn span={[7, 3]} colReverse={true}>
           <div className="">
             <Reveal>
               <Image alt="TODO" src={OnePager} />
