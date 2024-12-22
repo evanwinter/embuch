@@ -9,7 +9,7 @@ export default function Home() {
         <Header />
         <Nav />
       </div>
-      <div className="absolute left-0 top-[16vh] overflow-hidden">
+      <div className="absolute left-0 top-[16vh] overflow-hidden w-full">
         <Marquee />
       </div>
     </>

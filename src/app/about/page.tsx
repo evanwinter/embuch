@@ -19,17 +19,17 @@ export default function AboutPage() {
           <div className="lg:max-w-lg xl:max-w-none flex-[50%]">
             <Image src={Emily} alt="TODO" />
           </div>
-          <div className="flex flex-[50%] flex-col gap-2 leading-tight text-lg text-pretty">
+          <div className="flex flex-[50%] flex-col gap-3 leading-tight text-lg text-pretty">
             <p>Hey, I&apos;m Emily! I’m a designer living in Chicago.</p>
             <p>
-              I work at Vestwell as a Senior Designer, where I&apos;m helping to
-              close the savings gap by taking complex financial concepts and
-              making them digestible.
+              I work at Vestwell as a Senior Designer, where I&apos;m helping
+              with our mission to close the savings gap by taking complex
+              financial concepts and making them digestible.
             </p>
             <p>
               Outside of work you can find me knitting, working towards racking
               up 200 hours of yoga for my teaching license, spending time in the
-              Northwoods of Wisconsin, playing Wingspan, or hanging out with
+              northwoods of Wisconsin, playing Wingspan, or spending time with
               friends.
             </p>
           </div>

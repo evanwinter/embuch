@@ -5,6 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Dog from "@/app/public/dog.jpg";
 import Mockup from "@/app/public/mockup.jpg";
+import { Reveal } from "./Reveal";
 
 const images = [
   { image: Dog, alt: "Dog Illustration" },
@@ -18,13 +19,15 @@ export function Nav() {
     <div className="flex flex-col gap-6 relative">
       <div className="w-[361px] h-[192px]">
         {index !== null && (
-          <Image
-            width={361}
-            height={192}
-            src={images[index].image}
-            alt={images[index].alt}
-            quality={100}
-          />
+          <Reveal>
+            <Image
+              width={361}
+              height={192}
+              src={images[index].image}
+              alt={images[index].alt}
+              quality={100}
+            />
+          </Reveal>
         )}
       </div>
 

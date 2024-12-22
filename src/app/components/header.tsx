@@ -11,7 +11,7 @@ export function Header() {
   };
 
   return (
-    <header className="flex flex-col items-start gap-2 text-sm">
+    <header className="flex flex-col items-start gap-2 text-sm leading-none">
       <span {...handlers}>Emily Buchberger</span>
       <span>Brand Designer</span>
       <span>Chicago, Illinois</span>
