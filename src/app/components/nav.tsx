@@ -40,7 +40,7 @@ export function Nav() {
         </motion.div>
       </div>
 
-      <nav className="border-t border-t-foreground flex gap-32 pt-6 text-sm">
+      <nav className="border-t border-t-foreground flex gap-32 pt-6 text-base">
         <Link
           className="p-4 -m-4"
           href="/work"
