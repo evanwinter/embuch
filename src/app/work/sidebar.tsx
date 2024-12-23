@@ -6,6 +6,7 @@ import { NavLink } from "@/app/components/nav-link";
 
 import { usePathname } from "next/navigation";
 import { cn } from "@evanwinter/cn";
+import Link from "next/link";
 
 export function Sidebar(
   props: React.DetailedHTMLProps<
@@ -19,14 +20,17 @@ export function Sidebar(
   return (
     <div className={cn(props.className, "min-w-[184px]")}>
       <div className="flex flex-col gap-10 items-start min-w-min shrink-0">
-        <div className="bg-accent relative w-full max-w-[120px]">
+        <Link
+          href="/"
+          className="bg-accent img-link relative w-full max-w-[120px]"
+        >
           <Image
             src={Flower}
             alt="Picture of flower"
             className="grayscale w-full"
           />
           <div className="absolute inset-0 bg-accent mix-blend-overlay" />
-        </div>
+        </Link>
         <nav className="grid gap-5 text-lg leading-none">
           <NavLink href="/">Home</NavLink>
           <NavLink href="/work">Work</NavLink>
