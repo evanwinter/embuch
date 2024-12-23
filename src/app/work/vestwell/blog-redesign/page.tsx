@@ -26,7 +26,7 @@ export default function BlogRedesignPage() {
           <Image alt="TODO" src={Blog1} />
         </div>
 
-        <TwoColumn span={[5, 5]}>
+        <TwoColumn span={[6, 4]}>
           <div className="">
             <Reveal>
               <Image alt="TODO" src={Blog2} />
@@ -35,19 +35,17 @@ export default function BlogRedesignPage() {
           <div className="sticky top-8">
             <Reveal>
               <LargeText>
-                I led the redesign of Vestwell's blog to create a more modern,
-                user-friendly experience that aligns with the brand’s identity.
-                The updated design features improved navigation, clean layouts,
-                and engaging visuals, making it easier for users to explore
-                content and stay informed.
+                Led the redesign of Vestwell's blog to create a more modern,
+                user-friendly experience that allows users to find relevant
+                content easily.
               </LargeText>
-              <LargeText>
+              {/* <LargeText>
                 Key enhancements include responsive design for seamless mobile
                 access and a refreshed aesthetic that highlights thought
                 leadership and educational resources. The new blog layout not
                 only increased engagement but also reinforced Vestwell's
                 position as a trusted voice in retirement planning.
-              </LargeText>
+              </LargeText> */}
             </Reveal>
           </div>
         </TwoColumn>

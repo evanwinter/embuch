@@ -16,7 +16,7 @@ export default function AboutPage() {
 
       <section className="mt-12 xl:mt-0 xl:px-12 md:h-[calc(100dvh-128px)] xl:h-[calc(100dvh-96px)] flex items-center">
         <div className="flex flex-col-reverse items-center md:flex-row gap-8 lg:gap-12 xl:gap-16">
-          <div className="lg:max-w-lg xl:max-w-none flex-[50%]">
+          <div className="lg:max-w-lg xl:max-w-none flex-[50%] scale-x-[-1]">
             <Image src={Emily} alt="TODO" />
           </div>
           <div className="flex flex-[50%] flex-col gap-3 leading-tight text-lg text-pretty">

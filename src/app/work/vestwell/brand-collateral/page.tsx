@@ -25,26 +25,29 @@ export default function BrandCollateralPage() {
           <Image alt="TODO" src={Collateral1} />
         </div>
 
+        <div className="-my-8">
+          <Reveal>
+            <LargeText className="max-w-[60ch] text-pretty">
+              Developed a comprehensive suite of brand collateral, including
+              business cards, swag, brochures, one-pagers, and mailers, to
+              support Vestwell's marketing and outreach efforts.
+            </LargeText>
+          </Reveal>
+        </div>
         <TwoColumn span={[5, 5]}>
           <div className="">
             <Reveal>
               <Image alt="TODO" src={Collateral2} />
             </Reveal>
           </div>
-          <div className="sticky top-8">
+          <div>
             <Reveal>
-              <LargeText>
-                I developed a comprehensive suite of brand collateral, including
-                business cards, swag, brochures, one-pagers, and mailers, to
-                support Vestwell's marketing and outreach efforts. Each piece
-                was designed with a consistent aesthetic, balancing modern,
-                professional visuals with clear, impactful messaging.
-              </LargeText>
+              <Image alt="TODO" src={Collateral3} />
             </Reveal>
           </div>
         </TwoColumn>
 
-        <TwoColumn span={[5, 5]}>
+        {/* <TwoColumn span={[5, 5]}>
           <div className="sticky top-8">
             <Reveal>
               <LargeText>
@@ -62,7 +65,7 @@ export default function BrandCollateralPage() {
               <Image alt="TODO" src={Collateral3} />
             </Reveal>
           </div>
-        </TwoColumn>
+        </TwoColumn> */}
 
         <TwoColumn span={[5, 5]}>
           <div className="sticky top-8">

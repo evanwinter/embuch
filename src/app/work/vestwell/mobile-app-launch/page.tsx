@@ -36,19 +36,8 @@ export default function MobileAppLaunchPage() {
           <div className="sticky top-8">
             <Reveal>
               <LargeText>
-                To support the launch of Vestwell’s mobile app, I designed a
-                dedicated landing page to effectively highlight the app's
-                features and benefits. The page balances engaging visuals with
-                concise messaging, focusing on how the app empowers users to
-                manage their retirement plans on the go.
-              </LargeText>
-              <LargeText>
-                Key design elements include bold headlines, app screen previews,
-                and a seamless user experience, all crafted to align with
-                Vestwell’s brand identity while driving excitement and
-                engagement. This page was integral to positioning the mobile app
-                as a game-changer for our audience and advancing the company’s
-                goal of moving up-market.
+                Landing page for Vestwell's mobile app launch, showcasing its
+                features and benefits.
               </LargeText>
             </Reveal>
           </div>

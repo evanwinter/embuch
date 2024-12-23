@@ -12,6 +12,7 @@ import Graphics6 from "@/app/public/vestwell/graphics-6.gif";
 import Graphics7 from "@/app/public/vestwell/graphics-7.gif";
 import Graphics8 from "@/app/public/vestwell/graphics-8.gif";
 import { SmallHeading } from "@/app/components/small-heading";
+import { LargeText } from "@/app/components/large-text";
 
 export default function SocialAndEmailGraphicsPage() {
   return (
@@ -28,15 +29,15 @@ export default function SocialAndEmailGraphicsPage() {
           <Image alt="TODO" src={Graphics1} />
         </div>
 
-        <div className="">
+        <div className="-my-8 -mb-12">
           <Reveal>
-            <Image alt="TODO" src={Graphics2} />
+            <LargeText className="font-semibold">Social Posts</LargeText>
           </Reveal>
         </div>
 
         <div className="">
           <Reveal>
-            <SmallHeading>Social Posts</SmallHeading>
+            <Image alt="TODO" src={Graphics2} />
           </Reveal>
         </div>
 

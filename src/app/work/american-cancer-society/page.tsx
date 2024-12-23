@@ -28,11 +28,16 @@ export default function ACSPage() {
           <Image alt="TODO" src={ACS1} />
         </div>
 
-        <div>
-          <LargeText className="max-w-[30ch] text-pretty">
-            This booklet was created to highlight the research done by the
-            American Cancer Society.
-          </LargeText>
+        <div className="-my-8">
+          <Reveal>
+            <LargeText className="text-pretty max-w-[72ch]">
+              The American Cancer Society asked us to create an immersive
+              experience for those attending the Gala. The visitors were able to
+              walk through an exhibit that highlighted their research efforts.
+              Visitors also connected to personal stories of those affected by
+              cancer through quotes and custom illustrations.
+            </LargeText>
+          </Reveal>
         </div>
 
         <div className="">
