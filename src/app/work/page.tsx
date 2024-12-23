@@ -1,19 +1,19 @@
 import Image from "next/image";
 
-import MobileAppLaunch1 from "@/app/public/work/app-1.jpg";
-import MobileAppLaunch2 from "@/app/public/work/app-2.jpg";
-import Blog1 from "@/app/public/work/blog-1.jpg";
-import Blog2 from "@/app/public/work/blog-2.jpg";
-import ConferenceBooth1 from "@/app/public/work/conference-1.jpg";
-import ConferenceBooth2 from "@/app/public/work/conference-2.jpg";
-import BrandCollateral1 from "@/app/public/work/collateral-1.jpg";
-import BrandCollateral2 from "@/app/public/work/collateral-2.jpg";
-import Graphics1 from "@/app/public/work/graphics-1.jpg";
-import Graphics2 from "@/app/public/work/graphics-2.jpg";
-import ACS1 from "@/app/public/work/acs-1.jpg";
-import ACS2 from "@/app/public/work/acs-2.jpg";
-import HLK1 from "@/app/public/work/hlk-1.jpg";
-import HLK2 from "@/app/public/work/hlk-2.jpg";
+import MobileAppLaunch1 from "@/public/work/app-1.jpg";
+import MobileAppLaunch2 from "@/public/work/app-2.jpg";
+import Blog1 from "@/public/work/blog-1.jpg";
+import Blog2 from "@/public/work/blog-2.jpg";
+import ConferenceBooth1 from "@/public/work/conference-1.jpg";
+import ConferenceBooth2 from "@/public/work/conference-2.jpg";
+import BrandCollateral1 from "@/public/work/collateral-1.jpg";
+import BrandCollateral2 from "@/public/work/collateral-2.jpg";
+import Graphics1 from "@/public/work/graphics-1.jpg";
+import Graphics2 from "@/public/work/graphics-2.jpg";
+import ACS1 from "@/public/work/acs-1.jpg";
+import ACS2 from "@/public/work/acs-2.jpg";
+import HLK1 from "@/public/work/hlk-1.jpg";
+import HLK2 from "@/public/work/hlk-2.jpg";
 
 import { WorkPreview } from "@/app/work/preview";
 

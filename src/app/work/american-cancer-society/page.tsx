@@ -2,14 +2,14 @@ import Image from "next/image";
 import { Reveal } from "@/app/components/Reveal";
 import { WorkHeader } from "../header";
 
-import ACS1 from "@/app/public/acs/acs-1.jpg";
-import ACS2 from "@/app/public/acs/acs-2.jpg";
-import ACS3 from "@/app/public/acs/acs-3.jpg";
-import ACS4 from "@/app/public/acs/acs-4.jpg";
-import ACS5 from "@/app/public/acs/acs-5.jpg";
-import ACS6 from "@/app/public/acs/acs-6.jpg";
-import ACS7 from "@/app/public/acs/acs-7.jpg";
-import ACS8 from "@/app/public/acs/acs-8.jpg";
+import ACS1 from "@/public/acs/acs-1.jpg";
+import ACS2 from "@/public/acs/acs-2.jpg";
+import ACS3 from "@/public/acs/acs-3.jpg";
+import ACS4 from "@/public/acs/acs-4.jpg";
+import ACS5 from "@/public/acs/acs-5.jpg";
+import ACS6 from "@/public/acs/acs-6.jpg";
+import ACS7 from "@/public/acs/acs-7.jpg";
+import ACS8 from "@/public/acs/acs-8.jpg";
 import { TwoColumn } from "@/app/components/two-column";
 import { LargeText } from "@/app/components/large-text";
 

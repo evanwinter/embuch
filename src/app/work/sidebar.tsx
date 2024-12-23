@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Flower from "../public/Flower-2.png";
+import Flower from "@/public/Flower-2.png";
 import { NavLink } from "@/app/components/nav-link";
 
 import { usePathname } from "next/navigation";

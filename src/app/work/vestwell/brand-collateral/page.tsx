@@ -3,11 +3,11 @@ import { Reveal } from "@/app/components/Reveal";
 import { TwoColumn } from "@/app/components/two-column";
 import { WorkHeader } from "../../header";
 
-import Collateral1 from "@/app/public/vestwell/collateral-1.gif";
-import Collateral2 from "@/app/public/vestwell/collateral-2.jpg";
-import Collateral3 from "@/app/public/vestwell/collateral-3.jpg";
-import Collateral4 from "@/app/public/vestwell/collateral-4.jpg";
-import Collateral5 from "@/app/public/vestwell/collateral-5.jpg";
+import Collateral1 from "@/public/vestwell/collateral-1.gif";
+import Collateral2 from "@/public/vestwell/collateral-2.jpg";
+import Collateral3 from "@/public/vestwell/collateral-3.jpg";
+import Collateral4 from "@/public/vestwell/collateral-4.jpg";
+import Collateral5 from "@/public/vestwell/collateral-5.jpg";
 import { LargeText } from "@/app/components/large-text";
 
 export default function BrandCollateralPage() {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Emily from "@/app/public/emily.jpg";
+import Emily from "@/public/emily.jpg";
 import { Blue } from "./blue";
 import { MarqueeImages } from "./marquee-images";
 

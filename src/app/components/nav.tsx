@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import Dog from "@/app/public/dog.jpg";
-import Mockup from "@/app/public/mockup.jpg";
+import Dog from "@/public/dog.jpg";
+import Mockup from "@/public/mockup.jpg";
 import { Reveal } from "./Reveal";
 import { motion, Variants } from "motion/react";
 

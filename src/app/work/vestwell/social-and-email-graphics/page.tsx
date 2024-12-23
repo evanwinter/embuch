@@ -3,14 +3,14 @@ import { WorkHeader } from "@/app/work/header";
 import { TwoColumn } from "@/app/components/two-column";
 import { Reveal } from "@/app/components/Reveal";
 
-import Graphics1 from "@/app/public/vestwell/graphics-1.gif";
-import Graphics2 from "@/app/public/vestwell/graphics-2.gif";
-import Graphics3 from "@/app/public/vestwell/graphics-3.gif";
-import Graphics4 from "@/app/public/vestwell/graphics-4.gif";
-import Graphics5 from "@/app/public/vestwell/graphics-5.gif";
-import Graphics6 from "@/app/public/vestwell/graphics-6.gif";
-import Graphics7 from "@/app/public/vestwell/graphics-7.gif";
-import Graphics8 from "@/app/public/vestwell/graphics-8.gif";
+import Graphics1 from "@/public/vestwell/graphics-1.gif";
+import Graphics2 from "@/public/vestwell/graphics-2.gif";
+import Graphics3 from "@/public/vestwell/graphics-3.gif";
+import Graphics4 from "@/public/vestwell/graphics-4.gif";
+import Graphics5 from "@/public/vestwell/graphics-5.gif";
+import Graphics6 from "@/public/vestwell/graphics-6.gif";
+import Graphics7 from "@/public/vestwell/graphics-7.gif";
+import Graphics8 from "@/public/vestwell/graphics-8.gif";
 import { SmallHeading } from "@/app/components/small-heading";
 import { LargeText } from "@/app/components/large-text";
 

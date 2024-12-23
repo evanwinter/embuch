@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Blog1 from "@/app/public/vestwell/blog-1.jpg";
-import Blog2 from "@/app/public/vestwell/blog-2.jpg";
-import Blog3 from "@/app/public/vestwell/blog-3.jpg";
-import Blog4 from "@/app/public/vestwell/blog-4.jpg";
-import Blog5 from "@/app/public/vestwell/blog-5.jpg";
-import Blog6 from "@/app/public/vestwell/blog-6.jpg";
+import Blog1 from "@/public/vestwell/blog-1.jpg";
+import Blog2 from "@/public/vestwell/blog-2.jpg";
+import Blog3 from "@/public/vestwell/blog-3.jpg";
+import Blog4 from "@/public/vestwell/blog-4.jpg";
+import Blog5 from "@/public/vestwell/blog-5.jpg";
+import Blog6 from "@/public/vestwell/blog-6.jpg";
 
 import { WorkHeader } from "@/app/work/header";
 import { TwoColumn } from "@/app/components/two-column";

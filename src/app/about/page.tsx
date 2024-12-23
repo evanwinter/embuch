@@ -2,7 +2,7 @@ import Image from "next/image";
 import { SideDrawer } from "../components/side-drawer";
 import { TwoColumn } from "../components/two-column";
 import { Sidebar } from "../work/sidebar";
-import Emily from "@/app/public/emily.jpg";
+import Emily from "@/public/emily.jpg";
 
 export default function AboutPage() {
   return (
