@@ -50,6 +50,12 @@ body.emily .emily-image {
   animation: marquee 90s linear infinite;
 }
 
+@media (max-width: 768px) {
+  .marquee-track {
+    animation: marquee 45s linear infinite;
+  }
+}
+
 a:not(.img-link):hover {
   opacity: 0.7;
 }
