@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fff;
+  --foreground: #120801;
+  --foreground-muted: #6c6c6c;
+  --accent: #0c82cb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #161616;
+    --foreground: #fff;
+    --foreground-muted: #b0b0b0;
+    --accent: #0c82cb;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.emily-image {
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+body.emily .emily-image {
+  opacity: 1;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  animation: marquee 90s linear infinite;
+}
+
+a:not(.img-link):hover {
+  opacity: 0.7;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100%));
+  }
+}
