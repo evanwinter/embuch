@@ -24,7 +24,7 @@ export function TwoColumn({ children, colReverse, span }: TwoColumnProps) {
   return (
     <div
       className={cn(
-        "flex flex-col lg:flex-row gap-4 sm:gap-8 relative",
+        "flex flex-col lg:flex-row gap-12 relative",
         colReverse ?? "flex-col-reverse",
       )}
     >

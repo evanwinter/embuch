@@ -23,12 +23,12 @@ export default function ACSPage() {
         types="Experiential Design, Illustration, Layout, Print Production"
       />
 
-      <div className="flex flex-col gap-8 xl:gap-24">
+      <div className="flex flex-col gap-12">
         <div className="">
           <Image alt="TODO" src={ACS1} />
         </div>
 
-        <div className="-my-8">
+        <div>
           <Reveal>
             <LargeText className="text-pretty max-w-[72ch]">
               The American Cancer Society asked us to create an immersive

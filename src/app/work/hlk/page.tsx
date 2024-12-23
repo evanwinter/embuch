@@ -17,7 +17,7 @@ export default function HlkPage() {
         types="Illustration, Layout, Print Production"
       />
 
-      <div className="flex flex-col gap-8 xl:gap-24">
+      <div className="flex flex-col gap-12">
         <div className="">
           <Image alt="HLK Book Cover" src={HLK1} />
         </div>

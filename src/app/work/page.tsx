@@ -19,7 +19,7 @@ import { WorkPreview } from "@/app/work/preview";
 
 export default function WorkPage() {
   return (
-    <div className="grid gap-24">
+    <div className="grid gap-12 sm:gap-24">
       <WorkPreview
         brand="Vestwell"
         title="Mobile App Launch"

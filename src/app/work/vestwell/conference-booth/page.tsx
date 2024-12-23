@@ -19,7 +19,7 @@ export default function ConferenceBoothPage() {
         types="Experiential Design"
       />
 
-      <div className="flex flex-col gap-8 xl:gap-24">
+      <div className="flex flex-col gap-12">
         <div className="">
           <Image alt="TODO" src={Booth1} />
         </div>

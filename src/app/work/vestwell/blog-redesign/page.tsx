@@ -21,7 +21,7 @@ export default function BlogRedesignPage() {
         types="Web Design"
       />
 
-      <div className="flex flex-col gap-24">
+      <div className="flex flex-col gap-12">
         <div className="flex flex-col gap-8">
           <Image alt="TODO" src={Blog1} />
         </div>

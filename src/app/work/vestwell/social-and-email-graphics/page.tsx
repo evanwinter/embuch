@@ -24,12 +24,12 @@ export default function SocialAndEmailGraphicsPage() {
         types="Motion, Illustration"
       />
 
-      <div className="flex flex-col gap-24">
+      <div className="flex flex-col gap-12">
         <div className="">
           <Image alt="TODO" src={Graphics1} />
         </div>
 
-        <div className="-my-8 -mb-12">
+        <div>
           <Reveal>
             <LargeText className="font-semibold">Social Posts</LargeText>
           </Reveal>

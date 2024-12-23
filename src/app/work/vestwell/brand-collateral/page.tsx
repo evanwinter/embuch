@@ -20,12 +20,12 @@ export default function BrandCollateralPage() {
         types="Illustration, Layout, Print Production"
       />
 
-      <div className="flex flex-col gap-24">
+      <div className="flex flex-col gap-12">
         <div className="flex flex-col gap-8">
           <Image alt="TODO" src={Collateral1} />
         </div>
 
-        <div className="-my-8">
+        <div>
           <Reveal>
             <LargeText className="max-w-[60ch] text-pretty">
               Developed a comprehensive suite of brand collateral, including
