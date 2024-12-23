@@ -50,7 +50,7 @@ body.emily .emily-image {
   animation: marquee 90s linear infinite;
 }
 
-a:hover {
+a:not(.img-link):hover {
   opacity: 0.7;
 }
 

@@ -37,14 +37,19 @@ export function Sidebar(
           {expandWork && (
             <div className="grid gap-2 text-xs pl-4 border-0 border-l-2 border-accent">
               <NavLink href="/work/vestwell/mobile-app-launch">
-                Mobile App Launch Campaign
+                Mobile App Launch
               </NavLink>
-              <NavLink href="/work/vestwell/blog">Blog</NavLink>
+              <NavLink href="/work/vestwell/blog-redesign">
+                Blog Redesign
+              </NavLink>
               <NavLink href="/work/vestwell/conference-booth">
                 Conference Booth
               </NavLink>
               <NavLink href="/work/vestwell/brand-collateral">
                 Brand Collateral
+              </NavLink>
+              <NavLink href="/work/vestwell/social-and-email-graphics">
+                Social &amp; Email Graphics
               </NavLink>
               <NavLink href="/work/american-cancer-society">
                 American Cancer Society

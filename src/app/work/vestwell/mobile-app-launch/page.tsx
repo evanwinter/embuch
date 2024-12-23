@@ -26,6 +26,30 @@ export default function MobileAppLaunchPage() {
           <Image alt="TODO" src={MobileAppLaunch1} />
         </div>
 
+        <TwoColumn span={[7, 3]} colReverse={true}>
+          <div className="">
+            <Reveal>
+              <Image alt="TODO" src={DesktopScreenshot} />
+            </Reveal>
+          </div>
+          <div className="sticky top-8">
+            <Reveal>
+              <p>
+                To support the launch of Vestwell’s mobile app, I designed a
+                dedicated landing page to effectively highlight the app's
+                features and benefits. The page balances engaging visuals with
+                concise messaging, focusing on how the app empowers users to
+                manage their retirement plans on the go. Key design elements
+                include bold headlines, app screen previews, and a seamless user
+                experience, all crafted to align with Vestwell’s brand identity
+                while driving excitement and engagement. This page was integral
+                to positioning the mobile app as a game-changer for our audience
+                and advancing the company’s goal of moving up-market.
+              </p>
+            </Reveal>
+          </div>
+        </TwoColumn>
+
         <div className="">
           <Reveal>
             <Image alt="TODO" src={AppStore} />
@@ -45,39 +69,10 @@ export default function MobileAppLaunchPage() {
           </div>
         </TwoColumn>
 
-        <TwoColumn span={[7, 3]} colReverse={true}>
-          <div className="">
-            <Reveal>
-              <Image alt="TODO" src={DesktopScreenshot} />
-            </Reveal>
-          </div>
-          <div className="sticky top-8">
-            <Reveal>
-              <p>
-                Deserunt do laborum exercitation anim. Est reprehenderit elit id
-                incididunt mollit ipsum laborum amet ullamco nisi enim fugiat.
-                Ut dolor cupidatat nulla fugiat in ea sunt elit officia anim
-                duis reprehenderit aute. Consequat aliqua cillum non est enim
-                non aliquip voluptate nostrud irure enim non duis id laborum.
-                Cillum esse consequat dolor occaecat ad adipisicing sint ut
-                veniam.
-              </p>
-            </Reveal>
-          </div>
-        </TwoColumn>
-
         <TwoColumn span={[3, 7]}>
           <div className="sticky top-8">
             <Reveal>
-              <p>
-                Deserunt do laborum exercitation anim. Est reprehenderit elit id
-                incididunt mollit ipsum laborum amet ullamco nisi enim fugiat.
-                Ut dolor cupidatat nulla fugiat in ea sunt elit officia anim
-                duis reprehenderit aute. Consequat aliqua cillum non est enim
-                non aliquip voluptate nostrud irure enim non duis id laborum.
-                Cillum esse consequat dolor occaecat ad adipisicing sint ut
-                veniam.
-              </p>
+              <p>LinkedIn post to announce the launch of the mobile app.</p>
             </Reveal>
           </div>
           <div className="overflow-hidden">
@@ -96,13 +91,8 @@ export default function MobileAppLaunchPage() {
           <div className="sticky top-8">
             <Reveal>
               <p>
-                Deserunt do laborum exercitation anim. Est reprehenderit elit id
-                incididunt mollit ipsum laborum amet ullamco nisi enim fugiat.
-                Ut dolor cupidatat nulla fugiat in ea sunt elit officia anim
-                duis reprehenderit aute. Consequat aliqua cillum non est enim
-                non aliquip voluptate nostrud irure enim non duis id laborum.
-                Cillum esse consequat dolor occaecat ad adipisicing sint ut
-                veniam.
+                Email communications were sent out to savers, advisors, and
+                employers to announce the mobile app and encourage doiwnloads.
               </p>
             </Reveal>
           </div>

@@ -8,7 +8,7 @@ import Blog4 from "@/app/public/vestwell/blog-4.jpg";
 import { TwoColumn } from "@/app/components/two-column";
 import { Reveal } from "@/app/components/Reveal";
 
-export default function BlogPage() {
+export default function BlogRedesignPage() {
   return (
     <div className="flex flex-col gap-4 sm:gap-8 lg:gap-12">
       {/* Header */}
@@ -32,13 +32,15 @@ export default function BlogPage() {
           <div className="sticky top-8">
             <Reveal>
               <p>
-                Deserunt do laborum exercitation anim. Est reprehenderit elit id
-                incididunt mollit ipsum laborum amet ullamco nisi enim fugiat.
-                Ut dolor cupidatat nulla fugiat in ea sunt elit officia anim
-                duis reprehenderit aute. Consequat aliqua cillum non est enim
-                non aliquip voluptate nostrud irure enim non duis id laborum.
-                Cillum esse consequat dolor occaecat ad adipisicing sint ut
-                veniam.
+                I led the redesign of Vestwell's blog to create a more modern,
+                user-friendly experience that aligns with the brand’s identity.
+                The updated design features improved navigation, clean layouts,
+                and engaging visuals, making it easier for users to explore
+                content and stay informed. Key enhancements include responsive
+                design for seamless mobile access and a refreshed aesthetic that
+                highlights thought leadership and educational resources. The new
+                blog layout not only increased engagement but also reinforced
+                Vestwell's position as a trusted voice in retirement planning.
               </p>
             </Reveal>
           </div>

@@ -1,116 +1,168 @@
 import Image from "next/image";
 
-import MobileAppLaunch1 from "@/app/public/vestwell/mobile-mockup-closeup.jpg";
-import MobileAppLaunch2 from "@/app/public/vestwell/success-square.jpg";
+import MobileAppLaunch1 from "@/app/public/work/app-1.jpg";
+import MobileAppLaunch2 from "@/app/public/work/app-2.jpg";
+import Blog1 from "@/app/public/work/blog-1.jpg";
+import Blog2 from "@/app/public/work/blog-2.jpg";
+import ConferenceBooth1 from "@/app/public/work/conference-1.jpg";
+import ConferenceBooth2 from "@/app/public/work/conference-2.jpg";
+import BrandCollateral1 from "@/app/public/work/collateral-1.jpg";
+import BrandCollateral2 from "@/app/public/work/collateral-2.jpg";
+import Graphics1 from "@/app/public/work/graphics-1.jpg";
+import Graphics2 from "@/app/public/work/graphics-2.jpg";
+import ACS1 from "@/app/public/work/acs-1.jpg";
+import ACS2 from "@/app/public/work/acs-2.jpg";
+import HLK1 from "@/app/public/work/hlk-1.jpg";
+import HLK2 from "@/app/public/work/hlk-2.jpg";
 
-import Blog1 from "@/app/public/vestwell/number-of-vestwell-plans.jpg";
-import Blog2 from "@/app/public/vestwell/blog.jpg";
-
-import ConferenceBooth1 from "@/app/public/vestwell/vestwell-conf-booth.jpg";
-import ConferenceBooth2 from "@/app/public/vestwell/conf-illustration.jpg";
-
-import BrandCollateral1 from "@/app/public/vestwell/umbrella.jpg";
-import BrandCollateral2 from "@/app/public/vestwell/fact-sheet.jpg";
-
-import ACS1 from "@/app/public/vestwell/acs-hug.jpg";
-import ACS2 from "@/app/public/vestwell/shattering-expectations.jpg";
-
-import HLK1 from "@/app/public/vestwell/ripple-book.jpg";
-import HLK2 from "@/app/public/vestwell/ripple-illustration.jpg";
-
-import { WorkPreview } from "./preview";
+import { WorkPreview } from "@/app/work/preview";
 
 export default function WorkPage() {
   return (
     <div className="grid gap-24">
-      {/* --- */}
-
       <WorkPreview
         brand="Vestwell"
-        title="Mobile App Launch Campaign"
+        title="Mobile App Launch"
         description="Campaign"
         href="/work/vestwell/mobile-app-launch"
       >
-        <div>
+        <div className="overflow-hidden">
           <Image
             src={MobileAppLaunch1}
-            alt="Closeup of Vestwell mobile app mockup"
+            alt="TODO"
+            className="group-hover:scale-105 transition-transform duration-300"
           />
         </div>
-        <div className="hidden lg:block">
-          <Image src={MobileAppLaunch2} alt="Vestwell iconography" />
+        <div className="hidden lg:block overflow-hidden">
+          <Image
+            src={MobileAppLaunch2}
+            alt="Vestwell iconography"
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
         </div>
       </WorkPreview>
-
-      {/* --- */}
-
-      <WorkPreview
-        brand="Vestwell"
-        title="Blog"
-        description="Web Design"
-        href="/work/vestwell/blog"
-      >
-        <div className="hidden lg:block">
-          <Image src={Blog1} alt="TODO" />
-        </div>
-        <div>
-          <Image src={Blog2} alt="TODO" />
-        </div>
-      </WorkPreview>
-
-      {/* --- */}
-
-      <WorkPreview
-        brand="Vestwell"
-        title="Conference Booth"
-        description="Experiental Design"
-        href="/work/vestwell/conference-booth"
-      >
-        <div>
-          <Image src={ConferenceBooth1} alt="TODO" />
-        </div>
-        <div className="hidden lg:block">
-          <Image src={ConferenceBooth2} alt="TODO" />
-        </div>
-      </WorkPreview>
-
       <WorkPreview
         brand="Vestwell"
         title="Brand Collateral"
         description="Illustration, Presentation Design, Layout"
         href="/work/vestwell/brand-collateral"
       >
-        <div className="hidden lg:block">
-          <Image src={BrandCollateral1} alt="TODO" />
+        <div className="hidden lg:block overflow-hidden">
+          <Image
+            src={BrandCollateral1}
+            alt="TODO"
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
         </div>
-        <div>
-          <Image src={BrandCollateral2} alt="TODO" />
+        <div className="overflow-hidden">
+          <Image
+            src={BrandCollateral2}
+            alt="TODO"
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
         </div>
       </WorkPreview>
-
+      <WorkPreview
+        brand="Vestwell"
+        title="Motion and Custom Illustrations"
+        description="Motion, Illustration"
+        href="/work/vestwell/social-and-email-graphics"
+      >
+        <div className="overflow-hidden">
+          <Image
+            src={Graphics1}
+            alt="TODO"
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div className="hidden lg:block overflow-hidden">
+          <Image
+            src={Graphics2}
+            alt="TODO"
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </WorkPreview>
+      <WorkPreview
+        brand="Vestwell"
+        title="Blog Redesign"
+        description="Web Design"
+        href="/work/vestwell/blog-redesign"
+      >
+        <div className="hidden lg:block overflow-hidden">
+          <Image
+            src={Blog1}
+            alt="TODO"
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div className="overflow-hidden">
+          <Image
+            src={Blog2}
+            alt="TODO"
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </WorkPreview>
+      <WorkPreview
+        brand="Vestwell"
+        title="Conference Booth"
+        description="Experiental Design"
+        href="/work/vestwell/conference-booth"
+      >
+        <div className="overflow-hidden">
+          <Image
+            src={ConferenceBooth1}
+            alt="TODO"
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div className="hidden lg:block overflow-hidden">
+          <Image
+            src={ConferenceBooth2}
+            alt="TODO"
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </WorkPreview>
       <WorkPreview
         brand="American Cancer Society"
         description="experiential"
         href="/work/american-cancer-society"
       >
-        <div className="hidden lg:block">
-          <Image src={ACS1} alt="TODO" />
+        <div className="hidden lg:block overflow-hidden">
+          <Image
+            src={ACS1}
+            alt="TODO"
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
         </div>
-        <div>
-          <Image src={ACS2} alt="TODO" />
+        <div className="overflow-hidden">
+          <Image
+            src={ACS2}
+            alt="TODO"
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
         </div>
       </WorkPreview>
-
       <WorkPreview
         brand="HLK"
         description="internal branding work for a scrappy st. louis agency"
         href="/work/hlk"
       >
-        <div>
-          <Image src={HLK1} alt="TODO" />
+        <div className="overflow-hidden">
+          <Image
+            src={HLK1}
+            alt="TODO"
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
         </div>
-        <div className="hidden lg:block">
-          <Image src={HLK2} alt="TODO" />
+        <div className="hidden lg:block overflow-hidden">
+          <Image
+            src={HLK2}
+            alt="TODO"
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
         </div>
       </WorkPreview>
     </div>

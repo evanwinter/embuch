@@ -25,6 +25,23 @@ export default function ConferenceBoothPage() {
 
         <div className="">
           <Reveal>
+            <p className="text-pretty max-w-[80ch]">
+              I developed a comprehensive suite of brand collateral, including
+              business cards, swag, brochures, one-pagers, and mailers, to
+              support Vestwell's marketing and outreach efforts. Each piece was
+              designed with a consistent aesthetic, balancing modern,
+              professional visuals with clear, impactful messaging. These
+              materials were tailored to resonate with different
+              audiences—whether engaging savers, advisors, or employers—while
+              maintaining brand integrity. From sleek, functional business cards
+              to eye-catching mailers, this collateral elevated the brand's
+              presence and strengthened connections across multiple touchpoints.
+            </p>
+          </Reveal>
+        </div>
+
+        <div className="">
+          <Reveal>
             <Image alt="TODO" src={Booth2} />
           </Reveal>
         </div>

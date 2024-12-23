@@ -33,13 +33,11 @@ export default function BrandCollateralPage() {
           <div className="sticky top-8">
             <Reveal>
               <p>
-                Deserunt do laborum exercitation anim. Est reprehenderit elit id
-                incididunt mollit ipsum laborum amet ullamco nisi enim fugiat.
-                Ut dolor cupidatat nulla fugiat in ea sunt elit officia anim
-                duis reprehenderit aute. Consequat aliqua cillum non est enim
-                non aliquip voluptate nostrud irure enim non duis id laborum.
-                Cillum esse consequat dolor occaecat ad adipisicing sint ut
-                veniam.
+                I developed a comprehensive suite of brand collateral, including
+                business cards, swag, brochures, one-pagers, and mailers, to
+                support Vestwell's marketing and outreach efforts. Each piece
+                was designed with a consistent aesthetic, balancing modern,
+                professional visuals with clear, impactful messaging.
               </p>
             </Reveal>
           </div>
@@ -49,13 +47,12 @@ export default function BrandCollateralPage() {
           <div className="sticky top-8">
             <Reveal>
               <p>
-                Deserunt do laborum exercitation anim. Est reprehenderit elit id
-                incididunt mollit ipsum laborum amet ullamco nisi enim fugiat.
-                Ut dolor cupidatat nulla fugiat in ea sunt elit officia anim
-                duis reprehenderit aute. Consequat aliqua cillum non est enim
-                non aliquip voluptate nostrud irure enim non duis id laborum.
-                Cillum esse consequat dolor occaecat ad adipisicing sint ut
-                veniam.
+                These materials were tailored to resonate with different
+                audiences—whether engaging savers, advisors, or employers—while
+                maintaining brand integrity. From sleek, functional business
+                cards to eye-catching mailers, this collateral elevated the
+                brand's presence and strengthened connections across multiple
+                touchpoints.
               </p>
             </Reveal>
           </div>
