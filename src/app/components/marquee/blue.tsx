@@ -9,6 +9,6 @@ export const Blue = ({
 >) => (
   <div
     style={{ width: MASK_WIDTH }}
-    className={cn("bg-accent h-full", className)}
+    className={cn("bg-accent h-full hidden sm:block", className)}
   />
 );
