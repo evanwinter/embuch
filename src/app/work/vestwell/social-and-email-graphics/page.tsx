@@ -19,7 +19,7 @@ export default function SocialAndEmailGraphicsPage() {
       {/* Header */}
       <WorkHeader
         brand="Vestwell &mdash; Social &amp; Email Graphics"
-        title="Motion and illustration work for Vestwell's marketing initiatives."
+        title="Social posts and graphics for emails that incorporate motion."
         types="Motion, Illustration"
       />
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { Drawer } from "vaul";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 export function SideDrawer({ children }: { children: React.ReactNode }) {
   return (
@@ -17,6 +18,9 @@ export function SideDrawer({ children }: { children: React.ReactNode }) {
             { "--initial-transform": "calc(100% + 8px)" } as React.CSSProperties
           }
         >
+          <VisuallyHidden>
+            <Drawer.Title>Navigation</Drawer.Title>
+          </VisuallyHidden>
           <div className="bg-zinc-50 h-full w-full grow p-5 flex flex-col rounded-[16px]">
             <div className="max-w-md mx-auto">{children}</div>
           </div>

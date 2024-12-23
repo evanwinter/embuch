@@ -11,6 +11,7 @@ import ACS6 from "@/app/public/acs/acs-6.jpg";
 import ACS7 from "@/app/public/acs/acs-7.jpg";
 import ACS8 from "@/app/public/acs/acs-8.jpg";
 import { TwoColumn } from "@/app/components/two-column";
+import { LargeText } from "@/app/components/large-text";
 
 export default function ACSPage() {
   return (
@@ -18,8 +19,8 @@ export default function ACSPage() {
       {/* Header */}
       <WorkHeader
         brand="American Cancer Society"
-        title="Design services for the annual American Cancer Society gala."
-        types="Stuff"
+        title="Booklet and experiential design for the American Cancer Society’s Gala."
+        types="Experiential Design, Illustration, Layout, Print Production"
       />
 
       <div className="flex flex-col gap-8 xl:gap-24">
@@ -28,13 +29,10 @@ export default function ACSPage() {
         </div>
 
         <div>
-          <p className="max-w-[80ch] text-pretty leading-tight">
-            Voluptate elit cillum dolore exercitation ad ut consectetur esse
-            officia amet dolore exercitation ullamco quis. Ipsum eiusmod nulla
-            minim pariatur sunt dolor proident laboris aute qui enim aliqua
-            sunt. Magna magna eu eu officia exercitation excepteur ex. Irure
-            eiusmod nulla minim ad anim aute.
-          </p>
+          <LargeText className="max-w-[30ch] text-pretty">
+            This booklet was created to highlight the research done by the
+            American Cancer Society.
+          </LargeText>
         </div>
 
         <div className="">

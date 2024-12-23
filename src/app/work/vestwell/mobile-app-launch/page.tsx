@@ -9,6 +9,7 @@ import MobileApp from "@/app/public/vestwell/mobile-app.jpg";
 import OnePager from "@/app/public/vestwell/one-pager.jpg";
 import { TwoColumn } from "@/app/components/two-column";
 import { Reveal } from "@/app/components/Reveal";
+import { LargeText } from "@/app/components/large-text";
 
 export default function MobileAppLaunchPage() {
   return (
@@ -18,7 +19,7 @@ export default function MobileAppLaunchPage() {
         brand="Vestwell &mdash; Mobile App Launch"
         title="A campaign announcing the launch of Vestwell's first-ever
       mobile application."
-        types="Campaign"
+        types="Web, Social, Email Design"
       />
 
       <div className="flex flex-col gap-24">
@@ -26,7 +27,7 @@ export default function MobileAppLaunchPage() {
           <Image alt="TODO" src={MobileAppLaunch1} />
         </div>
 
-        <TwoColumn span={[7, 3]} colReverse={true}>
+        <TwoColumn span={[6, 4]} colReverse={true}>
           <div className="">
             <Reveal>
               <Image alt="TODO" src={DesktopScreenshot} />
@@ -34,18 +35,21 @@ export default function MobileAppLaunchPage() {
           </div>
           <div className="sticky top-8">
             <Reveal>
-              <p>
+              <LargeText>
                 To support the launch of Vestwell’s mobile app, I designed a
                 dedicated landing page to effectively highlight the app's
                 features and benefits. The page balances engaging visuals with
                 concise messaging, focusing on how the app empowers users to
-                manage their retirement plans on the go. Key design elements
-                include bold headlines, app screen previews, and a seamless user
-                experience, all crafted to align with Vestwell’s brand identity
-                while driving excitement and engagement. This page was integral
-                to positioning the mobile app as a game-changer for our audience
-                and advancing the company’s goal of moving up-market.
-              </p>
+                manage their retirement plans on the go.
+              </LargeText>
+              <LargeText>
+                Key design elements include bold headlines, app screen previews,
+                and a seamless user experience, all crafted to align with
+                Vestwell’s brand identity while driving excitement and
+                engagement. This page was integral to positioning the mobile app
+                as a game-changer for our audience and advancing the company’s
+                goal of moving up-market.
+              </LargeText>
             </Reveal>
           </div>
         </TwoColumn>
@@ -69,10 +73,12 @@ export default function MobileAppLaunchPage() {
           </div>
         </TwoColumn>
 
-        <TwoColumn span={[3, 7]}>
+        <TwoColumn span={[2, 8]}>
           <div className="sticky top-8">
             <Reveal>
-              <p>LinkedIn post to announce the launch of the mobile app.</p>
+              <LargeText className="text-balance">
+                LinkedIn post to announce the launch of the mobile app.
+              </LargeText>
             </Reveal>
           </div>
           <div className="overflow-hidden">
@@ -90,10 +96,10 @@ export default function MobileAppLaunchPage() {
           </div>
           <div className="sticky top-8">
             <Reveal>
-              <p>
+              <LargeText className="text-balance">
                 Email communications were sent out to savers, advisors, and
                 employers to announce the mobile app and encourage doiwnloads.
-              </p>
+              </LargeText>
             </Reveal>
           </div>
         </TwoColumn>

@@ -14,10 +14,7 @@ export function Sidebar(
   >,
 ) {
   const pathname = usePathname();
-  console.log({ pathname });
   const expandWork = pathname.includes("/work");
-
-  console.log(expandWork);
 
   return (
     <div className={cn(props.className, "min-w-[184px]")}>
@@ -30,7 +27,7 @@ export function Sidebar(
           />
           <div className="absolute inset-0 bg-accent mix-blend-overlay" />
         </div>
-        <nav className="grid gap-4 text-lg">
+        <nav className="grid gap-5 text-lg leading-none">
           <NavLink href="/">Home</NavLink>
           <NavLink href="/work">Work</NavLink>
 
@@ -39,17 +36,17 @@ export function Sidebar(
               <NavLink href="/work/vestwell/mobile-app-launch">
                 Mobile App Launch
               </NavLink>
-              <NavLink href="/work/vestwell/blog-redesign">
-                Blog Redesign
-              </NavLink>
-              <NavLink href="/work/vestwell/conference-booth">
-                Conference Booth
-              </NavLink>
               <NavLink href="/work/vestwell/brand-collateral">
                 Brand Collateral
               </NavLink>
               <NavLink href="/work/vestwell/social-and-email-graphics">
                 Social &amp; Email Graphics
+              </NavLink>
+              <NavLink href="/work/vestwell/blog-redesign">
+                Blog Redesign
+              </NavLink>
+              <NavLink href="/work/vestwell/conference-booth">
+                Conference Booth
               </NavLink>
               <NavLink href="/work/american-cancer-society">
                 American Cancer Society

@@ -23,7 +23,7 @@ export default function WorkPage() {
       <WorkPreview
         brand="Vestwell"
         title="Mobile App Launch"
-        description="Campaign"
+        description="Web, Social, Email Design"
         href="/work/vestwell/mobile-app-launch"
       >
         <div className="overflow-hidden">
@@ -44,7 +44,7 @@ export default function WorkPage() {
       <WorkPreview
         brand="Vestwell"
         title="Brand Collateral"
-        description="Illustration, Presentation Design, Layout"
+        description="Illustration,  Layout, Print Production"
         href="/work/vestwell/brand-collateral"
       >
         <div className="hidden lg:block overflow-hidden">
@@ -64,7 +64,7 @@ export default function WorkPage() {
       </WorkPreview>
       <WorkPreview
         brand="Vestwell"
-        title="Motion and Custom Illustrations"
+        title="Social &amp; Email Graphics"
         description="Motion, Illustration"
         href="/work/vestwell/social-and-email-graphics"
       >
@@ -127,7 +127,7 @@ export default function WorkPage() {
       </WorkPreview>
       <WorkPreview
         brand="American Cancer Society"
-        description="experiential"
+        description="Experiential Design, Illustration,  Layout, Print Production"
         href="/work/american-cancer-society"
       >
         <div className="hidden lg:block overflow-hidden">
@@ -147,7 +147,7 @@ export default function WorkPage() {
       </WorkPreview>
       <WorkPreview
         brand="HLK"
-        description="internal branding work for a scrappy st. louis agency"
+        description="Illustration, Layout, Print Production"
         href="/work/hlk"
       >
         <div className="overflow-hidden">

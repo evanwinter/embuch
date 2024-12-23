@@ -3,20 +3,21 @@ import { Reveal } from "@/app/components/Reveal";
 import { TwoColumn } from "@/app/components/two-column";
 import { WorkHeader } from "../../header";
 
-import Collateral1 from "@/app/public/vestwell/collateral-1.jpg";
+import Collateral1 from "@/app/public/vestwell/collateral-1.gif";
 import Collateral2 from "@/app/public/vestwell/collateral-2.jpg";
 import Collateral3 from "@/app/public/vestwell/collateral-3.jpg";
 import Collateral4 from "@/app/public/vestwell/collateral-4.jpg";
 import Collateral5 from "@/app/public/vestwell/collateral-5.jpg";
+import { LargeText } from "@/app/components/large-text";
 
 export default function BrandCollateralPage() {
   return (
     <div className="grid gap-12">
       {/* Header */}
       <WorkHeader
-        brand="Vestwell"
-        title="Brochures, one-pagers, and sales materials to show off our value prop."
-        types="Illustration, Presentation Design, Layout"
+        brand="Vestwell &mdash; Brand Collateral"
+        title="Brochures, one-pagers, and swag that highlight the Vestwell brand."
+        types="Illustration, Layout, Print Production"
       />
 
       <div className="flex flex-col gap-24">
@@ -32,13 +33,13 @@ export default function BrandCollateralPage() {
           </div>
           <div className="sticky top-8">
             <Reveal>
-              <p>
+              <LargeText>
                 I developed a comprehensive suite of brand collateral, including
                 business cards, swag, brochures, one-pagers, and mailers, to
                 support Vestwell's marketing and outreach efforts. Each piece
                 was designed with a consistent aesthetic, balancing modern,
                 professional visuals with clear, impactful messaging.
-              </p>
+              </LargeText>
             </Reveal>
           </div>
         </TwoColumn>
@@ -46,14 +47,14 @@ export default function BrandCollateralPage() {
         <TwoColumn span={[5, 5]}>
           <div className="sticky top-8">
             <Reveal>
-              <p>
+              <LargeText>
                 These materials were tailored to resonate with different
                 audiences—whether engaging savers, advisors, or employers—while
                 maintaining brand integrity. From sleek, functional business
                 cards to eye-catching mailers, this collateral elevated the
                 brand's presence and strengthened connections across multiple
                 touchpoints.
-              </p>
+              </LargeText>
             </Reveal>
           </div>
           <div>

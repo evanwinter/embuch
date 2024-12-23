@@ -7,14 +7,15 @@ import Booth4 from "@/app/public/vestwell/booth-4.jpg";
 
 import { TwoColumn } from "@/app/components/two-column";
 import { Reveal } from "@/app/components/Reveal";
+import { LargeText } from "@/app/components/large-text";
 
 export default function ConferenceBoothPage() {
   return (
     <div className="flex flex-col gap-4 sm:gap-8 lg:gap-12">
       {/* Header */}
       <WorkHeader
-        brand="Vestwell"
-        title="Design for Vestwell's booth at a conference."
+        brand="Vestwell &mdash; Conference Booth"
+        title="Conference booth design for Vestwell's largest conference of the year."
         types="Experiential Design"
       />
 
@@ -25,7 +26,7 @@ export default function ConferenceBoothPage() {
 
         <div className="">
           <Reveal>
-            <p className="text-pretty max-w-[80ch]">
+            <LargeText className="text-pretty max-w-[60ch]">
               I developed a comprehensive suite of brand collateral, including
               business cards, swag, brochures, one-pagers, and mailers, to
               support Vestwell's marketing and outreach efforts. Each piece was
@@ -36,7 +37,7 @@ export default function ConferenceBoothPage() {
               maintaining brand integrity. From sleek, functional business cards
               to eye-catching mailers, this collateral elevated the brand's
               presence and strengthened connections across multiple touchpoints.
-            </p>
+            </LargeText>
           </Reveal>
         </div>
 
