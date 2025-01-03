@@ -36,7 +36,7 @@ export default function BrandCollateralPage() {
           </Reveal>
         </div>
         <TwoColumn span={[5, 5]}>
-          <div className="">
+          <div className="sticky top-8">
             <Reveal>
               <ResponsiveImage alt="TODO" src={Collateral2} />
             </Reveal>
