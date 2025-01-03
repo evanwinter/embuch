@@ -25,7 +25,7 @@ export default function ACSPage() {
 
       <div className="flex flex-col gap-12">
         <div className="">
-          <Image alt="TODO" src={ACS1} />
+          <ResponsiveImage alt="TODO" src={ACS1} />
         </div>
 
         <div>
@@ -42,25 +42,25 @@ export default function ACSPage() {
 
         <div className="">
           <Reveal>
-            <Image alt="TODO" src={ACS2} />
+            <ResponsiveImage alt="TODO" src={ACS2} />
           </Reveal>
         </div>
 
         <div className="">
           <Reveal>
-            <Image alt="TODO" src={ACS3} />
+            <ResponsiveImage alt="TODO" src={ACS3} />
           </Reveal>
         </div>
 
         <TwoColumn span={[6, 4]}>
           <div>
             <Reveal>
-              <Image alt="TODO" src={ACS4} />
+              <ResponsiveImage alt="TODO" src={ACS4} />
             </Reveal>
           </div>
           <div className="sticky top-8">
             <Reveal>
-              <Image alt="TODO" src={ACS5} />
+              <ResponsiveImage alt="TODO" src={ACS5} />
             </Reveal>
           </div>
         </TwoColumn>
@@ -68,19 +68,19 @@ export default function ACSPage() {
         <TwoColumn span={[4, 6]}>
           <div className="sticky top-8">
             <Reveal>
-              <Image alt="TODO" src={ACS6} />
+              <ResponsiveImage alt="TODO" src={ACS6} />
             </Reveal>
           </div>
           <div className="">
             <Reveal>
-              <Image alt="TODO" src={ACS7} />
+              <ResponsiveImage alt="TODO" src={ACS7} />
             </Reveal>
           </div>
         </TwoColumn>
 
         <div className="">
           <Reveal>
-            <Image alt="TODO" src={ACS8} />
+            <ResponsiveImage alt="TODO" src={ACS8} />
           </Reveal>
         </div>
       </div>

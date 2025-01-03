@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Blog1 from "@/public/vestwell/blog-1.jpg";
 import Blog2 from "@/public/vestwell/blog-2.jpg";
 import Blog3 from "@/public/vestwell/blog-3.jpg";
@@ -10,6 +9,7 @@ import { WorkHeader } from "@/app/work/header";
 import { TwoColumn } from "@/app/components/two-column";
 import { Reveal } from "@/app/components/Reveal";
 import { LargeText } from "@/app/components/large-text";
+import { ResponsiveImage } from "@/app/components/responsive-image";
 
 export default function BlogRedesignPage() {
   return (
@@ -23,13 +23,13 @@ export default function BlogRedesignPage() {
 
       <div className="flex flex-col gap-12">
         <div className="flex flex-col gap-8">
-          <Image alt="TODO" src={Blog1} />
+          <ResponsiveImage alt="TODO" src={Blog1} />
         </div>
 
         <TwoColumn span={[6, 4]}>
           <div className="">
             <Reveal>
-              <Image alt="TODO" src={Blog2} />
+              <ResponsiveImage alt="TODO" src={Blog2} />
             </Reveal>
           </div>
           <div className="sticky top-8">
@@ -53,24 +53,24 @@ export default function BlogRedesignPage() {
         <TwoColumn span={[5, 5]}>
           <div className="sticky top-8">
             <Reveal>
-              <Image alt="TODO" src={Blog3} />
+              <ResponsiveImage alt="TODO" src={Blog3} />
             </Reveal>
           </div>
           <div>
             <Reveal>
-              <Image alt="TODO" src={Blog4} />
+              <ResponsiveImage alt="TODO" src={Blog4} />
             </Reveal>
           </div>
         </TwoColumn>
         <TwoColumn span={[4, 6]}>
           <div className="">
             <Reveal>
-              <Image alt="TODO" src={Blog5} />
+              <ResponsiveImage alt="TODO" src={Blog5} />
             </Reveal>
           </div>
           <div>
             <Reveal>
-              <Image alt="TODO" src={Blog6} />
+              <ResponsiveImage alt="TODO" src={Blog6} />
             </Reveal>
           </div>
         </TwoColumn>

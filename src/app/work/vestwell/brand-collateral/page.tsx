@@ -22,7 +22,7 @@ export default function BrandCollateralPage() {
 
       <div className="flex flex-col gap-12">
         <div className="flex flex-col gap-8">
-          <Image alt="TODO" src={Collateral1} />
+          <ResponsiveImage alt="TODO" src={Collateral1} />
         </div>
 
         <div>
@@ -37,12 +37,12 @@ export default function BrandCollateralPage() {
         <TwoColumn span={[5, 5]}>
           <div className="">
             <Reveal>
-              <Image alt="TODO" src={Collateral2} />
+              <ResponsiveImage alt="TODO" src={Collateral2} />
             </Reveal>
           </div>
           <div>
             <Reveal>
-              <Image alt="TODO" src={Collateral3} />
+              <ResponsiveImage alt="TODO" src={Collateral3} />
             </Reveal>
           </div>
         </TwoColumn>
@@ -62,7 +62,7 @@ export default function BrandCollateralPage() {
           </div>
           <div>
             <Reveal>
-              <Image alt="TODO" src={Collateral3} />
+              <ResponsiveImage alt="TODO" src={Collateral3} />
             </Reveal>
           </div>
         </TwoColumn> */}
@@ -70,12 +70,12 @@ export default function BrandCollateralPage() {
         <TwoColumn span={[5, 5]}>
           <div className="sticky top-8">
             <Reveal>
-              <Image alt="TODO" src={Collateral4} />
+              <ResponsiveImage alt="TODO" src={Collateral4} />
             </Reveal>
           </div>
           <div>
             <Reveal>
-              <Image alt="TODO" src={Collateral5} />
+              <ResponsiveImage alt="TODO" src={Collateral5} />
             </Reveal>
           </div>
         </TwoColumn>

@@ -27,14 +27,14 @@ export default function WorkPage() {
         href="/work/vestwell/mobile-app-launch"
       >
         <div className="overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={MobileAppLaunch1}
             alt="TODO"
             className="group-hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div className="hidden lg:block overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={MobileAppLaunch2}
             alt="Vestwell iconography"
             className="group-hover:scale-105 transition-transform duration-300"
@@ -48,14 +48,14 @@ export default function WorkPage() {
         href="/work/vestwell/brand-collateral"
       >
         <div className="hidden lg:block overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={BrandCollateral1}
             alt="TODO"
             className="group-hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div className="overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={BrandCollateral2}
             alt="TODO"
             className="group-hover:scale-105 transition-transform duration-300"
@@ -69,14 +69,14 @@ export default function WorkPage() {
         href="/work/vestwell/social-and-email-graphics"
       >
         <div className="overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={Graphics1}
             alt="TODO"
             className="group-hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div className="hidden lg:block overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={Graphics2}
             alt="TODO"
             className="group-hover:scale-105 transition-transform duration-300"
@@ -90,14 +90,14 @@ export default function WorkPage() {
         href="/work/vestwell/blog-redesign"
       >
         <div className="hidden lg:block overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={Blog1}
             alt="TODO"
             className="group-hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div className="overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={Blog2}
             alt="TODO"
             className="group-hover:scale-105 transition-transform duration-300"
@@ -111,14 +111,14 @@ export default function WorkPage() {
         href="/work/vestwell/conference-booth"
       >
         <div className="overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={ConferenceBooth1}
             alt="TODO"
             className="group-hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div className="hidden lg:block overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={ConferenceBooth2}
             alt="TODO"
             className="group-hover:scale-105 transition-transform duration-300"
@@ -131,14 +131,14 @@ export default function WorkPage() {
         href="/work/american-cancer-society"
       >
         <div className="hidden lg:block overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={ACS1}
             alt="TODO"
             className="group-hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div className="overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={ACS2}
             alt="TODO"
             className="group-hover:scale-105 transition-transform duration-300"
@@ -151,14 +151,14 @@ export default function WorkPage() {
         href="/work/hlk"
       >
         <div className="overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={HLK1}
             alt="TODO"
             className="group-hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div className="hidden lg:block overflow-hidden">
-          <Image
+          <ResponsiveImage
             src={HLK2}
             alt="TODO"
             className="group-hover:scale-105 transition-transform duration-300"

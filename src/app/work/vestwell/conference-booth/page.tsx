@@ -21,24 +21,24 @@ export default function ConferenceBoothPage() {
 
       <div className="flex flex-col gap-12">
         <div className="">
-          <Image alt="TODO" src={Booth1} />
+          <ResponsiveImage alt="TODO" src={Booth1} />
         </div>
 
         <div className="">
           <Reveal>
-            <Image alt="TODO" src={Booth2} />
+            <ResponsiveImage alt="TODO" src={Booth2} />
           </Reveal>
         </div>
 
         <TwoColumn span={[4, 6]}>
           <div className="sticky top-8">
             <Reveal>
-              <Image alt="TODO" src={Booth3} />
+              <ResponsiveImage alt="TODO" src={Booth3} />
             </Reveal>
           </div>
           <div className="">
             <Reveal>
-              <Image alt="TODO" src={Booth4} />
+              <ResponsiveImage alt="TODO" src={Booth4} />
             </Reveal>
           </div>
         </TwoColumn>

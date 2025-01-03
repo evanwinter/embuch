@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import Flower from "@/public/Flower-2.png";
 import { NavLink } from "@/app/components/nav-link";
 
 import { usePathname } from "next/navigation";
 import { cn } from "@evanwinter/cn";
 import Link from "next/link";
+import { ResponsiveImage } from "../components/responsive-image";
 
 export function Sidebar(
   props: React.DetailedHTMLProps<
@@ -24,7 +24,7 @@ export function Sidebar(
           href="/"
           className="bg-accent img-link relative w-full max-w-[120px]"
         >
-          <Image
+          <ResponsiveImage
             src={Flower}
             alt="Picture of flower"
             className="grayscale w-full"

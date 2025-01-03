@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { WorkHeader } from "../../header";
 import MobileAppLaunch1 from "@/public/vestwell/mobile-app-launch-1.jpg";
 import AppStore from "@/public/03.jpg";
@@ -10,6 +9,7 @@ import OnePager from "@/public/vestwell/one-pager.jpg";
 import { TwoColumn } from "@/app/components/two-column";
 import { Reveal } from "@/app/components/Reveal";
 import { LargeText } from "@/app/components/large-text";
+import { ResponsiveImage } from "@/app/components/responsive-image";
 
 export default function MobileAppLaunchPage() {
   return (
@@ -24,13 +24,13 @@ export default function MobileAppLaunchPage() {
 
       <div className="flex flex-col gap-12">
         <div className="flex flex-col gap-8">
-          <Image alt="TODO" src={MobileAppLaunch1} />
+          <ResponsiveImage alt="TODO" src={MobileAppLaunch1} />
         </div>
 
         <TwoColumn span={[6, 4]} colReverse={true}>
           <div className="">
             <Reveal>
-              <Image alt="TODO" src={DesktopScreenshot} />
+              <ResponsiveImage alt="TODO" src={DesktopScreenshot} />
             </Reveal>
           </div>
           <div className="sticky top-8">
@@ -45,19 +45,19 @@ export default function MobileAppLaunchPage() {
 
         <div className="">
           <Reveal>
-            <Image alt="TODO" src={AppStore} />
+            <ResponsiveImage alt="TODO" src={AppStore} />
           </Reveal>
         </div>
 
         <TwoColumn span={[5, 5]}>
           <div className="sticky top-8 max-h-[calc(100dvh-64px)] overflow-hidden">
             <Reveal>
-              <Image alt="TODO" src={MobileMockup} />
+              <ResponsiveImage alt="TODO" src={MobileMockup} />
             </Reveal>
           </div>
           <div>
             <Reveal>
-              <Image alt="TODO" src={VestwellMobile} />
+              <ResponsiveImage alt="TODO" src={VestwellMobile} />
             </Reveal>
           </div>
         </TwoColumn>
@@ -72,7 +72,7 @@ export default function MobileAppLaunchPage() {
           </div>
           <div className="overflow-hidden">
             <Reveal>
-              <Image alt="TODO" src={MobileApp} />
+              <ResponsiveImage alt="TODO" src={MobileApp} />
             </Reveal>
           </div>
         </TwoColumn>
@@ -80,7 +80,7 @@ export default function MobileAppLaunchPage() {
         <TwoColumn span={[7, 3]} colReverse={true}>
           <div className="">
             <Reveal>
-              <Image alt="TODO" src={OnePager} />
+              <ResponsiveImage alt="TODO" src={OnePager} />
             </Reveal>
           </div>
           <div className="sticky top-8">

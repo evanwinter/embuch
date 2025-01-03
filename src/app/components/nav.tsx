@@ -7,6 +7,7 @@ import Dog from "@/public/dog.jpg";
 import Mockup from "@/public/mockup.jpg";
 import { Reveal } from "./Reveal";
 import { motion, Variants } from "motion/react";
+import { ResponsiveImage } from "./responsive-image";
 
 const variants: Variants = {
   offscreen: { opacity: 0, y: 12 },
@@ -30,7 +31,7 @@ export function Nav() {
           transition={{ duration: 0.2 }}
           variants={variants}
         >
-          <Image
+          <ResponsiveImage
             width={361}
             height={192}
             src={images.mockup.image}

@@ -1,4 +1,5 @@
 import Image, { type ImageProps } from "next/image";
+import { ResponsiveImage } from "./responsive-image";
 
 interface ImageTextProps {
   image: ImageProps;
@@ -20,14 +21,14 @@ export function ImageText(props: ImageTextProps) {
           </div>
           <div className="col-span-10 sm:col-span-6">
             {/* eslint-disable-next-line */}
-            <Image {...props.image} />
+            <ResponsiveImage {...props.image} />
           </div>
         </>
       ) : (
         <>
           <div className="col-span-10 sm:col-span-6">
             {/* eslint-disable-next-line */}
-            <Image {...props.image} />
+            <ResponsiveImage {...props.image} />
           </div>
           <div className="col-span-10 sm:col-span-4">
             <Text text={props.text} />

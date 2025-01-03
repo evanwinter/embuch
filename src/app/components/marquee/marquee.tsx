@@ -2,6 +2,7 @@ import Image from "next/image";
 import Emily from "@/public/emily.jpg";
 import { Blue } from "./blue";
 import { MarqueeImages } from "./marquee-images";
+import { ResponsiveImage } from "../responsive-image";
 
 export const Marquee = () => {
   return (
@@ -13,7 +14,7 @@ export const Marquee = () => {
 
       <div className="absolute -right-[25vw] md:right-[10vw] top-0 h-full">
         <Blue className="mix-blend-overlay" />
-        <Image
+        <ResponsiveImage
           src={Emily}
           width={323}
           height={373}

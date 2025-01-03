@@ -13,6 +13,7 @@ import Graphics7 from "@/public/vestwell/graphics-7.gif";
 import Graphics8 from "@/public/vestwell/graphics-8.gif";
 import { SmallHeading } from "@/app/components/small-heading";
 import { LargeText } from "@/app/components/large-text";
+import { ResponsiveImage } from "@/app/components/responsive-image";
 
 export default function SocialAndEmailGraphicsPage() {
   return (
@@ -26,7 +27,7 @@ export default function SocialAndEmailGraphicsPage() {
 
       <div className="flex flex-col gap-12">
         <div className="">
-          <Image alt="TODO" src={Graphics1} />
+          <ResponsiveImage alt="TODO" src={Graphics1} />
         </div>
 
         <div>
@@ -37,38 +38,38 @@ export default function SocialAndEmailGraphicsPage() {
 
         <div className="">
           <Reveal>
-            <Image alt="TODO" src={Graphics2} />
+            <ResponsiveImage alt="TODO" src={Graphics2} />
           </Reveal>
         </div>
 
         <div className="">
           <Reveal>
-            <Image alt="TODO" src={Graphics3} />
+            <ResponsiveImage alt="TODO" src={Graphics3} />
           </Reveal>
         </div>
         <div className="">
           <Reveal>
-            <Image alt="TODO" src={Graphics4} />
+            <ResponsiveImage alt="TODO" src={Graphics4} />
           </Reveal>
         </div>
         <div className="">
           <Reveal>
-            <Image alt="TODO" src={Graphics5} />
+            <ResponsiveImage alt="TODO" src={Graphics5} />
           </Reveal>
         </div>
         <div className="">
           <Reveal>
-            <Image alt="TODO" src={Graphics6} />
+            <ResponsiveImage alt="TODO" src={Graphics6} />
           </Reveal>
         </div>
         <div className="">
           <Reveal>
-            <Image alt="TODO" src={Graphics7} />
+            <ResponsiveImage alt="TODO" src={Graphics7} />
           </Reveal>
         </div>
         <div className="">
           <Reveal>
-            <Image alt="TODO" src={Graphics8} />
+            <ResponsiveImage alt="TODO" src={Graphics8} />
           </Reveal>
         </div>
       </div>

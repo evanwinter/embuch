@@ -3,6 +3,7 @@ import { SideDrawer } from "../components/side-drawer";
 import { TwoColumn } from "../components/two-column";
 import { Sidebar } from "../work/sidebar";
 import Emily from "@/public/emily.jpg";
+import { ResponsiveImage } from "../components/responsive-image";
 
 export default function AboutPage() {
   return (
@@ -17,7 +18,12 @@ export default function AboutPage() {
       <section className="mt-12 xl:mt-0 xl:px-12 md:h-[calc(100dvh-128px)] xl:h-[calc(100dvh-96px)] flex items-center">
         <div className="flex flex-col-reverse items-center md:flex-row gap-8 lg:gap-12 xl:gap-16">
           <div className="lg:max-w-lg xl:max-w-none flex-[50%] scale-x-[-1]">
-            <Image src={Emily} alt="TODO" />
+            <ResponsiveImage
+              src={Emily}
+              alt="TODO"
+              sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 800px"
+              quality={100}
+            />
           </div>
           <div className="flex flex-[50%] flex-col gap-3 leading-tight text-lg text-pretty">
             <p>Hey, I&apos;m Emily! I’m a designer living in Chicago.</p>

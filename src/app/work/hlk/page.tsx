@@ -19,7 +19,7 @@ export default function HlkPage() {
 
       <div className="flex flex-col gap-12">
         <div className="">
-          <Image alt="HLK Book Cover" src={HLK1} />
+          <ResponsiveImage alt="HLK Book Cover" src={HLK1} />
         </div>
 
         <Reveal>
@@ -28,7 +28,7 @@ export default function HlkPage() {
             Book containing HLK’s weekly internal communication newsletters from
             2020-2021.
           </LargeText>
-          <Image alt="HLK Book Inside" src={HLK2} />
+          <ResponsiveImage alt="HLK Book Inside" src={HLK2} />
         </Reveal>
 
         <Reveal>
@@ -39,7 +39,7 @@ export default function HlkPage() {
             Mailer sent out to all employees inviting them to participate in a
             steps challenge.
           </LargeText>
-          <Image alt="HLK Mailer" src={HLK3} />
+          <ResponsiveImage alt="HLK Mailer" src={HLK3} />
         </Reveal>
 
         <Reveal>
@@ -47,7 +47,7 @@ export default function HlkPage() {
           <LargeText className="mb-8">
             Card thanking partners of HLK for a great year accompanying a gift.
           </LargeText>
-          <Image alt="HLK Holiday Card" src={HLK4} />
+          <ResponsiveImage alt="HLK Holiday Card" src={HLK4} />
         </Reveal>
       </div>
     </div>
