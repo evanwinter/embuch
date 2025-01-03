@@ -84,6 +84,19 @@ export default function ACSPage() {
             <ResponsiveImage alt="TODO" src={ACS8} />
           </Reveal>
         </div>
+
+        <div className="mx-auto">
+          <iframe
+            width="1400"
+            height="787.5"
+            src="https://www.youtube.com/embed/1vTJ3nX1Bxg?si=CM7GXOs7HFS-S3fh"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
     </div>
   );
