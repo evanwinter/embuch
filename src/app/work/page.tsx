@@ -16,6 +16,7 @@ import HLK1 from "@/public/work/hlk-1.jpg";
 import HLK2 from "@/public/work/hlk-2.jpg";
 
 import { WorkPreview } from "@/app/work/preview";
+import { ResponsiveImage } from "../components/responsive-image";
 
 export default function WorkPage() {
   return (

@@ -8,6 +8,7 @@ import Booth4 from "@/public/vestwell/booth-4.jpg";
 import { TwoColumn } from "@/app/components/two-column";
 import { Reveal } from "@/app/components/Reveal";
 import { LargeText } from "@/app/components/large-text";
+import { ResponsiveImage } from "@/app/components/responsive-image";
 
 export default function ConferenceBoothPage() {
   return (

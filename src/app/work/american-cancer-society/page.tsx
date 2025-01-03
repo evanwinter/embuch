@@ -12,6 +12,7 @@ import ACS7 from "@/public/acs/acs-7.jpg";
 import ACS8 from "@/public/acs/acs-8.jpg";
 import { TwoColumn } from "@/app/components/two-column";
 import { LargeText } from "@/app/components/large-text";
+import { ResponsiveImage } from "@/app/components/responsive-image";
 
 export default function ACSPage() {
   return (

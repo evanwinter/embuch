@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Reveal } from "@/app/components/Reveal";
 import { WorkHeader } from "@/app/work/header";
 import { LargeText } from "@/app/components/large-text";
@@ -7,6 +6,7 @@ import HLK1 from "@/public/hlk/hlk-1.jpg";
 import HLK2 from "@/public/hlk/hlk-2.jpg";
 import HLK3 from "@/public/hlk/hlk-3.jpg";
 import HLK4 from "@/public/hlk/hlk-4.jpg";
+import { ResponsiveImage } from "@/app/components/responsive-image";
 
 export default function HlkPage() {
   return (

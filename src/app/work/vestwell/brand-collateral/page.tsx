@@ -9,6 +9,7 @@ import Collateral3 from "@/public/vestwell/collateral-3.jpg";
 import Collateral4 from "@/public/vestwell/collateral-4.jpg";
 import Collateral5 from "@/public/vestwell/collateral-5.jpg";
 import { LargeText } from "@/app/components/large-text";
+import { ResponsiveImage } from "@/app/components/responsive-image";
 
 export default function BrandCollateralPage() {
   return (
